@@ -1,36 +1,84 @@
+import SkillPill from '@/components/skillPill'
 import Image from 'next/image'
 import Link from 'next/link'
+
+const skillPillInfo = [
+  {
+    name: 'React',
+    imagePath: '/images/react-logo.svg',
+  },
+  {
+    name: 'Next.js',
+    imagePath: '/images/nextjs-logo.svg',
+  },
+  {
+    name: 'HTML',
+    imagePath: '/images/html-logo1.svg',
+  },
+  {
+    name: 'CSS',
+    imagePath: '/images/css-logo.svg',
+  },
+  {
+    name: 'Javascript',
+    imagePath: '/images/js-logo.svg',
+  }
+]
+
+const secondarySkillPillInfo = [
+  {
+    name: 'Tailwind CSS',
+    imagePath: '/images/tailwind-logo.svg',
+  },
+  {
+    name: 'Jest',
+    imagePath: '/images/jest-logo.svg',
+  },
+  {
+    name: 'GitHub',
+    imagePath: '/images/github-logo.svg',
+  },
+]
 
 export default function Home() {
   return (
     <main className="">
       <section className='mt-24'>
         <div className='flex flex-col md:flex-row max-w-5xl mx-auto'>
-          <span className='md:basis-1/3 mx-auto md:pt-20 pr-5'>
+          <span className='md:basis-1/3 mx-auto pr-5'>
             <Image src='/images/profile_pic.jpg' className='rounded-xl' width={300} height={300} alt='profile pic' />
           </span>
-          <span className='md:basis-2/3 p-2'>
-            <h2 className='text-3xl font-bold'>
-              Welcome! I'm Michael McGuiness,
-            </h2>
-            <p>
-              <br />
+          <span className='md:basis-2/3 flex flex-col pl-2'>
+            <div className='text-[clamp(3rem,7vw,5rem)]'>
+              <h2 className='leading-none'>Welcome! I'm </h2>
+              <h2 className=' leading-tight font-bold'>Michael McGuiness,</h2>
+            </div>
+            <p className='pt-4'>
               A front-end web developer with a strong foundation in React, Next.js, and Tailwind CSS, passionate about building functional, user-centric digital experiences.
-              <br />
-              <br />
-              My unique background, which spans from VR game development to neural networks, allows me to draw from a broad palette of tools and approaches to solve complex problems. This multi-disciplinary perspective, combined with a knack for continuous learning, equips me to adapt to evolving tech landscapes and always find the right tool for the task, whether it be traditional front-end technologies or state-of-the-art AI tools like OpenAI's ChatGPT.
-              <br />
-              <br />
-              What sets me apart is my exceptional interpersonal skills, honed during my years as a tutor. This experience taught me to appreciate the diversity of thought processes and to communicate complex concepts in a straightforward manner. It has shaped my ability to work effectively in teams, liaise between technical and non-technical stakeholders, and articulate design and development decisions clearly.
-              <br />
-              <br />
-              I'm always seeking new challenges, particularly those that allow me to leverage my varied skill set to create impactful, innovative solutions. If you're looking for a developer with a wide-ranging toolkit and a collaborative approach, let's talk!
             </p>
           </span>
         </div>
       </section>
 
-      <section className='mt-24 max-w-5xl mx-auto '>
+      <section>
+        <div className="flex flex-wrap justify-center pt-32 gap-8">
+          {skillPillInfo && skillPillInfo.map((info, i) =>
+            <SkillPill {...info} key={i} />
+          )}
+        </div>
+        <div tabIndex={0} className="collapse bg-base-200 mt-4 w-3/4 mx-auto">
+          <div className="collapse-title text-xl font-medium text-center px-0">
+            More Skills
+          </div>
+          <div className="collapse-content flex flex-wrap justify-center gap-8">
+            {secondarySkillPillInfo && secondarySkillPillInfo.map((info, i) =>
+              <SkillPill {...info} key={i} />
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className='mt-32 max-w-5xl mx-auto '>
         <h2 className='text-center text-2xl mb-8'>
           Highlighted Project
         </h2>
