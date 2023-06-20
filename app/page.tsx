@@ -38,6 +38,10 @@ const secondarySkillPillInfo = [
     name: 'GitHub',
     imagePath: '/images/github-logo.svg',
   },
+  {
+    name: 'ChatGPT',
+    imagePath: '/images/openai-logo.svg',
+  },
 ]
 
 export default function Home() {
@@ -66,7 +70,7 @@ export default function Home() {
             <SkillPill {...info} key={i} />
           )}
         </div>
-        <div tabIndex={0} className="collapse bg-base-200 mt-4 w-3/4 mx-auto">
+        <div tabIndex={0} className="collapse bg-base-200 mt-4 w-fit mx-auto">
           <div className="collapse-title text-xl font-medium text-center px-0">
             More Skills
           </div>

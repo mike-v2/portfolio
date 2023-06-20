@@ -9,7 +9,7 @@ const projectData = [
     summaryHeader: 'Using AI to Make Big Data More Accessible',
     summary: "I'm proud to introduce Harry Howard's Journals, an advanced web application that redefines the way we explore historical journal entries. Using Next.js, Python, and AI tools, the app processes and analyzes entries from the 1930s and 40s. These entries are enhanced by AI and made easily accessible, putting a treasure trove of historical data at your fingertips.",
     features: ["Harry has been brought to life with state-of-the-art AI technology. Ask Harry detailed questions about the journals, or just chat! (powered by ChatGPT)", "Read journal entries one page at a time or easily skip around", "Search function for journal entries", "AI-generated topics for each entry allow users to understand an entry at a glance and link together stories woven through multiple entries", "Sign in with Google to keep track of pages read, save special passages and make posts to discuss entries with others"],
-    primaryTools: ["Next JS", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Prisma", "Supabase", "ElasticSearch", "Lunr Search"],
+    primaryTools: ["Next.js", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Prisma", "Supabase", "ElasticSearch", "Lunr Search"],
     secondaryTools: ["Use Python library OpenCV to preprocess images", "Run CRAFT AI locally to split images into lines", "Apply Google Vision API on lines", "Use GPT-4 to reconstruct journal entry from Google Vision output", "Generate metadata on journal entries with GPT-3.5 (ChatGPT) API"]
   },
   {
@@ -32,7 +32,7 @@ const projectData = [
     summaryHeader: 'Small Business Redesign',
     summary: "An update of an old website to make it clean, responsive, and consistent with modern design principles",
     features: ["Splash page", "Navbar and Footer", "Responsive", "Realtime review data", "Embedded Google Map"],
-    primaryTools: ["Next", "Bootstrap", "GitHub"],
+    primaryTools: ["Next.js", "Bootstrap", "GitHub"],
     secondaryTools: ["Google Places API", "Google Maps API", "Yelp API"]
   }
 ]
@@ -92,10 +92,25 @@ export default function Projects() {
                   <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5">
                     <summary className="collapse-title text-xl">Primary Tools Used</summary>
                     <div className="collapse-content">
-                      <ul className='list-disc ps-8'>
+                      <ul className='flex flex-col gap-y-2 ps-8'>
                         {project.primaryTools && project.primaryTools.map((primary, i) => {
+                          const src = primary === 'Next.js' ? '/images/nextjs-logo.svg' :
+                            primary === 'React' ? '/images/react-logo.svg' :
+                              primary === 'GitHub' ? '/images/github-logo.svg' :
+                                primary === 'Tailwind CSS' ? '/images/tailwind-logo.svg' :
+                                  primary === 'ChatGPT' ? '/images/openai-logo.svg' :
+                                    primary === 'ChatGPT API' ? '/images/openai-logo.svg' :
+                                      primary === 'Firebase' ? '/images/firebase-logo.svg' :
+                                        primary === 'Prisma' ? '/images/prisma-logo.svg' :
+                                          primary === 'Bootstrap' ? '/images/bootstrap-logo.svg' :
+                                            '';
                           return (
-                            <li key={i}>{primary}</li>
+                            <li key={i} className=''>
+                              <div className='flex'>
+                                {src !== '' && <Image src={src} className='-ms-8 mr-2' width={25} height={25} alt={`${primary} logo`} />}
+                                <p className=''>{primary}</p>
+                              </div>
+                            </li>
                           )
                         })}
                       </ul>

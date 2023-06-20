@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Resume() {
   return (
     <main className="">
-      <div className='w-full md:w-5/6 lg:w-3/4 mx-auto mt-12'>
+      <div className='w-full px-2 md:px-0 md:w-5/6 lg:w-3/4 mx-auto mt-12'>
         <div className='pt-6'>
           <h4 className='font-bold'>
             Michael McGuiness
@@ -151,7 +151,7 @@ export default function Resume() {
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
         <div className="divider my-0 before:bg-black after:bg-black"></div>
 
-        <div className='pt-6'>
+        <div className='py-6'>
           <h2 className='font-bold'>
             INTERESTS
           </h2>
