@@ -48,11 +48,12 @@ export default function Projects() {
         let linkText = 'Link';
         if (project.desktopOnly) linkText += ' (desktop only)'
         return (
-          <div className='collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg' key={i}>
+          <div className='collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg bg-gradient-to-b from-stone-200' key={i}>
             <input type="checkbox" />
             <div className='collapse-title rounded-lg flex flex-col'>
               <h2 className='text-3xl'>{project.title}</h2>
-              <div className='mt-1 text-sm'>
+              <h4 className='text-lg italic'>{project.summaryHeader}</h4>
+              <div className='text-sm'>
                 <a href={project.link} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5'>
                   {linkText}
                 </a>
@@ -61,23 +62,22 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-
             <div className='collapse-content'>
+              <div className="divider"></div>
               <div className='mt-8 flex flex-col lg:flex-row lg:gap-x-4 w-full mx-auto'>
                 <div className='lg:basis-7/12 xl:basis-1/2 '>
-                  <Image src={project.imagePath} className='rounded-xl w-auto mx-auto xl:mx-0 xl:ml-auto' width={800} height={800} alt='profile pic' />
+                  <Image src={project.imagePath} className='rounded-xl h-auto mx-auto xl:mx-0 xl:ml-auto' width={800} height={800} alt='profile pic' />
                 </div>
                 <div className='w-11/12 lg:basis-5/12 xl:basis-1/2 max-w-xl mx-auto xl:mx-0 xl:mr-auto lg:pr-8 mt-8 lg:mt-0'>
-                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200">
+                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 border border-black">
                     <summary className="collapse-title text-xl">Summary</summary>
                     <div className="collapse-content">
                       <div className='px-4'>
-                        <h4 className='font-bold'>{project.summaryHeader}</h4>
                         <p className='pt-1'>{project.summary}</p>
                       </div>
                     </div>
                   </div>
-                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5">
+                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5 border border-black">
                     <summary className="collapse-title text-xl">Main Features</summary>
                     <div className="collapse-content">
                       <ul className='list-disc ps-8'>
@@ -89,7 +89,7 @@ export default function Projects() {
                       </ul>
                     </div>
                   </div>
-                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5">
+                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5 border border-black">
                     <summary className="collapse-title text-xl">Primary Tools Used</summary>
                     <div className="collapse-content">
                       <ul className='flex flex-col gap-y-2 ps-8'>
@@ -116,7 +116,7 @@ export default function Projects() {
                       </ul>
                     </div>
                   </div>
-                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5">
+                  <div tabIndex={0} className="collapse collapse-arrow bg-base-200 mt-1.5 border border-black">
                     <summary className="collapse-title text-xl">Secondary Tools Used</summary>
                     <div className="collapse-content">
                       <ul className='list-disc ps-8'>

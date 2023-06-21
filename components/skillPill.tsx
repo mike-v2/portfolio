@@ -7,7 +7,7 @@ export default function SkillPill({ name, imagePath }: { name: string, imagePath
   const gap = displayName.length > 1 ? 'gap-y-0' : 'gap-y-4';
 
   return (
-    <div className={`flex flex-col justify-center ${gap} border rounded-full w-32 h-44`}>
+    <div className={`flex flex-col justify-center ${gap} border border-stone-400 rounded-full w-32 h-48`}>
       <div>
         {displayName && displayName.map(dName =>
           <p className={`text-center ${textSize}`}>{dName}</p>

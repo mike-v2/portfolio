@@ -48,18 +48,19 @@ export default function Home() {
   return (
     <main className="">
       <section className='mt-24'>
-        <div className='flex flex-col md:flex-row max-w-5xl mx-auto'>
-          <span className='md:basis-1/3 mx-auto pr-5'>
-            <Image src='/images/profile_pic.jpg' className='rounded-xl' width={300} height={300} alt='profile pic' />
+        <div className='flex flex-col md:flex-row max-w-5xl mx-auto gap-y-4'>
+          <span className='md:basis-1/2 lg:basis-1/3 pr-5'>
+            <Image src='/images/profile_pic.jpg' className='rounded-xl mx-auto md:mx-0 md:ml-auto h-auto' width={300} height={300} alt='profile pic' />
           </span>
-          <span className='md:basis-2/3 flex flex-col pl-2'>
-            <div className='text-[clamp(3rem,7vw,5rem)]'>
-              <h2 className='leading-none'>Welcome! I'm </h2>
-              <h2 className=' leading-tight font-bold'>Michael McGuiness,</h2>
-            </div>
-            <p className='pt-4'>
+          <span className='md:basis-1/2 lg:basis-2/3 flex flex-col pl-2 pe-4'>
+            <h2 className='text-[clamp(2rem,4vw,3.5rem)] leading-none'>Welcome! I'm </h2>
+            <h2 className='text-[clamp(3rem,7vw,4rem)] leading-tight font-bold'>Michael McGuiness,</h2>
+            <p className='pt-4 pb-6 ps-1 '>
               A front-end web developer with a strong foundation in React, Next.js, and Tailwind CSS, passionate about building functional, user-centric digital experiences.
             </p>
+            <Link href='/contact'>
+              <button className='btn w-fit bg-green-400 hover:bg-green-300 rounded-full px-8'>Contact</button>
+            </Link>
           </span>
         </div>
       </section>
@@ -70,38 +71,46 @@ export default function Home() {
             <SkillPill {...info} key={i} />
           )}
         </div>
-        <div tabIndex={0} className="collapse bg-base-200 mt-4 w-fit mx-auto">
-          <div className="collapse-title text-xl font-medium text-center px-0">
-            More Skills
+        <div className="collapse mt-4 w-fit mx-auto bg-gradient-to-b from-base-300">
+          <input type="checkbox" />
+          <div className="collapse-title px-0">
+            <h4 className='text-xl font-medium text-center'>More Skills</h4>
           </div>
-          <div className="collapse-content flex flex-wrap justify-center gap-8">
-            {secondarySkillPillInfo && secondarySkillPillInfo.map((info, i) =>
-              <SkillPill {...info} key={i} />
-            )}
+          <div className="collapse-content">
+            <div className='flex flex-wrap justify-center gap-8 mb-4 md:mx-8'>
+              {secondarySkillPillInfo && secondarySkillPillInfo.map((info, i) =>
+                <SkillPill {...info} key={i} />
+              )}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className='mt-32 max-w-5xl mx-auto '>
-        <h2 className='text-center text-2xl mb-8'>
+      <section className='my-32 max-w-5xl mx-auto'>
+        <h2 className='text-center text-4xl mb-12'>
           Highlighted Project
         </h2>
-        <h4 className='text-center text-xl font-bold'>
-          Harry Howard's Journals
-        </h4>
-        <div className=''>
-          <Image src='/images/journal-search-screenshot.jpg' className='rounded-xl w-auto mx-auto' width={800} height={800} alt='profile pic' />
+
+        <div className="flex flex-col md:flex-row gap-x-4 gap-y-4 mx-auto">
+          <div className='basis-1/2'>
+            <Image src='/images/journal-search-screenshot.jpg' className='rounded-xl h-auto mx-auto' width={800} height={800} alt='profile pic' />
+          </div>
+          <div className='basis-1/2'>
+            <h4 className='text-2xl pb-4 font-bold'>
+              Harry Howard's Journals
+            </h4>
+            <h6 className='text-lg italic'>Reimagining the exploration of historical journals with AI</h6>
+            <p className=' pt-2 px-4'>Harry Howard's Journals is a cutting-edge web application that leverages Next.js, Python, and AI tools to make a rich collection of historical entries from the 1930s and 40s readily accessible.</p>
+          </div>
         </div>
         <div className='pt-4 px-2'>
-          <h6 className='text-center text-lg italic'>Reimagining the exploration of historical journals with AI</h6>
-          <p className='max-w-3xl mx-auto pt-2'>Harry Howard's Journals is a cutting-edge web application that leverages Next.js, Python, and AI tools to make a rich collection of historical entries from the 1930s and 40s readily accessible.</p>
-          <div className='flex flex-col lg:flex-row gap-y-4 gap-x-4  mx-auto pt-6'>
+          <div className='flex flex-col lg:flex-row gap-y-4 gap-x-4 mx-auto pt-6'>
             <div className='basis-1/2'>
               <h6 className='font-bold'>Key Features</h6>
               <ul className='flex flex-col gap-y-2 list-disc ps-8 pt-2'>
                 <li>State-of-the-art AI interaction, allowing users to ask Harry questions about the journals or just chat, powered by ChatGPT</li>
-                <li>Search function that lets users easily explore the journal entries</li>
                 <li>AI-generated topics for each entry, enabling users to understand an entry at a glance and discover stories woven through multiple entries</li>
+                <li>Users can log in to keep track of their progress, save favorite entries, and share discoveries with the community</li>
               </ul>
             </div>
             <div className='basis-1/2'>
