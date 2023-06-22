@@ -5,7 +5,7 @@ export default function Resume() {
     <main className="">
       <div className='w-full px-2 md:px-0 md:w-5/6 lg:w-3/4 mx-auto mt-12'>
         <div className='pt-6'>
-          <h4 className='font-bold'>
+          <h4 className='font-bold text-xl'>
             Michael McGuiness
           </h4>
           <div className='flex flex-col lg:flex-row pt-4'>
@@ -24,7 +24,7 @@ export default function Resume() {
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
-        <div className="divider my-0 before:bg-black after:bg-black"></div>
+        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
         <div className='pt-6'>
           <h2 className='font-bold'>
@@ -36,7 +36,8 @@ export default function Resume() {
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
-        <div className="divider my-0 before:bg-black after:bg-black"></div>
+        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
+
 
         <div className='pt-6'>
           <h2 className='font-bold'>
@@ -50,7 +51,8 @@ export default function Resume() {
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
-        <div className="divider my-0 before:bg-black after:bg-black"></div>
+        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
+
 
         <div className='pt-6'>
           <h2 className='font-bold'>
@@ -89,7 +91,8 @@ export default function Resume() {
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
-        <div className="divider my-0 before:bg-black after:bg-black"></div>
+        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
+
 
         <div className='pt-6'>
           <h2 className='font-bold'>
@@ -116,7 +119,8 @@ export default function Resume() {
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
-        <div className="divider my-0 before:bg-black after:bg-black"></div>
+        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
+
 
         <div className='pt-6'>
           <h2 className='font-bold'>
@@ -149,7 +153,8 @@ export default function Resume() {
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
-        <div className="divider my-0 before:bg-black after:bg-black"></div>
+        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
+
 
         <div className='py-6'>
           <h2 className='font-bold'>
