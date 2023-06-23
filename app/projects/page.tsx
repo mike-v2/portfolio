@@ -54,20 +54,21 @@ export default function Projects() {
               <div className='collapse-title rounded-lg flex flex-col'>
                 <h2 className='text-3xl'>{project.title}</h2>
                 <h4 className='text-lg italic'>{project.summaryHeader}</h4>
-                <div className='text-sm'>
-                  <a href={project.link} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5'>
-                    {linkText}
-                  </a>
-                  <a href={project.source} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>
-                    Source
-                  </a>
-                </div>
               </div>
               <div className='collapse-content'>
                 <div className="divider"></div>
                 <div className='mt-8 flex flex-col lg:flex-row lg:gap-x-4 w-full mx-auto'>
-                  <div className='lg:basis-7/12 xl:basis-1/2 '>
+                  <div className='lg:basis-7/12 xl:basis-1/2 relative'>
+                    <div className='text-sm absolute top-0 left-0 -translate-y-6'>
+                      <a href={project.link} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5'>
+                        {linkText}
+                      </a>
+                      <a href={project.source} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>
+                        Source
+                      </a>
+                    </div>
                     <Image src={project.imagePath} className='rounded-xl h-auto mx-auto xl:mx-0 xl:ml-auto' width={800} height={800} alt='profile pic' />
+
                   </div>
                   <div className='w-11/12 lg:basis-5/12 xl:basis-1/2 max-w-xl mx-auto xl:mx-0 xl:mr-auto lg:pr-8 mt-8 lg:mt-0'>
                     <div tabIndex={0} className="collapse collapse-arrow bg-base-200 border border-green-600">
