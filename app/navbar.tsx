@@ -47,15 +47,15 @@ export default function NavBar() {
   return (
     <nav className="flex h-32 relative">
       <Link href='/' className="absolute flex w-14 h-14 top-1 left-1/2 transform -translate-x-1/2" onMouseEnter={e => setIsLogoHovered(true)} onMouseLeave={e => setIsLogoHovered(false)}>
-        <Image src='/images/m-outside.svg' className={`transition-transform duration-250 ${isLogoHovered ? '-translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
-        <Image src='/images/m-inside.svg' className={`transition ${isLogoHovered ? 'translate-y-1 filter-green-400 scale-150' : ''}`} width={25} height={60} alt='logo part' />
-        <Image src='/images/m-outside.svg' className={`rotate-180 transition-transform duration-250 ${isLogoHovered ? 'translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
+        <Image src='/images/m-outside.svg' className={`transition-transform duration-250 h-auto ${isLogoHovered ? '-translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
+        <Image src='/images/m-inside.svg' className={`transition h-auto ${isLogoHovered ? 'translate-y-1 filter-green-400 scale-150' : ''}`} width={25} height={60} alt='logo part' />
+        <Image src='/images/m-outside.svg' className={`rotate-180 transition-transform duration-250 h-auto ${isLogoHovered ? 'translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
       </ Link>
       <div className="basis-1/2 flex pl-4 pb-4 gap-x-6 md:gap-x-12 md:pl-12 mt-auto">
         {icons && icons.map((icon, i) => {
           return (
-            <a href={icon.link}>
-              <Image src={icon.imagePath} className="hover:scale-125 transition duration-250" width={30} height={30} alt={`${icon.name} logo`} />
+            <a href={icon.link} key={i}>
+              <Image src={icon.imagePath} className="hover:scale-125 transition duration-250" width={30} height={30} alt={`${icon.name} logo`} key={i} />
             </a>
           )
         })}
@@ -74,7 +74,7 @@ export default function NavBar() {
           </ul>
         </div>
 
-        <div className="hidden md:flex basis-full max-w-xl justify-between  mt-auto pb-4 px-4">
+        <div className="hidden md:flex basis-full max-w-lg justify-between  mt-auto pb-4 px-4">
           {links.map((link, i) => {
             return (
               <Link href={link.address} className="whitespace-nowrap hover:font-bold hover:underline decoration-green-400 decoration-2" key={i}>{link.name}</ Link>

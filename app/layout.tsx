@@ -1,12 +1,11 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import NavBar from './navbar'
-import Footer from './footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Portfolio',
+  title: 'Mike McGuiness',
   description: 'Portfolio of Michael McGuiness, front-end web developer',
 }
 

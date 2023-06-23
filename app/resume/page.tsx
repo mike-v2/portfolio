@@ -44,8 +44,8 @@ export default function Resume() {
             TECHNICAL SKILLS
           </h2>
           <ul className='flex flex-col gap-y-2 list-disc ps-8 pt-4'>
-            <li><span className='font-bold'>Front-End Development:</span> React.js, Next.js, Tailwind CSS, HTML, CSS, JavaScript</li>
-            <li><span className='font-bold'>Others:</span> Android Studio, Unity, C#, Blender, Substance Painter, Audacity</li>
+            <li><span className='font-bold'>Front-End Development:</span> React.js, Next.js, Tailwind CSS, HTML, CSS, JavaScript, Jest, Git</li>
+            <li><span className='font-bold'>Others:</span> Unity, C#, Blender, Substance Painter, Audacity</li>
             <li><span className='font-bold'>Conceptual Understanding:</span> Neural Networks, Game Development, VR Development, 3D Modeling</li>
           </ul>
         </div>

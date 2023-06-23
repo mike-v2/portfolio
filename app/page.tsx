@@ -13,7 +13,7 @@ const skillPillInfo = [
   },
   {
     name: 'HTML',
-    imagePath: '/images/html-logo1.svg',
+    imagePath: '/images/html-logo.svg',
   },
   {
     name: 'CSS',
@@ -53,10 +53,10 @@ export default function Home() {
             <Image src='/images/headshot.png' className='h-auto' width={800} height={800} alt='profile pic' />
           </span>
           <span className='md:basis-1/2 lg:basis-2/3 flex flex-col pl-2 pe-4 max-w-2xl'>
-            <h2 className='text-[clamp(2rem,4vw,3.5rem)] leading-none'>Welcome! I'm </h2>
+            <h2 className='text-[clamp(2rem,4vw,3.5rem)] leading-none'>Welcome! I&apos;m </h2>
             <h2 className='text-[clamp(3rem,7vw,4rem)] leading-tight font-bold'>Michael McGuiness,</h2>
             <p className='pt-4 pb-6 ps-1 '>
-              A front-end web developer with a strong foundation in React, Next.js, and Tailwind CSS, passionate about building functional, user-centric digital experiences.
+              A front-end web developer with a strong foundation in React, Next.js, and <span className='whitespace-nowrap'>Tailwind CSS</span>, passionate about building functional, user-centric digital experiences.
             </p>
             <Link href='/contact'>
               <button className='btn w-fit bg-green-400 hover:bg-green-500 rounded-full px-8'>Contact</button>
@@ -65,8 +65,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="flex flex-wrap justify-center pt-32 gap-8">
+      <section className='mt-32'>
+        <div className="flex flex-wrap justify-center gap-8">
           {skillPillInfo && skillPillInfo.map((info, i) =>
             <SkillPill {...info} key={i} />
           )}
@@ -86,47 +86,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='my-32 max-w-5xl mx-auto'>
-        <h2 className='text-center text-4xl mb-12'>
+      <section className='my-40 max-w-5xl mx-auto'>
+        <h2 className=' border-green-400 border-b-2  w-fit mx-auto text-4xl px-8 py-4 mb-12'>
           Highlighted Project
         </h2>
-
-        <div className="flex flex-col md:flex-row gap-x-4 gap-y-4 mx-auto">
-          <div className='basis-1/2'>
-            <Image src='/images/journal-search-screenshot.jpg' className='rounded-xl h-auto mx-auto' width={800} height={800} alt='profile pic' />
+        <div className="flex flex-col gap-y-4 mx-auto">
+          <div className='basis-1/2 relative w-fit mx-auto'>
+            <Image src='/images/journal-search-home.jpg' className='rounded-xl h-auto' width={1000} height={1000} alt='profile pic' />
+            <div className="absolute bottom-2 left-0 md:bottom-6 md:left-4 flex flex-col gap-y-1 md:gap-y-4 text-center font-semibold">
+              <div className='bg-base-200 px-8 py-2 md:py-4 rounded-full'>
+                Next.js
+              </div>
+              <div className='bg-base-200 px-4 py-2 md:py-4 rounded-full'>
+                Tailwind CSS
+              </div>
+              <div className='bg-base-200 px-8 py-2 md:py-4 rounded-full'>
+                ChatGPT
+              </div>
+            </div>
           </div>
           <div className='basis-1/2'>
-            <h4 className='text-2xl pb-4 font-bold'>
-              Harry Howard's Journals
-            </h4>
+            <div className="flex">
+              <h4 className='text-2xl pb-4 font-bold'>
+                Harry Howard&apos;s Journals
+              </h4>
+              <Link href='/projects' className='ml-auto'>
+                <div className="btn bg-green-400 hover:bg-green-500 rounded-full px-8">Go To Project</div>
+              </Link>
+            </div>
             <h6 className='text-lg italic'>Reimagining the exploration of historical journals with AI</h6>
-            <p className=' pt-2 px-4'>Harry Howard's Journals is a cutting-edge web application that leverages Next.js, Python, and AI tools to make a rich collection of historical entries from the 1930s and 40s readily accessible.</p>
-          </div>
-        </div>
-        <div className='pt-4 px-2'>
-          <div className='flex flex-col lg:flex-row gap-y-4 gap-x-4 mx-auto pt-6'>
-            <div className='basis-1/2'>
-              <h6 className='font-bold'>Key Features</h6>
-              <ul className='flex flex-col gap-y-2 list-disc ps-8 pt-2'>
-                <li>State-of-the-art AI interaction, allowing users to ask Harry questions about the journals or just chat, powered by ChatGPT</li>
-                <li>AI-generated topics for each entry, enabling users to understand an entry at a glance and discover stories woven through multiple entries</li>
-                <li>Users can log in to keep track of their progress, save favorite entries, and share discoveries with the community</li>
-              </ul>
-            </div>
-            <div className='basis-1/2'>
-              <h6 className='font-bold'>Technologies</h6>
-              <ul className='flex flex-col gap-y-2 list-disc ps-8 pt-2'>
-                <li>Next JS, Tailwind CSS, Daisy UI for the frontend</li>
-                <li>AI technologies like ChatGPT API for enhanced interaction and GPT-4 for data reconstruction</li>
-                <li>Prisma, Supabase, ElasticSearch, and Lunr Search for robust backend functionality</li>
-              </ul>
-            </div>
-          </div>
-          <div className='flex pt-6'>
-            <p className='pr-4 italic text-sm'>Want to delve into the details? Check out the <a href='https://journal-search.vercel.app/' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>live project</a> or explore the <a href='https://github.com/mike-v2/journal-search' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>source code</a>.</p>
-            <Link href='/projects' className='ml-auto'>
-              <button className="btn btn-accent md:btn-wide bg-green-400 hover:bg-green-500">More Projects</button>
-            </Link>
+            <p className=' pt-2 px-4'>Harry Howard&apos;s Journals is a cutting-edge web application that leverages Next.js, Python, and AI tools to make a rich collection of historical entries from the 1930s and 40s readily accessible.</p>
           </div>
         </div>
       </section>

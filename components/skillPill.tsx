@@ -9,11 +9,11 @@ export default function SkillPill({ name, imagePath }: { name: string, imagePath
   return (
     <div className={`flex flex-col justify-center ${gap} border border-stone-400 rounded-full w-32 h-48`}>
       <div>
-        {displayName && displayName.map(dName =>
-          <p className={`text-center ${textSize}`}>{dName}</p>
+        {displayName && displayName.map((dName, i) =>
+          <p className={`text-center ${textSize}`} key={i}>{dName}</p>
         )}
       </div>
-      <Image src={imagePath} className='mx-auto' height={70} width={70} alt='react logo' />
+      <Image src={imagePath} className='mx-auto h-auto' height={70} width={70} alt={`${name} logo`} />
     </div>
   )
 }
