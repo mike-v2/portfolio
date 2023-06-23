@@ -105,6 +105,10 @@ export default function Projects() {
                                         primary === 'Firebase' ? '/images/firebase-logo.svg' :
                                           primary === 'Prisma' ? '/images/prisma-logo.svg' :
                                             primary === 'Bootstrap' ? '/images/bootstrap-logo.svg' :
+                                              primary === 'Supabase' ? '/images/supabase-logo.svg' :
+                                                primary === 'Daisy UI' ? '/images/daisyui-logo.svg' :
+                                                  primary === 'ElasticSearch' ? '/images/elasticsearch-logo.svg' :
+                                                    primary === 'Lunr Search' ? '/images/lunrjs-logo.svg' :
                                               '';
                             return (
                               <li key={i} className=''>
