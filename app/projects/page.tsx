@@ -49,7 +49,7 @@ export default function Projects() {
           let linkText = 'Link';
           if (project.desktopOnly) linkText += ' (desktop only)'
           return (
-            <div className='collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg bg-gradient-to-b from-stone-200' key={i}>
+            <div className='collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg ' key={i}>
               <input type="checkbox" />
               <div className='collapse-title rounded-lg flex flex-col'>
                 <h2 className='text-3xl'>{project.title}</h2>

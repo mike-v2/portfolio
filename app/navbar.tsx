@@ -47,23 +47,23 @@ export default function NavBar() {
   return (
     <nav className="flex h-32 relative">
       <Link href='/' className="absolute flex w-14 h-14 top-1 left-1/2 transform -translate-x-1/2" onMouseEnter={e => setIsLogoHovered(true)} onMouseLeave={e => setIsLogoHovered(false)}>
-        <Image src='/images/m-outside.svg' className={`transition-transform duration-250 h-auto ${isLogoHovered ? '-translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
-        <Image src='/images/m-inside.svg' className={`transition h-auto ${isLogoHovered ? 'translate-y-1 filter-green-400 scale-150' : ''}`} width={25} height={60} alt='logo part' />
-        <Image src='/images/m-outside.svg' className={`rotate-180 transition-transform duration-250 h-auto ${isLogoHovered ? 'translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
+        <Image src='/images/m-outside.svg' className={`transition-transform duration-250 h-auto dark:invert ${isLogoHovered ? '-translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
+        <Image src='/images/m-inside.svg' className={`transition h-auto dark:invert ${isLogoHovered ? 'translate-y-1 filter-green-400 scale-150' : ''}`} width={25} height={60} alt='logo part' />
+        <Image src='/images/m-outside.svg' className={`rotate-180 transition-transform duration-250 h-auto dark:invert ${isLogoHovered ? 'translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
       </ Link>
       <div className="basis-1/2 flex pl-4 pb-4 gap-x-6 md:gap-x-12 md:pl-12 mt-auto">
         {icons && icons.map((icon, i) => {
           return (
             <a href={icon.link} key={i}>
-              <Image src={icon.imagePath} className="hover:scale-125 transition duration-250" width={30} height={30} alt={`${icon.name} logo`} key={i} />
+              <Image src={icon.imagePath} className="hover:scale-125 transition duration-250 dark:invert" width={30} height={30} alt={`${icon.name} logo`} key={i} />
             </a>
           )
         })}
       </div>
       <div className="basis-1/2 flex justify-end h-full">
-        <div className="md:hidden dropdown dropdown-bottom dropdown-end mt-auto mr-4">
-          <label tabIndex={0} className="btn m-1 h-12 w-12 p-2">
-            <Image src='/images/menu-icon.svg' width={25} height={25} alt="menu icon" />
+        <div className="md:hidden dropdown dropdown-bottom dropdown-end mt-auto mr-4 ">
+          <label tabIndex={0} className="btn m-1 h-12 w-12 p-2 dark:border-white">
+            <Image src='/images/menu-icon.svg' className="dark:invert" width={25} height={25} alt="menu icon" />
           </label>
           <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
             {links.map((link, i) => {

@@ -13,9 +13,9 @@ export default function Contact() {
 
   return (
     <main className="">
-      <form className="rounded-lg shadow-xl flex flex-col px-8 py-8 mt-8 bg-white dark:bg-blue-500 max-w-6xl mx-auto" onSubmit={handleSubmit} method="POST">
+      <form className="rounded-lg shadow-xl flex flex-col px-8 py-8 mt-8   max-w-6xl mx-auto" onSubmit={handleSubmit} method="POST">
         <div className='flex flex-col gap-y-2 max-w-4xl mx-auto pb-8'>
-          <h1 className="text-2xl font-bold dark:text-gray-50 pb-2">Thanks for taking the time to explore my portfolio!
+          <h1 className="text-2xl font-bold dark:text-slate-200 pb-2">Thanks for taking the time to explore my portfolio!
           </h1>
           <p className=''>
             Whether you have a potential job opportunity, an exciting project collaboration in mind, or just want to chat about web development, I&apos;d love to hear from you. Don&apos;t hesitate to reach out using the contact form below or through my <a href='https://www.linkedin.com/in/michael-mcguiness-react/' className='text-blue-600 hover:text-blue-800 visited:text-purple-600'>LinkedIn</a> or <a href="https://github.com/mike-v2/" className='text-blue-600 hover:text-blue-800 visited:text-purple-600'>GitHub</a> profiles, or via email at <a href='https://www.mikemcguiness@protonmail.com' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mikemcguiness@protonmail.com</a>.
@@ -51,7 +51,7 @@ export default function Contact() {
         />
 
         <div className="">
-          <button type='submit' disabled={state.submitting} className="btn text-lg px-10 mt-8 py-2 bg-green-400 hover:bg-green-500">
+          <button type='submit' disabled={state.submitting} className="btn text-lg px-10 mt-8 py-2 bg-green-400 hover:bg-green-500 dark:text-black">
             Send
           </button>
         </div>

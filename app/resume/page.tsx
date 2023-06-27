@@ -10,20 +10,20 @@ export default function Resume() {
           </h4>
           <div className='flex flex-col lg:flex-row pt-4'>
             <p>Vancouver, WA</p>
-            <div className="divider lg:divider-horizontal my-0 "></div>
+            <div className="divider lg:divider-horizontal my-0 dark:before:bg-slate-600 dark:after:bg-slate-600"></div>
             <a href='https://www.mikemcguiness@protonmail.com' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mikemcguiness@protonmail.com</a>
-            <div className="divider lg:divider-horizontal my-0"></div>
+            <div className="divider lg:divider-horizontal my-0 dark:before:bg-slate-600 dark:after:bg-slate-600"></div>
             <p>
               LinkedIn: <a href='http://www.linkedin.com/in/michael-mcguiness-react' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>linkedin.com/in/michael-mcguiness-react</a>
             </p>
-            <div className="divider lg:divider-horizontal my-0"></div>
+            <div className="divider lg:divider-horizontal my-0 dark:before:bg-slate-600 dark:after:bg-slate-600"></div>
             <p>
               GitHub: <a href='github.com/mike-v2' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>github.com/mike-v2</a>
             </p>
           </div>
         </div>
 
-        <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
+        <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400 mt-4"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
         <div className='pt-6'>
@@ -35,7 +35,7 @@ export default function Resume() {
           </p>
         </div>
 
-        <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
+        <div className="divider my-0 before:bg-black after:bg-black mt-4 dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
 
@@ -52,7 +52,7 @@ export default function Resume() {
           </ul>
         </div>
 
-        <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
+        <div className="divider my-0 before:bg-black after:bg-black mt-4 dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
 
@@ -92,7 +92,7 @@ export default function Resume() {
           </div>
         </div>
 
-        <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
+        <div className="divider my-0 before:bg-black after:bg-black mt-4 dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
 
@@ -120,7 +120,7 @@ export default function Resume() {
           </ul>
         </div>
 
-        <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
+        <div className="divider my-0 before:bg-black after:bg-black mt-4 dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
 
@@ -154,7 +154,7 @@ export default function Resume() {
           </div>
         </div>
 
-        <div className="divider my-0 before:bg-black after:bg-black mt-4"></div>
+        <div className="divider my-0 before:bg-black after:bg-black mt-4 dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
 

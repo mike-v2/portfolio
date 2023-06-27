@@ -23,7 +23,7 @@ export default function About() {
             I&apos;m always seeking new challenges, particularly those that allow me to leverage my varied skill set to create <span className="text-green-600 font-bold">impactful, innovative solutions</span>. If you&apos;re looking for a developer with a wide-ranging toolkit and a collaborative approach, let&apos;s talk!
           </p>
           <Link href='/contact' className="mx-auto mt-2">
-            <button className='btn btn-wide bg-green-400 hover:bg-green-500 rounded-full px-8'>Contact</button>
+            <button className='btn btn-wide bg-green-400 hover:bg-green-500 rounded-full px-8 dark:text-black'>Contact</button>
           </Link>
         </div>
 

@@ -59,7 +59,7 @@ export default function Home() {
               A front-end web developer with a strong foundation in React, Next.js, and <span className='whitespace-nowrap'>Tailwind CSS</span>, passionate about building functional, user-centric digital experiences.
             </p>
             <Link href='/contact'>
-              <button className='btn w-fit bg-green-400 hover:bg-green-500 rounded-full px-8'>Contact</button>
+              <button className='btn w-fit bg-green-400 hover:bg-green-500 rounded-full px-8 dark:text-black'>Contact</button>
             </Link>
           </span>
         </div>
@@ -107,15 +107,15 @@ export default function Home() {
           </div>
           <div className='basis-1/2'>
             <div className="flex">
-              <h4 className='text-2xl pb-4 font-bold'>
+              <h4 className='text-2xl flex flex-col justify-end'>
                 Harry Howard&apos;s Journals
               </h4>
               <Link href='/projects' className='ml-auto'>
-                <div className="btn bg-green-400 hover:bg-green-500 rounded-full px-8">Go To Project</div>
+                <div className="btn bg-green-400 hover:bg-green-500 rounded-full px-8 dark:text-black">Go To Project</div>
               </Link>
             </div>
-            <h6 className='text-lg italic'>Reimagining the exploration of historical journals with AI</h6>
-            <p className=' pt-2 px-4'>Harry Howard&apos;s Journals is a cutting-edge web application that leverages Next.js, Python, and AI tools to make a rich collection of historical entries from the 1930s and 40s readily accessible.</p>
+            <h6 className='text-lg italic pt-2'>Reimagining the exploration of historical journals with AI</h6>
+            <p className=' pt-4 px-4'>Harry Howard&apos;s Journals is a cutting-edge web application that leverages Next.js, Python, and AI tools to make a rich collection of historical entries from the 1930s and 40s readily accessible.</p>
           </div>
         </div>
       </section>
