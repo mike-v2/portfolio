@@ -45,7 +45,7 @@ export default function NavBar() {
   const [isLogoHovered, setIsLogoHovered] = useState<boolean>(false);
 
   return (
-    <nav className="flex h-32 relative">
+    <nav className="flex h-32 relative border-b border-green-400">
       <Link href='/' className="absolute flex w-14 h-14 top-1 left-1/2 transform -translate-x-1/2" onMouseEnter={e => setIsLogoHovered(true)} onMouseLeave={e => setIsLogoHovered(false)}>
         <Image src='/images/m-outside.svg' className={`transition-transform duration-250 h-auto dark:invert ${isLogoHovered ? '-translate-x-1' : ''}`} width={15} height={60} alt='logo part' />
         <Image src='/images/m-inside.svg' className={`transition h-auto dark:invert ${isLogoHovered ? 'translate-y-1 filter-green-400 scale-150' : ''}`} width={25} height={60} alt='logo part' />
@@ -82,7 +82,6 @@ export default function NavBar() {
           })}
         </div>
       </div>
-
     </nav>
   )
 }

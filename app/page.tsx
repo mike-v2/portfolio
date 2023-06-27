@@ -10,6 +10,7 @@ const skillPillInfo = [
   {
     name: 'Next.js',
     imagePath: '/images/nextjs-logo.svg',
+    invert: true,
   },
   {
     name: 'HTML',
@@ -37,10 +38,12 @@ const secondarySkillPillInfo = [
   {
     name: 'GitHub',
     imagePath: '/images/github-logo.svg',
+    invert: true,
   },
   {
     name: 'ChatGPT',
     imagePath: '/images/openai-logo.svg',
+    invert: true,
   },
 ]
 

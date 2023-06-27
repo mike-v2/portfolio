@@ -95,26 +95,33 @@ export default function Projects() {
                       <summary className="collapse-title text-xl">Primary Tools Used</summary>
                       <div className="collapse-content">
                         <ul className='flex flex-col gap-y-2 ps-8'>
-                          {project.primaryTools && project.primaryTools.map((primary, i) => {
-                            const src = primary === 'Next.js' ? '/images/nextjs-logo.svg' :
-                              primary === 'React' ? '/images/react-logo.svg' :
-                                primary === 'GitHub' ? '/images/github-logo.svg' :
-                                  primary === 'Tailwind CSS' ? '/images/tailwind-logo.svg' :
-                                    primary === 'ChatGPT' ? '/images/openai-logo.svg' :
-                                      primary === 'ChatGPT API' ? '/images/openai-logo.svg' :
-                                        primary === 'Firebase' ? '/images/firebase-logo.svg' :
-                                          primary === 'Prisma' ? '/images/prisma-logo.svg' :
-                                            primary === 'Bootstrap' ? '/images/bootstrap-logo.svg' :
-                                              primary === 'Supabase' ? '/images/supabase-logo.svg' :
-                                                primary === 'Daisy UI' ? '/images/daisyui-logo.svg' :
-                                                  primary === 'ElasticSearch' ? '/images/elasticsearch-logo.svg' :
-                                                    primary === 'Lunr Search' ? '/images/lunrjs-logo.svg' :
+                          {project.primaryTools && project.primaryTools.map((tool, i) => {
+                            const src = tool === 'Next.js' ? '/images/nextjs-logo.svg' :
+                              tool === 'React' ? '/images/react-logo.svg' :
+                                tool === 'GitHub' ? '/images/github-logo.svg' :
+                                  tool === 'Tailwind CSS' ? '/images/tailwind-logo.svg' :
+                                    tool === 'ChatGPT' ? '/images/openai-logo.svg' :
+                                      tool === 'ChatGPT API' ? '/images/openai-logo.svg' :
+                                        tool === 'Firebase' ? '/images/firebase-logo.svg' :
+                                          tool === 'Prisma' ? '/images/prisma-logo.svg' :
+                                            tool === 'Bootstrap' ? '/images/bootstrap-logo.svg' :
+                                              tool === 'Supabase' ? '/images/supabase-logo.svg' :
+                                                tool === 'Daisy UI' ? '/images/daisyui-logo.svg' :
+                                                  tool === 'ElasticSearch' ? '/images/elasticsearch-logo.svg' :
+                                                    tool === 'Lunr Search' ? '/images/lunrjs-logo.svg' :
                                               '';
+                            const invert = tool === 'Next.js' ||
+                              tool === 'GitHub' ||
+                              tool === 'ChatGPT' ||
+                              tool === 'ChatGPT API' ||
+                              tool === 'Prisma' ||
+                              tool === 'Lunr Search' ||
+                              tool === 'Bootstrap';
                             return (
                               <li key={i} className=''>
                                 <div className='flex'>
-                                  {src !== '' && <Image src={src} className='-ms-8 mr-2' width={25} height={25} alt={`${primary} logo`} />}
-                                  <p className=''>{primary}</p>
+                                  {src !== '' && <Image src={src} className={`-ms-8 mr-2 ${invert ? 'dark:invert' : ''}`} width={25} height={25} alt={`${tool} logo`} />}
+                                  <p className=''>{tool}</p>
                                 </div>
                               </li>
                             )

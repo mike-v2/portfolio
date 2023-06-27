@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 
-export default function SkillPill({ name, imagePath }: { name: string, imagePath: string }) {
+export default function SkillPill({ name, imagePath, invert }: { name: string, imagePath: string, invert?: boolean }) {
   const textSize = name.length > 7 ? 'text-lg' : 'text-2xl';
   const displayName = name.split(' ');
   const gap = displayName.length > 1 ? 'gap-y-0' : 'gap-y-4';
@@ -13,7 +13,7 @@ export default function SkillPill({ name, imagePath }: { name: string, imagePath
           <p className={`text-center ${textSize}`} key={i}>{dName}</p>
         )}
       </div>
-      <Image src={imagePath} className='mx-auto h-auto' height={70} width={70} alt={`${name} logo`} />
+      <Image src={imagePath} className={`mx-auto h-auto ${invert ? 'dark:invert' : ''}`} height={70} width={70} alt={`${name} logo`} />
     </div>
   )
 }
