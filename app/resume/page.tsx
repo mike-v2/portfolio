@@ -45,8 +45,10 @@ export default function Resume() {
           </h2>
           <ul className='flex flex-col gap-y-2 list-disc ps-8 pt-4'>
             <li><span className='font-bold'>Front-End Development:</span> React.js, Next.js, Tailwind CSS, HTML, CSS, JavaScript, Jest, Git</li>
+            <li><span className='font-bold'>Database Management:</span> Prisma, Supabase, Firebase</li>
+            <li><span className='font-bold'>Cloud Services:</span> Google Cloud Storage, Google Cloud Run</li>
+            <li><span className='font-bold'>APIs:</span> OpenAI API, Google Maps API, Yelp API</li>
             <li><span className='font-bold'>Others:</span> Unity, C#, Blender, Substance Painter, Audacity</li>
-            <li><span className='font-bold'>Conceptual Understanding:</span> Neural Networks, Game Development, VR Development, 3D Modeling</li>
           </ul>
         </div>
 
@@ -144,10 +146,10 @@ export default function Resume() {
           </div>
           <div>
             <h4 className='font-bold'>
-              Journal Search
+              Harry Howard&apos;s Journals
             </h4>
             <ul className='list-disc ps-8 py-2'>
-              <li>Created a user-focused platform for browsing and searching journal entries, with additional community features, user profiles, and custom OCR</li>
+              <li>Created a user-focused platform for browsing and searching journal entries, with state-of-the-art AI that enables users to explore a large dataset with natural language</li>
             </ul>
           </div>
         </div>
