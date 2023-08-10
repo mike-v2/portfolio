@@ -94,21 +94,18 @@ export default function Home() {
           Highlighted Project
         </h2>
         <div className="flex flex-col gap-y-4 mx-auto">
-          <div className='basis-1/2 relative w-fit mx-auto'>
-            <Image src='/images/journal-search-home.jpg' className='rounded-xl h-auto' width={1000} height={1000} alt='profile pic' />
-            <div className="absolute bottom-2 left-0 md:bottom-6 md:left-4 flex flex-col gap-y-1 md:gap-y-4 text-center font-semibold">
-              <div className='bg-base-200 px-8 py-2 md:py-4 rounded-full'>
-                Next.js
-              </div>
-              <div className='bg-base-200 px-4 py-2 md:py-4 rounded-full'>
-                Tailwind CSS
-              </div>
-              <div className='bg-base-200 px-8 py-2 md:py-4 rounded-full'>
-                ChatGPT
-              </div>
-            </div>
+          <div className="video-container relative w-full overflow-hidden mx-auto" >
+            <iframe
+              className='absolute inset-0 w-full h-full'
+              width="853"
+              height="480"
+              src='https://www.youtube.com/embed/SmqiGkeuxo8'
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded youtube"
+            />
           </div>
-          <div className='basis-1/2'>
+          <div className=''>
             <div className="flex">
               <h4 className='text-2xl flex flex-col justify-end'>
                 Harry Howard&apos;s Journals

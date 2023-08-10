@@ -4,3 +4,7 @@
 .filter-green-400 {
   filter: invert(81%) sepia(27%) saturate(947%) hue-rotate(81deg) brightness(89%) contrast(95%);
 }
+.video-container {
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 56.25%;
+}
