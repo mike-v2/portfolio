@@ -13,6 +13,17 @@ const projectData = [
     secondaryTools: ["Use Python library OpenCV to preprocess images", "Run CRAFT AI locally to split images into lines", "Apply Google Vision API on lines", "Use GPT-4 to reconstruct journal entry from Google Vision output", "Generate metadata on journal entries with GPT-3.5 (ChatGPT) API", "Store data with Google Cloud Storage", "Run python scripts with Google Cloud Run"]
   },
   {
+    imagePath: '/images/good-news.jpg',
+    title: "Good News!",
+    link: 'https://good-news-three.vercel.app/',
+    source: 'https://github.com/mike-v2/good-news',
+    summaryHeader: 'Finding Positive News Stories with AI',
+    summary: "Good News! aggregates global news stories through reputable news aggregator APIs, meticulously collecting articles related to building and construction projects, as well as advancements in healthcare, education, and peace. To identify the most uplifting and positive stories, I employ advanced AI analysis, powered by OpenAI's GPT. This sophisticated natural language processing helps to filter and present news that sparks optimism and inspiration, shedding light on the progress and goodwill that is constantly unfolding around the world.",
+    features: ["Aggregates positive news stories from around the world related to construction projects, healthcare advancements, educational progress, and peace initiatives", "Interactable world map representing source countries", "Updated daily with new articles", "Automated data collection and processing pipeline that requires minimal manual intervention", "Utilizes OpenAI's GPT API to evaluate and filter news stories based on positivity and relevance to the chosen categories"],
+    primaryTools: ["Next.js", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Firebase", "Google Cloud Functions", "Mediastack API"],
+    secondaryTools: ["React Simple Maps"]
+  },
+  {
     imagePath: '/images/journal-transcribe-screenshot.jpg',
     title: "Journal Transcription Assistant",
     link: 'https://mike-v2.github.io/journal-transcribe/',
@@ -109,6 +120,8 @@ export default function Projects() {
                                                 tool === 'Daisy UI' ? '/images/daisyui-logo.svg' :
                                                   tool === 'ElasticSearch' ? '/images/elasticsearch-logo.svg' :
                                                     tool === 'Lunr Search' ? '/images/lunrjs-logo.svg' :
+                                                      tool === 'Google Cloud Functions' ? '/images/cloud_functions.png' :
+                                                        tool === 'Mediastack API' ? '/images/mediastack.png' :
                                               '';
                             const invert = tool === 'Next.js' ||
                               tool === 'GitHub' ||
