@@ -128,38 +128,48 @@ export default function Resume() {
           <h2 className='font-bold pb-4'>
             PROJECTS
           </h2>
-          <div className='pb-4'>
-            <h4 className='font-bold pb-2'>
-              Service Now Auto Repair
-            </h4>
-            <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-              <li>Developed a responsive web application with real-time review data and integrated Google Maps</li>
-              <li>Project Link: <a href="https://service-now-auto-repair.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' >service-now-auto-repair.vercel.app</a></li>
-            </ul>
-          </div>
-          <div className='pb-4'>
-            <h4 className='font-bold pb-2'>
-              Journal Transcribe
-            </h4>
-            <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-              <li>Designed a system to process, index, and store images of journal pages, featuring user input, zoom functionality, and speech-to-text capabilities</li>
-              <li>Project Link: <a href="https://mike-v2.github.io/journal-transcribe/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mike-v2.github.io/journal-transcribe</a></li>
-            </ul>
-          </div>
-          <div className=''>
-            <h4 className='font-bold pb-2'>
-              Harry Howard&apos;s Journals
-            </h4>
-            <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-              <li>Created a user-focused platform for browsing and searching journal entries, with state-of-the-art AI that enables users to explore a large dataset with natural language</li>
-              <li>Project Link: <a href="https://journal-search.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>journal-search.vercel.app</a></li>
-            </ul>
+          <div className="flex flex-col gap-y-4">
+            <div className=''>
+              <h4 className='font-bold pb-2'>
+                Harry Howard&apos;s Journals
+              </h4>
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Created a user-focused platform for browsing and searching journal entries, with state-of-the-art AI that enables users to explore a large dataset with natural language</li>
+                <li>Project Link: <a href="https://journal-search.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>journal-search.vercel.app</a></li>
+              </ul>
+            </div>
+            <div className=''>
+              <h4 className='font-bold pb-2'>
+                Journal Transcribe
+              </h4>
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Designed a system to process, index, and store images of journal pages, featuring user input, zoom functionality, and speech-to-text capabilities</li>
+                <li>Project Link: <a href="https://mike-v2.github.io/journal-transcribe/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mike-v2.github.io/journal-transcribe</a></li>
+              </ul>
+            </div>
+            <div className=''>
+              <h4 className='font-bold pb-2'>
+                Good News!
+              </h4>
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Built a web application to aggregate global news through reputable aggregator APIs, focusing on positive developments in construction, healthcare, education, and peace. Incorporated OpenAI's GPT for advanced AI analysis, highlighting stories of optimism and progress</li>
+                <li>Project Link: <a href="https://good-news-three.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>good-news-three.vercel.app</a></li>
+              </ul>
+            </div>
+            <div className=''>
+              <h4 className='font-bold pb-2'>
+                Service Now Auto Repair
+              </h4>
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Developed a responsive web application with real-time review data and integrated Google Maps</li>
+                <li>Project Link: <a href="https://service-now-auto-repair.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' >service-now-auto-repair.vercel.app</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
-
 
         <div className='py-6'>
           <h2 className='font-bold'>
