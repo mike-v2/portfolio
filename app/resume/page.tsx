@@ -152,7 +152,7 @@ export default function Resume() {
                 Good News!
               </h4>
               <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-                <li>Built a web application to aggregate global news through reputable aggregator APIs, focusing on positive developments in construction, healthcare, education, and peace. Incorporated OpenAI's GPT for advanced AI analysis, highlighting stories of optimism and progress</li>
+                <li>Built a web application to aggregate global news through reputable aggregator APIs, focusing on positive developments in construction, healthcare, education, and peace. Incorporated OpenAI&apos;s GPT for advanced AI analysis, highlighting stories of optimism and progress</li>
                 <li>Project Link: <a href="https://good-news-three.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>good-news-three.vercel.app</a></li>
               </ul>
             </div>
