@@ -1,8 +1,6 @@
 'use client';
 
 import { ValidationError, useForm } from '@formspree/react';
-import Image from 'next/image'
-import { useState } from 'react';
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("meqwywez");
@@ -18,7 +16,7 @@ export default function Contact() {
           <h1 className="text-2xl font-bold dark:text-slate-200 pb-2">Thanks for taking the time to explore my portfolio!
           </h1>
           <p className=''>
-            Whether you have a potential job opportunity, an exciting project collaboration in mind, or just want to chat about web development, I&apos;d love to hear from you. Don&apos;t hesitate to reach out using the contact form below or through my <a href='https://www.linkedin.com/in/michael-mcguiness-react/' className='text-blue-600 hover:text-blue-800 visited:text-purple-600'>LinkedIn</a> or <a href="https://github.com/mike-v2/" className='text-blue-600 hover:text-blue-800 visited:text-purple-600'>GitHub</a> profiles, or via email at <a href='https://www.mikemcguiness@protonmail.com' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mikemcguiness@protonmail.com</a>.
+            Whether you have a potential job opportunity, an exciting project collaboration in mind, or just want to chat about web development, I&apos;d love to hear from you. Don&apos;t hesitate to reach out using the contact form below or through my <a href='https://www.linkedin.com/in/michael-mcguiness-react/' target='_blank' className='text-blue-600 hover:text-blue-800 visited:text-purple-600'>LinkedIn</a> or <a href="https://github.com/mike-v2/" target='_blank' className='text-blue-600 hover:text-blue-800 visited:text-purple-600'>GitHub</a> profiles, or via email at <a href='mailto:mikemcguiness@protonmail.com' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mikemcguiness@protonmail.com</a>.
           </p>
           <p>
             I&apos;m always open to new ideas, interesting challenges, and opportunities to expand my skills and network. I&apos;m looking forward to connecting with you!

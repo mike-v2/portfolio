@@ -71,10 +71,10 @@ export default function Projects() {
                 <div className='mt-8 flex flex-col lg:flex-row lg:gap-x-4 w-full mx-auto'>
                   <div className='lg:basis-7/12 xl:basis-1/2 relative'>
                     <div className='text-sm absolute top-0 left-0 -translate-y-6'>
-                      <a href={project.link} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5'>
+                      <a href={project.link} target='_blank' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5'>
                         {linkText}
                       </a>
-                      <a href={project.source} className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>
+                      <a href={project.source} target='_blank' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>
                         Source
                       </a>
                     </div>
@@ -153,13 +153,13 @@ export default function Projects() {
                                 if (word === 'OpenCV') {
                                   return (
                                     <span key={wordIndex}>
-                                      <a href='https://opencv.org/' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>{word}</a>{' '}
+                                      <a href='https://opencv.org/' target='_blank' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>{word}</a>{' '}
                                     </span>
                                   )
                                 } else if (word === 'CRAFT') {
                                   return (
                                     <span key={wordIndex}>
-                                      <a href='https://github.com/clovaai/CRAFT-pytorch' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>{word}</a>{' '}
+                                      <a href='https://github.com/clovaai/CRAFT-pytorch' target='_blank' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>{word}</a>{' '}
                                     </span>
                                   )
                                 } else {

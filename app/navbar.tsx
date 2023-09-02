@@ -54,7 +54,7 @@ export default function NavBar() {
       <div className="basis-1/2 flex pl-4 pb-4 gap-x-6 md:gap-x-12 md:pl-12 mt-auto">
         {icons && icons.map((icon, i) => {
           return (
-            <a href={icon.link} key={i}>
+            <a href={icon.link} target='_blank' key={i}>
               <Image src={icon.imagePath} className="hover:scale-125 transition duration-250 dark:invert" width={30} height={30} alt={`${icon.name} logo`} key={i} />
             </a>
           )
