@@ -27,34 +27,73 @@ export default function Resume() {
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
         <div className='py-6'>
-          <h2 className='font-bold'>
-            PROFILE SUMMARY
+          <h2 className='font-bold pb-4'>
+            PROJECTS
           </h2>
-          <p className='pt-4'>
-            Innovative Front-End Developer with a diverse background in technologies ranging from VR game development to neural networks. Excels in React, Next.js, and Tailwind CSS with experience in developing interactive websites and applications. Passionate about solving complex problems and learning new technologies.
-          </p>
+          <div className="flex flex-col gap-y-4">
+            <div className=''>
+              <div className="flex">
+                <h4 className='font-bold pb-2'>
+                  Harry Howard&apos;s Journals
+                </h4>
+                <div className='ms-auto'>
+                  <div className="flex gap-x-4 text-sm">
+                    <a href='https://journal-search.vercel.app/' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Link</a>
+                    <a href='https://github.com/mike-v2/journal-search' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Source</a>
+                  </div>
+                </div>
+              </div>
+
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Engineered an advanced search engine capable of analyzing over a thousand documents for conceptual similarity, not just keyword matches. Implemented with OpenAI embeddings and Google Cloud Storage.</li>
+                <li>Introduced a chat function for intuitive natural language querying, revolutionizing the accessibility of vast journal data. Integrated OpenAI embeddings with Vercel’s AI library for real-time data streaming.</li>
+                <li>Incorporated community features for sharing and discussion, fostering engagement around interwoven journal narratives. Managed data with Prisma/Supabase and secured authentication using next-auth and Google Sign-In.</li>
+                <li>Developed a custom AI solution to transcribe cursive handwriting, improving accuracy from 60% to 90%. Utilized Python, OpenCV, CRAFT AI, Google Vision API, and OpenAI’s GPT-4.</li>
+                <li>Employed AI to preprocess and summarize journal entries, enhancing the organization and presentation. Leveraged Python and OpenAI API.</li>
+              </ul>
+            </div>
+
+            <div className=''>
+              <div className="flex">
+                <h4 className='font-bold pb-2'>
+                  Journal Transcription Assistant
+                </h4>
+                <div className='ms-auto'>
+                  <div className="flex gap-x-4 text-sm">
+                    <a href='https://mike-v2.github.io/journal-transcribe/' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Link (desktop only)</a>
+                    <a href='https://github.com/mike-v2/journal-transcribe' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Source</a>
+                  </div>
+                </div>
+              </div>
+
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Developed a system to process, index, and store journal images, serving them for user transcription. Incorporated annotation tools to enrich data capture. Data management done using Firebase.</li>
+                <li>Implemented speech-to-text functionality enhanced with punctuation recognition through regular expressions. Utilized the React Speech Recognition library.</li>
+              </ul>
+            </div>
+            <div className=''>
+              <div className="flex">
+                <h4 className='font-bold pb-2'>
+                  Good News!
+                </h4>
+                <div className='ms-auto'>
+                  <div className="flex gap-x-4 text-sm">
+                    <a href='https://good-news-three.vercel.app/' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Link</a>
+                    <a href='https://github.com/mike-v2/good-news' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Source</a>
+                  </div>
+                </div>
+              </div>
+
+              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
+                <li>Established an automated data collection and processing pipeline, minimizing manual intervention, with Google Cloud Functions, Cloud Scheduler, and Firebase.</li>
+                <li>Automated the collection of global news stories using the Mediastack API and employed OpenAI API to assess and filter articles based on positivity and relevance.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
-
-
-        <div className='py-6'>
-          <h2 className='font-bold'>
-            TECHNICAL SKILLS
-          </h2>
-          <ul className='flex flex-col gap-y-2 pt-4'>
-            <li><span className='font-bold'>Front-End:</span> HTML, CSS, JavaScript, Typescript, React, Next.js, Tailwind CSS, Jest, Git</li>
-            <li><span className='font-bold'>Database Management:</span> Prisma, Supabase, Firebase</li>
-            <li><span className='font-bold'>Cloud Services:</span> Google Cloud Storage, Google Cloud Run</li>
-            <li><span className='font-bold'>APIs:</span> OpenAI API, Google Maps API, Yelp API</li>
-            <li><span className='font-bold'>Others:</span> Python, Unity, C#, Blender</li>
-          </ul>
-        </div>
-
-        <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
-        <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
-
 
         <div className='py-6'>
           <h2 className='font-bold'>
@@ -63,7 +102,7 @@ export default function Resume() {
           <div className="flex flex-col gap-y-2 pt-4">
             <div className='flex'>
               <p>
-                Bachelor of Science in Mathematics, Cum Laude
+                <span className='font-bold'>Bachelor of Science in Mathematics</span>, Cum Laude
               </p>
               <div className="divider divider-horizontal"></div>
               <p>
@@ -77,7 +116,7 @@ export default function Resume() {
             </div>
             <div className='flex'>
               <p>
-                Bachelor of Science in Biotechnology, Cum Laude
+                <span className='font-bold'>Bachelor of Science in Biotechnology</span>, Cum Laude
               </p>
               <div className="divider divider-horizontal"></div>
               <p>
@@ -94,7 +133,6 @@ export default function Resume() {
 
         <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
-
 
         <div className='py-6'>
           <h2 className='font-bold'>
@@ -123,49 +161,17 @@ export default function Resume() {
         <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
         <div className="divider my-0 before:bg-green-600 after:bg-green-600"></div>
 
-
         <div className='py-6'>
-          <h2 className='font-bold pb-4'>
-            PROJECTS
+          <h2 className='font-bold'>
+            TECHNICAL SKILLS
           </h2>
-          <div className="flex flex-col gap-y-4">
-            <div className=''>
-              <h4 className='font-bold pb-2'>
-                Harry Howard&apos;s Journals
-              </h4>
-              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-                <li>Created a user-focused platform for browsing and searching journal entries, with state-of-the-art AI that enables users to explore a large dataset with natural language</li>
-                <li>Project Link: <a href="https://journal-search.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>journal-search.vercel.app</a></li>
-              </ul>
-            </div>
-            <div className=''>
-              <h4 className='font-bold pb-2'>
-                Journal Transcribe
-              </h4>
-              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-                <li>Designed a system to process, index, and store images of journal pages, featuring user input, zoom functionality, and speech-to-text capabilities</li>
-                <li>Project Link: <a href="https://mike-v2.github.io/journal-transcribe/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mike-v2.github.io/journal-transcribe</a></li>
-              </ul>
-            </div>
-            <div className=''>
-              <h4 className='font-bold pb-2'>
-                Good News!
-              </h4>
-              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-                <li>Built a web application to aggregate global news through reputable aggregator APIs, focusing on positive developments in construction, healthcare, education, and peace. Incorporated OpenAI&apos;s GPT for advanced AI analysis, highlighting stories of optimism and progress</li>
-                <li>Project Link: <a href="https://good-news-three.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>good-news-three.vercel.app</a></li>
-              </ul>
-            </div>
-            <div className=''>
-              <h4 className='font-bold pb-2'>
-                Service Now Auto Repair
-              </h4>
-              <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-                <li>Developed a responsive web application with real-time review data and integrated Google Maps</li>
-                <li>Project Link: <a href="https://service-now-auto-repair.vercel.app/" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' >service-now-auto-repair.vercel.app</a></li>
-              </ul>
-            </div>
-          </div>
+          <ul className='flex flex-col gap-y-2 pt-4'>
+            <li><span className='font-bold'>Front-End:</span> HTML, CSS, JavaScript, Typescript, React, Next.js, Tailwind CSS, Jest, Git</li>
+            <li><span className='font-bold'>Database Management:</span> Prisma, Supabase (PostgreSQL), Firebase</li>
+            <li><span className='font-bold'>Cloud Services:</span> Google Cloud Storage, Google Cloud Run, Google Cloud Functions</li>
+            <li><span className='font-bold'>APIs:</span> OpenAI API, Google Maps API, Yelp API</li>
+            <li><span className='font-bold'>Others:</span> Python, Unity, C#, Blender</li>
+          </ul>
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
@@ -173,11 +179,12 @@ export default function Resume() {
 
         <div className='py-6'>
           <h2 className='font-bold'>
-            INTERESTS
+            RESEARCH CONTRIBUTIONS
           </h2>
-          <p className='pt-4'>
-            Gardening, Cooking, Exercising
-          </p>
+          <ul className='flex flex-col gap-y-2 pt-4'>
+            <li>Rana V Smalling, Don A Delker, Yuxia Zhang, Natalia Nieto, <span className='font-bold'>Michael S McGuiness</span>, Shuanghu Liu, Scott L Friedman, Curt H Hagedorn, Li Wang. "Genome-wide transcriptome analysis identifies novel gene signatures implicated in human
+              chronic liver disease" - <span className='italic'>American Journal of Physiology - Gastrointestinal and Liver Physiology</span>, 2013.</li>
+          </ul>
         </div>
       </div>
     </main>

@@ -21,10 +21,7 @@ export default function Contact() {
           <p>
             I&apos;m always open to new ideas, interesting challenges, and opportunities to expand my skills and network. I&apos;m looking forward to connecting with you!
           </p>
-
         </div>
-
-
 
         <label htmlFor="fullname" className="text-gray-500 font-light mt-8 dark:text-gray-50">Name</label>
         <input type="text" name="fullname" className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
