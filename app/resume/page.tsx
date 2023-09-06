@@ -49,7 +49,7 @@ export default function Resume() {
                 <li>Introduced a chat function for intuitive natural language querying, revolutionizing the accessibility of vast journal data. Integrated OpenAI embeddings with Vercel’s AI library for real-time data streaming.</li>
                 <li>Incorporated community features for sharing and discussion, fostering engagement around interwoven journal narratives. Managed data with Prisma/Supabase and secured authentication using next-auth and Google Sign-In.</li>
                 <li>Developed a custom AI solution to transcribe cursive handwriting, improving accuracy from 60% to 90%. Utilized Python, OpenCV, CRAFT AI, Google Vision API, and OpenAI’s GPT-4.</li>
-                <li>Employed AI to preprocess and summarize journal entries, enhancing the organization and presentation. Leveraged Python and OpenAI API.</li>
+                <li>Employed AI to preprocess and summarize journal entries, enhancing organization and presentation. Leveraged Python and OpenAI API.</li>
               </ul>
             </div>
 
@@ -100,33 +100,31 @@ export default function Resume() {
             EDUCATION
           </h2>
           <div className="flex flex-col gap-y-2 pt-4">
-            <div className='flex'>
+            <div className='flex justify-between'>
               <p>
-                <span className='font-bold'>Bachelor of Science in Mathematics</span>, Cum Laude
+                <span className='font-bold sm:whitespace-nowrap'>Bachelor of Science in Mathematics</span>, Cum Laude
               </p>
               <div className="divider divider-horizontal"></div>
               <p>
                 Washington State University
               </p>
               <div className="divider divider-horizontal"></div>
-              <p>
+              <p className='font-bold sm:whitespace-nowrap'>
                 2007 - 2010
               </p>
-              <div className="divider divider-horizontal"></div>
             </div>
-            <div className='flex'>
+            <div className='flex justify-between'>
               <p>
-                <span className='font-bold'>Bachelor of Science in Biotechnology</span>, Cum Laude
+                <span className='font-bold sm:whitespace-nowrap'>Bachelor of Science in Biotechnology</span>, Cum Laude
               </p>
               <div className="divider divider-horizontal"></div>
               <p>
                 Washington State University
               </p>
               <div className="divider divider-horizontal"></div>
-              <p>
+              <p className='font-bold sm:whitespace-nowrap'>
                 2007 - 2010
               </p>
-              <div className="divider divider-horizontal"></div>
             </div>
           </div>
         </div>
@@ -138,7 +136,7 @@ export default function Resume() {
           <h2 className='font-bold'>
             WORK EXPERIENCE
           </h2>
-          <div className='flex pt-4'>
+          <div className='flex justify-between pt-4'>
             <p className='font-bold'>
               Tutor
             </p>
@@ -147,7 +145,7 @@ export default function Resume() {
               Various organizations and Freelance
             </p>
             <div className="divider divider-horizontal"></div>
-            <p>
+            <p className='font-bold'>
               2008 - present
             </p>
           </div>
