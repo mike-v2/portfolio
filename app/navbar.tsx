@@ -38,6 +38,11 @@ const icons = [
     name: 'Email',
     link: 'mailto:mikemcguiness@protonmail.com',
     imagePath: '/images/email-logo.svg'
+  },
+  {
+    name: 'YouTube',
+    link: 'https://www.youtube.com/channel/UCSacwkTC8liUfirZuPEOuew',
+    imagePath: '/images/youtube-logo.svg'
   }
 ]
 
