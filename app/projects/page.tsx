@@ -9,7 +9,7 @@ const projectData = [
     summaryHeader: 'Using AI to Make Big Data More Accessible',
     summary: "I'm proud to introduce Harry Howard's Journals, an advanced web application that redefines the way we explore historical journal entries. Using Next.js, Python, and AI tools, the app processes and analyzes entries from the 1930s and 40s. These entries are enhanced by AI and made easily accessible, putting a treasure trove of historical data at your fingertips.",
     features: ["Harry has been brought to life with state-of-the-art AI technology. Ask Harry detailed questions about the journals, or just chat! (powered by ChatGPT)", "Read journal entries one page at a time or easily skip around", "Search function for journal entries", "AI-generated topics for each entry allow users to understand an entry at a glance and link together stories woven through multiple entries", "Sign in with Google to keep track of pages read, save special passages and make posts to discuss entries with others"],
-    primaryTools: ["Next.js", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Prisma", "Supabase", "ElasticSearch", "Lunr Search"],
+    primaryTools: ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Prisma", "Supabase", "ElasticSearch", "Lunr Search"],
     secondaryTools: ["Use Python library OpenCV to preprocess images", "Run CRAFT AI locally to split images into lines", "Apply Google Vision API on lines", "Use GPT-4 to reconstruct journal entry from Google Vision output", "Generate metadata on journal entries with GPT-3.5 (ChatGPT) API", "Store data with Google Cloud Storage", "Run python scripts with Google Cloud Run"]
   },
   {
@@ -20,7 +20,7 @@ const projectData = [
     summaryHeader: 'Finding Positive News Stories with AI',
     summary: "Good News! aggregates global news stories through reputable news aggregator APIs, meticulously collecting articles related to building and construction projects, as well as advancements in healthcare, education, and peace. To identify the most uplifting and positive stories, I employ advanced AI analysis, powered by OpenAI's GPT. This sophisticated natural language processing helps to filter and present news that sparks optimism and inspiration, shedding light on the progress and goodwill that is constantly unfolding around the world.",
     features: ["Aggregates positive news stories from around the world related to construction projects, healthcare advancements, educational progress, and peace initiatives", "Interactable world map representing source countries", "Updated daily with new articles", "Automated data collection and processing pipeline that requires minimal manual intervention", "Utilizes OpenAI's GPT API to evaluate and filter news stories based on positivity and relevance to the chosen categories"],
-    primaryTools: ["Next.js", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Firebase", "Google Cloud Functions", "Mediastack API"],
+    primaryTools: ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS", "Daisy UI", "ChatGPT API", "Firebase", "Google Cloud Functions", "Mediastack API"],
     secondaryTools: ["React Simple Maps"]
   },
   {
@@ -32,7 +32,7 @@ const projectData = [
     summaryHeader: 'Efficiently Transcribe Journal Entries',
     summary: "A kind of Content Management Application that serves images of journal pages to users and provides the tools to quickly and conveniently transcribe them. The transcription is indexed and stored in a database so that another website can analyze and display them.",
     features: ["Process, index, and store images of journal pages", "Serve images of journal pages from firebase database", "Speech-to-text with added support for punctuation", "Click to zoom image for hard-to-read text", "Special annotation tools to enrich the text data"],
-    primaryTools: ["React", "Firebase", "GitHub"],
+    primaryTools: ["React", "JavaScript", "Firebase", "GitHub"],
     secondaryTools: ["React Speech Recognition", "React Inner Image Zoom"]
   },
   {
@@ -43,7 +43,7 @@ const projectData = [
     summaryHeader: 'Small Business Redesign',
     summary: "An update of an old website to make it clean, responsive, and consistent with modern design principles",
     features: ["Splash page", "Navbar and Footer", "Responsive", "Realtime review data", "Embedded Google Map"],
-    primaryTools: ["Next.js", "Bootstrap", "GitHub"],
+    primaryTools: ["React", "Next.js", "Node.js", "TypeScript", "Bootstrap", "GitHub"],
     secondaryTools: ["Google Places API", "Google Maps API", "Yelp API"]
   }
 ]
@@ -122,6 +122,9 @@ export default function Projects() {
                                                     tool === 'Lunr Search' ? '/images/lunrjs-logo.svg' :
                                                       tool === 'Google Cloud Functions' ? '/images/cloud_functions.png' :
                                                         tool === 'Mediastack API' ? '/images/mediastack.png' :
+                                                          tool === "JavaScript" ? '/images/js-logo.svg' :
+                                                            tool === 'TypeScript' ? '/images/typescript-logo.svg' :
+                                                              tool === 'Node.js' ? '/images/node-logo.svg' :
                                               '';
                             const invert = tool === 'Next.js' ||
                               tool === 'GitHub' ||
