@@ -38,7 +38,7 @@ export default function Resume() {
                 </h4>
                 <div className='ms-auto'>
                   <div className="flex gap-x-4 text-sm">
-                    <a href='https://medium.com/@mmcguiness8700/recreating-react-96e8a01d4cb5' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Blog</a>
+                    <a href='https://medium.com/@mmcguiness8700/recreating-react-96e8a01d4cb5' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Article</a>
                     <a href='https://youtu.be/BU37lgD28lU' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Video</a>
                     <a href='https://github.com/mike-v2/react-from-scratch' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Source</a>
                   </div>
@@ -46,9 +46,9 @@ export default function Resume() {
               </div>
 
               <ul className='flex flex-col gap-y-2 list-disc ps-8'>
-                <li>Demonstrated strong technical proficiency by recreating React's core functions, including createElement and render, to understand the intricacies of JSX transformation and virtual DOM.</li>
+                <li>Demonstrated strong technical proficiency by recreating React&apos;s core functions, including createElement and render, to understand the intricacies of JSX transformation and virtual DOM.</li>
                 <li>Showcased effective problem-solving and self-learning skills through the hands-on experience of developing custom hooks, such as useState and useEffect, to manage state and side effects in functional components.</li>
-                <li>Enhanced communication skills by documenting the project's process and results in a comprehensive Medium article and a YouTube video, making complex technical information accessible and understandable.</li>
+                <li>Enhanced communication skills by documenting the project&apos;s process and results in a comprehensive Medium article and a YouTube video, making complex technical information accessible and understandable.</li>
               </ul>
             </div>
 
