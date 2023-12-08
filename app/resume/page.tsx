@@ -1,7 +1,7 @@
 export default function Resume() {
   return (
     <main className="">
-      <div className='w-full px-2 md:px-0 md:w-5/6 lg:w-3/4 mx-auto mt-12'>
+      <div className='w-full max-w-5xl px-2 md:px-0 md:w-5/6 lg:w-3/4 mx-auto mt-12'>
         <div className='flex'>
           <h4 className='font-bold text-xl'>
             Michael McGuiness
