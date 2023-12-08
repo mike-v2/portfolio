@@ -2,23 +2,13 @@ export default function Resume() {
   return (
     <main className="">
       <div className='w-full px-2 md:px-0 md:w-5/6 lg:w-3/4 mx-auto mt-12'>
-        <div className='py-6'>
+        <div className='flex'>
           <h4 className='font-bold text-xl'>
             Michael McGuiness
           </h4>
-          <div className='flex flex-col lg:flex-row pt-4'>
-            <p>Vancouver, WA</p>
-            <div className="divider lg:divider-horizontal my-0 dark:before:bg-slate-600 dark:after:bg-slate-600"></div>
-            <a href='mailto:mikemcguiness@protonmail.com' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>mikemcguiness@protonmail.com</a>
-            <div className="divider lg:divider-horizontal my-0 dark:before:bg-slate-600 dark:after:bg-slate-600"></div>
-            <p>
-              LinkedIn: <a href='http://www.linkedin.com/in/michael-mcguiness-react' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>linkedin.com/in/michael-mcguiness-react</a>
-            </p>
-            <div className="divider lg:divider-horizontal my-0 dark:before:bg-slate-600 dark:after:bg-slate-600"></div>
-            <p>
-              GitHub: <a href='https://github.com/mike-v2' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>github.com/mike-v2</a>
-            </p>
-          </div>
+          <p className="flex flex-col justify-center ms-auto">
+            Vancouver, WA
+          </p>
         </div>
 
         <div className="divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400"></div>
