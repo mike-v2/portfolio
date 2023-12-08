@@ -167,7 +167,7 @@ export default function Resume() {
             </p>
             <div className="divider divider-horizontal"></div>
             <p className='font-bold'>
-              2008 - present
+              2008 - 2023
             </p>
           </div>
           <ul className='flex flex-col gap-y-2 list-disc ps-8 pt-4'>
