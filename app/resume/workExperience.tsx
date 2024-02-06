@@ -26,7 +26,7 @@ export default function WorkExperience() {
   return (
     <div className="py-6">
       <h2 className="font-bold">WORK EXPERIENCE</h2>
-      {jobData && jobData.map((job) => <Job {...job} />)}
+      {jobData && jobData.map((job) => <Job key={job.date} {...job} />)}
     </div>
   );
 }
@@ -42,7 +42,10 @@ function Job({ title, company, date, description }: JobData) {
         <p className="font-bold">{date}</p>
       </div>
       <ul className="flex flex-col gap-y-2 list-disc ps-8 pt-4">
-        {description && description.map((item) => <li>{item}</li>)}
+        {description &&
+          description.map((item) => (
+            <li key={item.substring(0, 20)}>{item}</li>
+          ))}
       </ul>
     </>
   );

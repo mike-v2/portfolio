@@ -39,6 +39,7 @@ export default function OpenSource() {
               {flutterPRs &&
                 flutterPRs.map((pr) => (
                   <a
+                    key={pr.name}
                     href={pr.href}
                     className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
                   >
