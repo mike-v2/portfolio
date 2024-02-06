@@ -1,3 +1,30 @@
+const flutterPRs = [
+  {
+    href: "https://github.com/flutter/packages/pull/5347",
+    name: "PR#5347",
+  },
+  {
+    href: "https://github.com/flutter/packages/pull/5478",
+    name: "PR#5478",
+  },
+  {
+    href: "https://github.com/flutter/packages/pull/5496",
+    name: "PR#5496",
+  },
+  {
+    href: "https://github.com/flutter/packages/pull/5498",
+    name: "PR#5498",
+  },
+  {
+    href: "https://github.com/flutter/packages/pull/5521",
+    name: "PR#5521",
+  },
+  {
+    href: "https://github.com/flutter/packages/pull/5567",
+    name: "PR#5567",
+  },
+];
+
 export default function OpenSource() {
   return (
     <div className="py-6">
@@ -8,21 +35,16 @@ export default function OpenSource() {
             <h4 className="font-bold pb-2">
               Flutter Packages Repository (Contributor)
             </h4>
-            <div className="ms-auto">
-              <div className="flex gap-x-4 text-sm">
-                <a
-                  href="https://github.com/flutter/packages/pull/5347"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
-                  PR#5347
-                </a>
-                <a
-                  href="https://github.com/flutter/packages/pull/5498"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
-                  PR#5498
-                </a>
-              </div>
+            <div className="flex flex-wrap justify-end gap-x-4 text-sm">
+              {flutterPRs &&
+                flutterPRs.map((pr) => (
+                  <a
+                    href={pr.href}
+                    className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                  >
+                    {pr.name}
+                  </a>
+                ))}
             </div>
           </div>
 
@@ -38,8 +60,9 @@ export default function OpenSource() {
               environment, and contributed to a widely-used codebase.
             </li>
             <li>
-              <span className="font-bold">Skills:</span> Flutter, Documentation
-              Standards, Git
+              Enhanced tool support by adding functionality for .java, .gradle,
+              .sh, and .m files, integrating 9 commits into the main branch (PR
+              #5567), improving language versatility and developer experience.
             </li>
           </ul>
         </div>
