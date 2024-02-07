@@ -65,7 +65,9 @@ export default function Projects() {
 
       <div className="mb-16">
         {projectData &&
-          projectData.map((project) => <ProjectCard project={project} />)}
+          projectData.map((project) => (
+            <ProjectCard key={project.imagePath} project={project} />
+          ))}
       </div>
     </main>
   );
@@ -76,10 +78,7 @@ function ProjectCard({ project }: { project: ProjectData }) {
   if (project.desktopOnly) linkText += " (desktop only)";
 
   return (
-    <div
-      className="collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg "
-      key={project.imagePath}
-    >
+    <div className="collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg ">
       <input type="checkbox" />
       <div className="collapse-title rounded-lg flex flex-col">
         <h2 className="text-3xl">{project.title}</h2>
