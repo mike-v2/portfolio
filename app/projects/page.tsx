@@ -203,7 +203,7 @@ const toolIcons: ToolIconData = {
     src: "/images/tailwind-logo.svg",
   },
   "ChatGPT API": {
-    src: "/images/nextjs-logo.svg",
+    src: "/images/openai-logo.svg",
     invert: true,
   },
   Firebase: {
