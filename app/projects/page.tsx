@@ -265,6 +265,7 @@ export default function Projects() {
 function ProjectCard({ project }: { project: ProjectData }) {
   let linkText = "Link";
   if (project.desktopOnly) linkText += " (desktop only)";
+
   return (
     <div
       className="collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg "
@@ -281,39 +282,17 @@ function ProjectCard({ project }: { project: ProjectData }) {
           <div className="lg:basis-7/12 xl:basis-1/2 relative">
             <div className="text-sm absolute top-0 left-0 -translate-y-6">
               {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
-                >
-                  {linkText}
-                </a>
+                <ProjectLink name={linkText} href={project.link} />
               )}
               {project.article && (
-                <a
-                  href={project.article}
-                  target="_blank"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
-                >
-                  Article
-                </a>
+                <ProjectLink name="Article" href={project.article} />
               )}
               {project.video && (
-                <a
-                  href={project.video}
-                  target="_blank"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
-                >
-                  Video
-                </a>
+                <ProjectLink name="Video" href={project.video} />
               )}
-              <a
-                href={project.source}
-                target="_blank"
-                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-              >
-                Source
-              </a>
+              {project.source && (
+                <ProjectLink name="Source" href={project.source} />
+              )}
             </div>
             <Image
               src={project.imagePath}
@@ -340,6 +319,18 @@ function ProjectCard({ project }: { project: ProjectData }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function ProjectLink({ name, href }: { name: string; href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
+    >
+      {name}
+    </a>
   );
 }
 
