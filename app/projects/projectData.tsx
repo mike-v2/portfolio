@@ -35,7 +35,7 @@ export const projectData: ProjectData[] = [
       </span>
     ),
     features: (
-      <ul className="list-disc ps-8">
+      <ul className="list-disc ps-4">
         <li key="createElement">
           <span className="font-bold">createElement</span> transforms JSX into
           ReactElement objects
@@ -54,7 +54,13 @@ export const projectData: ProjectData[] = [
       </ul>
     ),
     primaryTools: ["TypeScript", "Parcel"],
-    secondaryTools: ["Jest", "Prettier", "GitHub"],
+    secondaryTools: (
+      <ul className="list-disc ps-4">
+        <li>Jest</li>
+        <li>Prettier</li>
+        <li>GitHub</li>
+      </ul>
+    ),
   },
   {
     imagePath: "/images/journal-search-chat.jpg",
@@ -83,7 +89,7 @@ export const projectData: ProjectData[] = [
       "Supabase",
     ],
     secondaryTools: (
-      <ul className="list-disc ps-8">
+      <ul className="list-disc ps-4">
         <li>
           Use Python library{" "}
           <a
@@ -143,7 +149,11 @@ export const projectData: ProjectData[] = [
       "Google Cloud Functions",
       "Mediastack API",
     ],
-    secondaryTools: ["React Simple Maps"],
+    secondaryTools: (
+      <ul className="list-disc ps-4">
+        <li>React Simple Maps</li>
+      </ul>
+    ),
   },
   {
     imagePath: "/images/journal-transcribe-screenshot.jpg",
@@ -187,6 +197,12 @@ export const projectData: ProjectData[] = [
       "Bootstrap",
       "GitHub",
     ],
-    secondaryTools: ["Google Places API", "Google Maps API", "Yelp API"],
+    secondaryTools: (
+      <ul className="list-disc ps-4">
+        <li>Google Places API</li>
+        <li>Google Maps API</li>
+        <li>Yelp API</li>
+      </ul>
+    ),
   },
 ];
