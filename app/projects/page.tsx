@@ -36,23 +36,25 @@ const projectData: ProjectData[] = [
         for those interested in diving deeper.
       </span>
     ),
-    features: [
-      <p key={0}>
-        <span className="font-bold">createElement</span> transforms JSX into
-        ReactElement objects
-      </p>,
-      <p key={1}>
-        <span className="font-bold">render</span> brings ReactElements to life
-        on the DOM
-      </p>,
-      <p key={2}>
-        <span className="font-bold">useState</span> manages state
-      </p>,
-      <p key={3}>
-        <span className="font-bold">useEffect</span> synchronizes the component
-        with an external system
-      </p>,
-    ],
+    features: (
+      <ul className="list-disc ps-8">
+        <li key="createElement">
+          <span className="font-bold">createElement</span> transforms JSX into
+          ReactElement objects
+        </li>
+        <li key="render">
+          <span className="font-bold">render</span> brings ReactElements to life
+          on the DOM
+        </li>
+        <li key="useState">
+          <span className="font-bold">useState</span> manages state
+        </li>
+        <li key="useEffect">
+          <span className="font-bold">useEffect</span> synchronizes the
+          component with an external system
+        </li>
+      </ul>
+    ),
     primaryTools: ["TypeScript", "Parcel"],
     secondaryTools: ["Jest", "Prettier", "GitHub"],
   },
@@ -82,35 +84,39 @@ const projectData: ProjectData[] = [
       "Prisma",
       "Supabase",
     ],
-    secondaryTools: [
-      <p>
-        Use Python library{" "}
-        <a
-          href="https://opencv.org/"
-          target="_blank"
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-        >
-          OpenCV
-        </a>{" "}
-        to preprocess images
-      </p>,
-      <p>
-        Run{" "}
-        <a
-          href="https://github.com/clovaai/CRAFT-pytorch"
-          target="_blank"
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-        >
-          CRAFT
-        </a>{" "}
-        AI locally to split images into lines
-      </p>,
-      "Apply Google Vision API on lines",
-      "Use GPT-4 to reconstruct journal entry from Google Vision output",
-      "Generate metadata on journal entries with GPT-3.5 (ChatGPT) API",
-      "Store data with Google Cloud Storage",
-      "Run python scripts with Google Cloud Run",
-    ],
+    secondaryTools: (
+      <ul className="list-disc ps-8">
+        <li>
+          Use Python library{" "}
+          <a
+            href="https://opencv.org/"
+            target="_blank"
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+          >
+            OpenCV
+          </a>{" "}
+          to preprocess images
+        </li>
+        <li>
+          Run{" "}
+          <a
+            href="https://github.com/clovaai/CRAFT-pytorch"
+            target="_blank"
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+          >
+            CRAFT
+          </a>{" "}
+          AI locally to split images into lines
+        </li>
+        <li>Apply Google Vision API on lines</li>
+        <li>
+          Use GPT-4 to reconstruct journal entry from Google Vision output
+        </li>
+        <li>Generate metadata on journal entries with GPT-3.5 (ChatGPT) API</li>
+        <li>Store data with Google Cloud Storage</li>
+        <li>Run python scripts with Google Cloud Run</li>
+      </ul>
+    ),
   },
   {
     imagePath: "/images/good-news.jpg",
@@ -250,155 +256,137 @@ export default function Projects() {
 
       <div className="mb-16">
         {projectData &&
-          projectData.map((project) => {
-            let linkText = "Link";
-            if (project.desktopOnly) linkText += " (desktop only)";
-            return (
-              <div
-                className="collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg "
-                key={project.imagePath}
-              >
-                <input type="checkbox" />
-                <div className="collapse-title rounded-lg flex flex-col">
-                  <h2 className="text-3xl">{project.title}</h2>
-                  <h4 className="text-lg italic">{project.subtitle}</h4>
-                </div>
-                <div className="collapse-content">
-                  <div className="divider"></div>
-                  <div className="mt-8 flex flex-col lg:flex-row lg:gap-x-4 w-full mx-auto">
-                    <div className="lg:basis-7/12 xl:basis-1/2 relative">
-                      <div className="text-sm absolute top-0 left-0 -translate-y-6">
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
-                          >
-                            {linkText}
-                          </a>
-                        )}
-                        {project.article && (
-                          <a
-                            href={project.article}
-                            target="_blank"
-                            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
-                          >
-                            Article
-                          </a>
-                        )}
-                        {project.video && (
-                          <a
-                            href={project.video}
-                            target="_blank"
-                            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
-                          >
-                            Video
-                          </a>
-                        )}
-                        <a
-                          href={project.source}
-                          target="_blank"
-                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                        >
-                          Source
-                        </a>
-                      </div>
-                      <Image
-                        src={project.imagePath}
-                        className="rounded-xl h-auto mx-auto xl:mx-0 xl:ml-auto"
-                        width={800}
-                        height={800}
-                        alt="profile pic"
-                      />
-                    </div>
-                    <div className="w-11/12 lg:basis-5/12 xl:basis-1/2 max-w-xl mx-auto xl:mx-0 xl:mr-auto lg:pr-8 mt-8 lg:mt-0">
-                      <div
-                        tabIndex={0}
-                        className="collapse collapse-arrow bg-base-200 border border-green-600"
-                      >
-                        <summary className="collapse-title text-xl">
-                          Summary
-                        </summary>
-                        <div className="collapse-content">
-                          <div className="px-4">
-                            <p className="pt-1">{project.summary}</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        tabIndex={0}
-                        className="collapse collapse-arrow bg-base-200 mt-1.5 border border-green-600"
-                      >
-                        <summary className="collapse-title text-xl">
-                          Main Features
-                        </summary>
-                        <div className="collapse-content">
-                          <ul className="list-disc ps-8">
-                            {project.features &&
-                              project.features.map((feature, j) => {
-                                return <li key={j}>{feature}</li>;
-                              })}
-                          </ul>
-                        </div>
-                      </div>
-                      <div
-                        tabIndex={0}
-                        className="collapse collapse-arrow bg-base-200 mt-1.5 border border-green-600"
-                      >
-                        <summary className="collapse-title text-xl">
-                          Primary Tools Used
-                        </summary>
-                        <div className="collapse-content">
-                          <ul className="flex flex-col gap-y-2 ps-8">
-                            {project.primaryTools &&
-                              project.primaryTools.map((tool, i) => {
-                                return (
-                                  <li key={i} className="">
-                                    <div className="flex">
-                                      {toolIcons[tool].src !== "" && (
-                                        <Image
-                                          src={toolIcons[tool].src}
-                                          className={`-ms-8 mr-2 ${
-                                            toolIcons[tool].invert
-                                              ? "dark:invert"
-                                              : ""
-                                          }`}
-                                          width={25}
-                                          height={25}
-                                          alt={`${tool} logo`}
-                                        />
-                                      )}
-                                      <p className="">{tool}</p>
-                                    </div>
-                                  </li>
-                                );
-                              })}
-                          </ul>
-                        </div>
-                      </div>
-                      <div
-                        tabIndex={0}
-                        className="collapse collapse-arrow bg-base-200 mt-1.5 border border-green-600"
-                      >
-                        <summary className="collapse-title text-xl">
-                          Secondary Tools Used
-                        </summary>
-                        <div className="collapse-content">
-                          <ul className="list-disc ps-8">
-                            {project.secondaryTools &&
-                              project.secondaryTools.map((secondary, i) => {
-                                return <li key={i}>{secondary}</li>;
-                              })}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          projectData.map((project) => <ProjectCard project={project} />)}
       </div>
     </main>
+  );
+}
+
+function ProjectCard({ project }: { project: ProjectData }) {
+  let linkText = "Link";
+  if (project.desktopOnly) linkText += " (desktop only)";
+  return (
+    <div
+      className="collapse border-2 border-black rounded-lg w-11/12 mx-auto p-2 mt-12 shadow-lg "
+      key={project.imagePath}
+    >
+      <input type="checkbox" />
+      <div className="collapse-title rounded-lg flex flex-col">
+        <h2 className="text-3xl">{project.title}</h2>
+        <h4 className="text-lg italic">{project.subtitle}</h4>
+      </div>
+      <div className="collapse-content">
+        <div className="divider"></div>
+        <div className="mt-8 flex flex-col lg:flex-row lg:gap-x-4 w-full mx-auto">
+          <div className="lg:basis-7/12 xl:basis-1/2 relative">
+            <div className="text-sm absolute top-0 left-0 -translate-y-6">
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
+                >
+                  {linkText}
+                </a>
+              )}
+              {project.article && (
+                <a
+                  href={project.article}
+                  target="_blank"
+                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
+                >
+                  Article
+                </a>
+              )}
+              {project.video && (
+                <a
+                  href={project.video}
+                  target="_blank"
+                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600 pr-5"
+                >
+                  Video
+                </a>
+              )}
+              <a
+                href={project.source}
+                target="_blank"
+                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              >
+                Source
+              </a>
+            </div>
+            <Image
+              src={project.imagePath}
+              className="rounded-xl h-auto mx-auto xl:mx-0 xl:ml-auto"
+              width={800}
+              height={800}
+              alt="profile pic"
+            />
+          </div>
+          <div className="w-11/12 lg:basis-5/12 xl:basis-1/2 max-w-xl mx-auto xl:mx-0 xl:mr-auto lg:pr-8 mt-8 lg:mt-0">
+            <ProjectCardTab name="Summary" contents={project.summary} />
+            <ProjectCardTab name="Main Features" contents={project.features} />
+            <ProjectCardTab
+              name="Primary Tools Used"
+              contents={
+                <PrimaryToolsContents primaryTools={project.primaryTools} />
+              }
+            />
+            <ProjectCardTab
+              name="Secondary Tools Used"
+              contents={project.secondaryTools}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProjectCardTab({
+  name,
+  contents,
+}: {
+  name: string;
+  contents: React.ReactNode | string[];
+}) {
+  return (
+    <div
+      tabIndex={0}
+      className="collapse collapse-arrow bg-base-200 border border-green-600"
+    >
+      <summary className="collapse-title text-xl">{name}</summary>
+      <div className="collapse-content">
+        <div className="px-4">{contents}</div>
+      </div>
+    </div>
+  );
+}
+
+function PrimaryToolsContents({ primaryTools }: { primaryTools: string[] }) {
+  return (
+    <ul className="flex flex-col gap-y-2 ps-8">
+      {primaryTools &&
+        primaryTools.map((tool) => {
+          return (
+            <li key={tool.substring(0, 20)}>
+              <div className="flex gap-x-3">
+                {toolIcons[tool].src !== "" && (
+                  <Image
+                    src={toolIcons[tool].src}
+                    className={`-ms-8 mr-2 ${
+                      toolIcons[tool].invert ? "dark:invert" : ""
+                    }`}
+                    width={25}
+                    height={25}
+                    alt={`${tool} logo`}
+                  />
+                )}
+                <p>{tool}</p>
+              </div>
+            </li>
+          );
+        })}
+    </ul>
   );
 }

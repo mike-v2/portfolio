@@ -8,9 +8,9 @@ type ProjectData = {
   desktopOnly?: boolean;
   source: string;
   summary: React.ReactNode;
-  features: React.ReactNode[];
+  features: React.ReactNode;
   primaryTools: string[];
-  secondaryTools: React.ReactNode[];
+  secondaryTools: React.ReactNode;
 };
 
 type ToolIconData = {
