@@ -70,13 +70,25 @@ export const projectData: ProjectData[] = [
     source: "https://github.com/mike-v2/journal-search",
     summary:
       "I'm proud to introduce Harry Howard's Journals, an advanced web application that redefines the way we explore historical journal entries. Using Next.js, Python, and AI tools, the app processes and analyzes entries from the 1930s and 40s. These entries are enhanced by AI and made easily accessible, putting a treasure trove of historical data at your fingertips.",
-    features: [
-      "Harry has been brought to life with state-of-the-art AI technology. Ask Harry detailed questions about the journals, or just chat! (powered by ChatGPT)",
-      "Read journal entries one page at a time or easily skip around",
-      "Search function for journal entries",
-      "AI-generated topics for each entry allow users to understand an entry at a glance and link together stories woven through multiple entries",
-      "Sign in with Google to keep track of pages read, save special passages and make posts to discuss entries with others",
-    ],
+    features: (
+      <ul className="list-disc ps-4">
+        <li>
+          Harry has been brought to life with state-of-the-art AI technology.
+          Ask Harry detailed questions about the journals, or just chat!
+          (powered by ChatGPT)
+        </li>
+        <li>Read journal entries one page at a time or easily skip around</li>
+        <li>Search function for journal entries</li>
+        <li>
+          AI-generated topics for each entry allow users to understand an entry
+          at a glance and link together stories woven through multiple entries
+        </li>
+        <li>
+          Sign in with Google to keep track of pages read, save special passages
+          and make posts to discuss entries with others
+        </li>
+      </ul>
+    ),
     primaryTools: [
       "React",
       "Next.js",
@@ -130,13 +142,25 @@ export const projectData: ProjectData[] = [
     source: "https://github.com/mike-v2/good-news",
     summary:
       "Good News! aggregates global news stories through reputable news aggregator APIs, meticulously collecting articles related to building and construction projects, as well as advancements in healthcare, education, and peace. To identify the most uplifting and positive stories, I employ advanced AI analysis, powered by OpenAI's GPT. This sophisticated natural language processing helps to filter and present news that sparks optimism and inspiration, shedding light on the progress and goodwill that is constantly unfolding around the world.",
-    features: [
-      "Aggregates positive news stories from around the world related to construction projects, healthcare advancements, educational progress, and peace initiatives",
-      "Interactable world map representing source countries",
-      "Updated daily with new articles",
-      "Automated data collection and processing pipeline that requires minimal manual intervention",
-      "Utilizes OpenAI's GPT API to evaluate and filter news stories based on positivity and relevance to the chosen categories",
-    ],
+    features: (
+      <ul className="list-disc ps-4">
+        <li>
+          Aggregates positive news stories from around the world related to
+          construction projects, healthcare advancements, educational progress,
+          and peace initiatives
+        </li>
+        <li>Interactable world map representing source countries</li>
+        <li>Updated daily with new articles</li>
+        <li>
+          Automated data collection and processing pipeline that requires
+          minimal manual intervention
+        </li>
+        <li>
+          Utilizes OpenAI&apos;s GPT API to evaluate and filter news stories
+          based on positivity and relevance to the chosen categories
+        </li>
+      </ul>
+    ),
     primaryTools: [
       "React",
       "Next.js",
@@ -164,15 +188,22 @@ export const projectData: ProjectData[] = [
     source: "https://github.com/mike-v2/journal-transcribe",
     summary:
       "A kind of Content Management Application that serves images of journal pages to users and provides the tools to quickly and conveniently transcribe them. The transcription is indexed and stored in a database so that another website can analyze and display them.",
-    features: [
-      "Process, index, and store images of journal pages",
-      "Serve images of journal pages from firebase database",
-      "Speech-to-text with added support for punctuation",
-      "Click to zoom image for hard-to-read text",
-      "Special annotation tools to enrich the text data",
-    ],
+    features: (
+      <ul className="list-disc ps-4">
+        <li>Process, index, and store images of journal pages</li>
+        <li>Serve images of journal pages from firebase database</li>
+        <li>Speech-to-text with added support for punctuation</li>
+        <li>Click to zoom image for hard-to-read text</li>
+        <li>Special annotation tools to enrich the text data</li>
+      </ul>
+    ),
     primaryTools: ["React", "JavaScript", "Firebase", "GitHub"],
-    secondaryTools: ["React Speech Recognition", "React Inner Image Zoom"],
+    secondaryTools: (
+      <ul className="list-disc ps-4">
+        <li>React Speech Recognition</li>
+        <li>React Inner Image Zoom</li>
+      </ul>
+    ),
   },
   {
     imagePath: "/images/dave-website.jpg",
@@ -182,13 +213,15 @@ export const projectData: ProjectData[] = [
     source: "https://github.com/mike-v2/service-now-auto-repair",
     summary:
       "An update of an old website to make it clean, responsive, and consistent with modern design principles",
-    features: [
-      "Splash page",
-      "Navbar and Footer",
-      "Responsive",
-      "Realtime review data",
-      "Embedded Google Map",
-    ],
+    features: (
+      <ul className="list-disc ps-4">
+        <li>Splash page</li>
+        <li>Navbar and Footer</li>
+        <li>Responsive</li>
+        <li>Realtime review data</li>
+        <li>Embedded Google Map</li>
+      </ul>
+    ),
     primaryTools: [
       "React",
       "Next.js",
