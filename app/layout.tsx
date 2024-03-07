@@ -1,12 +1,15 @@
 import { Inter } from "next/font/google";
-import NavBar from "@/components/navbar";
-import "./globals.css";
+import { Metadata } from 'next';
 
-const inter = Inter({ subsets: ["latin"] });
+import '@/app/globals.css';
+import { getCurrentTheme } from '@/utils/theme';
+import NavBar from '@/components/navbar';
 
-export const metadata = {
-  title: "Mike McGuiness",
-  description: "Portfolio of Michael McGuiness, front-end web developer",
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Mike McGuiness',
+  description: 'Portfolio of Michael McGuiness, full-stack web developer',
 };
 
 export default function RootLayout({
@@ -15,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en' data-theme={getCurrentTheme()}>
       <body className={inter.className}>
         <NavBar />
         {children}
