@@ -4,7 +4,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Logo() {
+import { Theme } from '@/types/theme.enum';
+
+export default function Logo({ theme }: { theme: Theme }) {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   return (
@@ -16,7 +18,7 @@ export default function Logo() {
     >
       <Image
         src='/images/m-outside.svg'
-        className={`duration-250 h-auto transition-transform dark:invert ${
+        className={`duration-250 h-auto transition-transform ${theme === Theme.Dark ? 'invert' : ''} ${
           isLogoHovered ? '-translate-x-1' : ''
         }`}
         width={15}
@@ -25,7 +27,7 @@ export default function Logo() {
       />
       <Image
         src='/images/m-inside.svg'
-        className={`h-auto transition dark:invert ${
+        className={`h-auto transition ${theme === Theme.Dark ? 'invert' : ''} ${
           isLogoHovered ? 'filter-green-400 translate-y-1 scale-150' : ''
         }`}
         width={25}
@@ -34,7 +36,7 @@ export default function Logo() {
       />
       <Image
         src='/images/m-outside.svg'
-        className={`duration-250 h-auto rotate-180 transition-transform dark:invert ${
+        className={`duration-250 h-auto rotate-180 transition-transform ${theme === Theme.Dark ? 'invert' : ''} ${
           isLogoHovered ? 'translate-x-1' : ''
         }`}
         width={15}

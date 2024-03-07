@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+import { Theme } from '@/types/theme.enum';
+import { getCurrentTheme } from '@/utils/theme';
+
 const icons = [
   {
     name: 'GitHub',
@@ -32,7 +35,7 @@ export default function MediaLinks() {
             <a href={icon.link} target='_blank' key={i}>
               <Image
                 src={icon.imagePath}
-                className='duration-250 transition hover:scale-125 dark:invert'
+                className={`duration-250 transition hover:scale-125 ${getCurrentTheme() === Theme.Dark ? 'invert' : ''}`}
                 width={30}
                 height={30}
                 alt={`${icon.name} logo`}

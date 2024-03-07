@@ -1,5 +1,8 @@
 import { cookies } from 'next/headers';
 
-export function getCurrentTheme(): string {
-  return cookies().get('theme')?.value || 'light';
+import { Theme } from '@/types/theme.enum';
+
+export function getCurrentTheme(): Theme {
+  console.log('getting current theme: ', cookies().get('theme')?.value);
+  return cookies().get('theme')?.value === 'dark' ? Theme.Dark : Theme.Light;
 }

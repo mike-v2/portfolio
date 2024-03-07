@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Theme } from '@/types/theme.enum';
+
 const links = [
   {
     name: 'About Me',
@@ -22,22 +24,25 @@ const links = [
   },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ theme }: { theme: Theme }) {
   return (
     <>
-      <div className='dropdown-bottom dropdown-end dropdown mr-4 mt-auto md:hidden '>
-        <label tabIndex={0} className='btn m-1 h-12 w-12 p-2 dark:border-white'>
+      <div className='dropdown-bottom dropdown-end dropdown mr-4 mt-auto lg:hidden '>
+        <label
+          tabIndex={0}
+          className={`btn m-1 h-12 w-12 p-2 ${theme === Theme.Dark ? 'border-white' : ''}`}
+        >
           <Image
             src='/images/menu-icon.svg'
-            className='dark:invert'
-            width={25}
-            height={25}
+            className={`${theme === Theme.Dark ? 'invert' : ''}`}
+            width={24}
+            height={24}
             alt='menu icon'
           />
         </label>
         <ul
           tabIndex={0}
-          className='dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow'
+          className='dropdown-content menu w-52 rounded-box bg-base-100 p-2 shadow'
         >
           {links.map((link, i) => {
             return (
@@ -56,7 +61,7 @@ export default function NavLinks() {
         </ul>
       </div>
 
-      <div className='mt-auto hidden max-w-lg basis-full justify-between  px-4 pb-4 md:flex'>
+      <div className='mt-auto hidden max-w-lg basis-full justify-between  px-4 pb-4 lg:flex'>
         {links.map((link, i) => {
           return (
             <Link

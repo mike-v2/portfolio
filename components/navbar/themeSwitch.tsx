@@ -5,20 +5,19 @@ import { useEffect, useState } from 'react';
 import { LuSun, LuMoon } from 'react-icons/lu';
 
 import { setCookie } from '@/app/actions/setTheme';
+import { Theme } from '@/types/theme.enum';
 
 export default function ThemeSwitch() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState<Theme>(Theme.Light);
 
   useEffect(() => {
-    if (theme) setCookie(theme);
+    setCookie(theme);
   }, [theme]);
 
   function toggleTheme() {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === 'light' ? 'dark' : 'light';
-      console.log('setting new theme: ', newTheme);
-      return newTheme;
-    });
+    setTheme((prevTheme) =>
+      prevTheme === Theme.Light ? Theme.Dark : Theme.Light,
+    );
   }
 
   return (
