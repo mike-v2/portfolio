@@ -26,8 +26,8 @@ const links = [
 
 export default function NavLinks({ theme }: { theme: Theme }) {
   return (
-    <>
-      <div className='dropdown-bottom dropdown-end dropdown mr-4 mt-auto lg:hidden '>
+    <div className='flex justify-end'>
+      <div className='dropdown-bottom dropdown-end dropdown mt-auto lg:hidden '>
         <label
           tabIndex={0}
           className={`btn m-1 h-12 w-12 p-2 ${theme === Theme.Dark ? 'border-white' : ''}`}
@@ -61,7 +61,7 @@ export default function NavLinks({ theme }: { theme: Theme }) {
         </ul>
       </div>
 
-      <div className='mt-auto hidden max-w-lg basis-full justify-between  px-4 pb-4 lg:flex'>
+      <div className='mt-auto hidden max-w-lg basis-full justify-between px-4 pb-4 lg:flex'>
         {links.map((link, i) => {
           return (
             <Link
@@ -74,6 +74,6 @@ export default function NavLinks({ theme }: { theme: Theme }) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

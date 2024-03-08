@@ -28,22 +28,28 @@ const icons = [
 
 export default function MediaLinks() {
   return (
-    <>
+    <div className='flex items-end gap-x-4 md:gap-x-8'>
       {icons &&
         icons.map((icon, i) => {
           return (
-            <a href={icon.link} target='_blank' key={i}>
+            <a
+              href={icon.link}
+              target='_blank'
+              className='h-6 w-6 md:h-8 md:w-8'
+              key={i}
+            >
               <Image
                 src={icon.imagePath}
-                className={`duration-250 transition hover:scale-125 ${getCurrentTheme() === Theme.Dark ? 'invert' : ''}`}
-                width={30}
-                height={30}
+                className={`duration-250 h-auto w-full transition hover:scale-125 ${getCurrentTheme() === Theme.Dark ? 'invert' : ''}`}
+                width={0}
+                height={0}
+                sizes='100vw'
                 alt={`${icon.name} logo`}
                 key={i}
               />
             </a>
           );
         })}
-    </>
+    </div>
   );
 }

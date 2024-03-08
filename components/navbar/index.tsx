@@ -7,13 +7,13 @@ import ThemeSwitch from './themeSwitch';
 
 export default function NavBar() {
   return (
-    <nav className='flex h-32 border-b border-green-400'>
+    <nav className='flex h-32 items-end border-b border-green-400'>
       <Logo theme={getCurrentTheme()} />
-      <div className='mt-auto flex basis-1/2 gap-x-6 pb-4 pl-4 md:gap-x-12 md:pl-12'>
+      <div className='flex basis-1/2 gap-x-2 pb-4 pl-2 md:gap-x-6'>
         <MediaLinks />
         <ThemeSwitch />
       </div>
-      <div className='flex h-full basis-1/2 justify-end'>
+      <div className='basis-1/2 pr-2'>
         <NavLinks theme={getCurrentTheme()} />
       </div>
     </nav>
