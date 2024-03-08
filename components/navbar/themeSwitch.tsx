@@ -8,7 +8,7 @@ import { setCookie } from '@/app/actions/setTheme';
 import { Theme } from '@/types/theme.enum';
 
 export default function ThemeSwitch() {
-  const [theme, setTheme] = useState<Theme>(Theme.Light);
+  const [theme, setTheme] = useState(Theme.Light);
 
   useEffect(() => {
     setCookie(theme);
@@ -22,12 +22,12 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className='flex items-center gap-x-2'
-      onClick={(e) => toggleTheme()}
+      className='btn flex h-fit min-h-0 items-center gap-x-2 p-2'
+      onClick={toggleTheme}
     >
-      {theme === 'light' && <LuSun />}
-      {theme === 'dark' && <LuMoon />}
-      Theme
+      {theme === Theme.Light && <LuSun />}
+      {theme === Theme.Dark && <LuMoon />}
+      <span className='hidden md:inline'>Theme</span>
     </button>
   );
 }

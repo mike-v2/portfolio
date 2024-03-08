@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     <nav className='flex h-32 items-end border-b border-green-400'>
       <Logo theme={getCurrentTheme()} />
-      <div className='flex basis-1/2 gap-x-2 pb-4 pl-2 md:gap-x-6'>
+      <div className='flex basis-1/2 gap-x-6 pb-4 pl-2'>
         <MediaLinks />
         <ThemeSwitch />
       </div>

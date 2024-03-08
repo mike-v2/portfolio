@@ -28,7 +28,7 @@ const icons = [
 
 export default function MediaLinks() {
   return (
-    <div className='flex items-end gap-x-4 md:gap-x-8'>
+    <div className='flex items-center gap-x-4 md:gap-x-8'>
       {icons &&
         icons.map((icon, i) => {
           return (
