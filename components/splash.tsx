@@ -22,10 +22,11 @@ export default function Splash() {
             Michael McGuiness,
           </h2>
           <p className='pb-6 ps-1 pt-4 '>
-            A front-end web developer with a strong foundation in React,
-            Next.js, and <span className='whitespace-nowrap'>Tailwind CSS</span>
-            , passionate about building functional, user-centric digital
-            experiences.
+            Passionate Full-Stack Developer adept at harnessing the latest in
+            web technologies and AI to craft seamless, user-centric digital
+            experiences. With expertise in React, Next.js, and Node.js, I&apos;m
+            dedicated to evolving with the tech landscape to build the future of
+            interactive applications.
           </p>
           <Link href='/contact'>
             <button className='btn w-fit rounded-full bg-green-400 px-8 hover:bg-green-500 dark:text-black'>

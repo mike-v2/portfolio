@@ -14,20 +14,25 @@ const skillPillInfo = [
     invert: true,
   },
   {
-    name: 'HTML',
-    imagePath: '/images/html-logo.svg',
+    name: 'Node.js',
+    imagePath: '/images/node-logo.svg',
   },
   {
-    name: 'CSS',
-    imagePath: '/images/css-logo.svg',
+    name: 'Express',
+    imagePath: '/images/express-logo.svg',
+    invert: true,
   },
   {
-    name: 'Javascript',
-    imagePath: '/images/js-logo.svg',
+    name: 'MongoDB',
+    imagePath: '/images/mongodb-logo.svg',
   },
 ];
 
 const secondarySkillPillInfo = [
+  {
+    name: 'Typescript',
+    imagePath: '/images/typescript-logo.svg',
+  },
   {
     name: 'Tailwind CSS',
     imagePath: '/images/tailwind-logo.svg',

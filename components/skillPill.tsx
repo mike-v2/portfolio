@@ -15,7 +15,7 @@ export default function SkillPill({
 
   return (
     <div
-      className={`flex flex-col justify-center ${gap} h-48 w-32 rounded-full border border-stone-400`}
+      className={`flex flex-col items-center justify-center ${gap} h-48 w-32 rounded-full border border-stone-400`}
     >
       <div>
         {displayName &&
@@ -25,13 +25,16 @@ export default function SkillPill({
             </p>
           ))}
       </div>
-      <Image
-        src={imagePath}
-        className={`mx-auto h-auto ${className}`}
-        height={70}
-        width={70}
-        alt={`${name} logo`}
-      />
+      <div className='flex h-16 w-16 items-center'>
+        <Image
+          src={imagePath}
+          className={`h-auto w-full ${className}`}
+          height={0}
+          width={0}
+          sizes='100vw'
+          alt={`${name} logo`}
+        />
+      </div>
     </div>
   );
 }
