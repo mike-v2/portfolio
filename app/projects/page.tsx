@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { projectData } from "./projectData";
+import { projectData } from '@/app/projects/components/projectData';
 
 const toolIcons: ToolIconData = {
   "Next.js": {
