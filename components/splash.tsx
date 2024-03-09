@@ -8,10 +8,12 @@ export default function Splash() {
         <span className='mr-12 pr-5 md:mr-0 md:basis-1/2 lg:basis-1/3'>
           <Image
             src='/images/headshot.png'
-            className='h-auto'
-            width={800}
-            height={800}
+            className='h-auto w-full'
+            width={0}
+            height={0}
+            sizes='100vw'
             alt='profile pic'
+            priority
           />
         </span>
         <span className='flex max-w-2xl flex-col pe-4 pl-2 md:basis-1/2 lg:basis-2/3'>

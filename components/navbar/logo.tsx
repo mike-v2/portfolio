@@ -18,29 +18,32 @@ export default function Logo({ theme }: { theme: Theme }) {
     >
       <Image
         src='/images/m-outside.svg'
-        className={`duration-250 h-auto transition-transform ${theme === Theme.Dark ? 'invert' : ''} ${
+        className={`duration-250 h-auto w-4 transition-transform ${theme === Theme.Dark ? 'invert' : ''} ${
           isLogoHovered ? '-translate-x-1' : ''
         }`}
-        width={15}
-        height={60}
+        width={0}
+        height={0}
+        sizes='100vw'
         alt='logo part'
       />
       <Image
         src='/images/m-inside.svg'
-        className={`h-auto transition ${theme === Theme.Dark ? 'invert' : ''} ${
+        className={`h-auto w-6 transition ${theme === Theme.Dark ? 'invert' : ''} ${
           isLogoHovered ? 'filter-green-400 translate-y-1 scale-150' : ''
         }`}
-        width={25}
-        height={60}
+        width={0}
+        height={0}
+        sizes='100vw'
         alt='logo part'
       />
       <Image
         src='/images/m-outside.svg'
-        className={`duration-250 h-auto rotate-180 transition-transform ${theme === Theme.Dark ? 'invert' : ''} ${
+        className={`duration-250 h-auto w-4 rotate-180 transition-transform ${theme === Theme.Dark ? 'invert' : ''} ${
           isLogoHovered ? 'translate-x-1' : ''
         }`}
-        width={15}
-        height={60}
+        width={0}
+        height={0}
+        sizes='100vw'
         alt='logo part'
       />
     </Link>
