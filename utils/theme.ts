@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-
 import { Theme } from '@/types/theme.enum';
 
 export function getCurrentTheme(): Theme {

@@ -19,7 +19,7 @@ export default function Splash() {
             Welcome! I&apos;m{' '}
           </h2>
           <h2 className='text-[clamp(3rem,7vw,4rem)] font-bold leading-tight'>
-            Michael McGuiness,
+            Michael McGuiness
           </h2>
           <p className='pb-6 ps-1 pt-4 '>
             Passionate Full-Stack Developer adept at harnessing the latest in

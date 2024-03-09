@@ -1,11 +1,12 @@
+import { Theme } from '@/types/theme.enum';
+import { getCurrentTheme } from '@/utils/theme';
+
 import Education from '@/app/resume/components/education';
 import OpenSource from '@/app/resume/components/openSource';
 import Projects from '@/app/resume/components/projects';
 import Publications from '@/app/resume/components/publications';
 import Skills from '@/app/resume/components/skills';
 import WorkExperience from '@/app/resume/components/workExperience';
-import { Theme } from '@/types/theme.enum';
-import { getCurrentTheme } from '@/utils/theme';
 
 export default function Resume() {
   return (

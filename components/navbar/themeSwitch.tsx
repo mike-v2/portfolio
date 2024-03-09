@@ -22,7 +22,7 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className='btn flex h-fit min-h-0 items-center gap-x-2 p-2'
+      className='btn flex h-auto min-h-0 gap-x-2 p-2'
       onClick={toggleTheme}
     >
       {theme === Theme.Light && <LuSun />}
