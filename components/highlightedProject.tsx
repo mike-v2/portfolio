@@ -24,7 +24,7 @@ export default function HighlightedProject() {
               Harry Howard&apos;s Journals
             </h4>
             <Link href='/projects' className='ml-auto'>
-              <div className='btn rounded-full bg-green-400 px-8 hover:bg-green-500 dark:text-black'>
+              <div className='btn rounded-full bg-green-400 px-8 text-black hover:bg-green-500'>
                 Go To Project
               </div>
             </Link>

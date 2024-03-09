@@ -4,6 +4,8 @@ import Projects from '@/app/resume/components/projects';
 import Publications from '@/app/resume/components/publications';
 import Skills from '@/app/resume/components/skills';
 import WorkExperience from '@/app/resume/components/workExperience';
+import { Theme } from '@/types/theme.enum';
+import { getCurrentTheme } from '@/utils/theme';
 
 export default function Resume() {
   return (
@@ -45,7 +47,9 @@ export default function Resume() {
 function Divider() {
   return (
     <>
-      <div className='divider my-0 before:bg-black after:bg-black dark:before:bg-slate-400 dark:after:bg-slate-400'></div>
+      <div
+        className={`divider my-0 before:bg-black after:bg-black ${getCurrentTheme() === Theme.Dark ? 'before:bg-slate-400 after:bg-slate-400' : ''}`}
+      ></div>
       <div className='divider my-0 before:bg-green-600 after:bg-green-600'></div>
     </>
   );

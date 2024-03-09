@@ -29,7 +29,7 @@ export default function Splash() {
             interactive applications.
           </p>
           <Link href='/contact'>
-            <button className='btn w-fit rounded-full bg-green-400 px-8 hover:bg-green-500 dark:text-black'>
+            <button className='btn w-fit rounded-full bg-green-400 px-8 text-black hover:bg-green-500'>
               Contact
             </button>
           </Link>
