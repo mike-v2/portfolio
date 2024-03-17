@@ -1,9 +1,11 @@
 import Link from 'next/link';
 
+import { Button } from '@/components/button';
+
 export default function HighlightedProject() {
   return (
     <section className='mx-auto my-40 max-w-5xl'>
-      <h2 className=' mx-auto mb-12  w-fit border-b-2 border-green-400 px-8 py-4 text-4xl'>
+      <h2 className=' mx-auto mb-12  w-fit border-b-2 border-primary px-8 py-4 text-4xl'>
         Highlighted Project
       </h2>
       <div className='mx-auto flex flex-col gap-y-4'>
@@ -23,9 +25,7 @@ export default function HighlightedProject() {
               Harry Howard&apos;s Journals
             </h4>
             <Link href='/projects' className='ml-auto'>
-              <div className='btn rounded-full bg-green-400 px-8 text-black hover:bg-green-500'>
-                Go To Project
-              </div>
+              <Button>Go To Project</Button>
             </Link>
           </div>
           <h6 className='pt-2 text-lg italic'>

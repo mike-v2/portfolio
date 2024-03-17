@@ -3,6 +3,7 @@
 import { ValidationError, useForm } from '@formspree/react';
 
 import { Theme } from '@/types/theme.enum';
+import { Button } from '@/components/button';
 
 export default function ContactForm({ theme }: { theme: Theme }) {
   const [state, handleSubmit] = useForm('meqwywez');
@@ -23,7 +24,7 @@ export default function ContactForm({ theme }: { theme: Theme }) {
       <input
         type='text'
         name='fullname'
-        className='border-b bg-transparent py-2 pl-4 font-light ring-green-500 focus:rounded-md focus:outline-none focus:ring-1'
+        className='border-b bg-transparent py-2 pl-4 font-light ring-primary focus:rounded-md focus:outline-none focus:ring-1'
       />
 
       <label htmlFor='email' className='mt-4 font-light '>
@@ -33,7 +34,7 @@ export default function ContactForm({ theme }: { theme: Theme }) {
         type='email'
         name='email'
         id='email'
-        className='border-b bg-transparent py-2 pl-4 font-light ring-green-500 focus:rounded-md focus:outline-none focus:ring-1'
+        className='border-b bg-transparent py-2 pl-4 font-light ring-primary focus:rounded-md focus:outline-none focus:ring-1'
       />
       <ValidationError prefix='Email' field='email' errors={state.errors} />
 
@@ -43,7 +44,7 @@ export default function ContactForm({ theme }: { theme: Theme }) {
       <input
         type='text'
         name='subject'
-        className='border-b bg-transparent py-2 pl-4 font-light ring-green-500 focus:rounded-md focus:outline-none focus:ring-1'
+        className='border-b bg-transparent py-2 pl-4 font-light ring-primary focus:rounded-md focus:outline-none focus:ring-1'
       />
 
       <label htmlFor='message' className='mt-4 font-light'>
@@ -52,18 +53,14 @@ export default function ContactForm({ theme }: { theme: Theme }) {
       <textarea
         name='message'
         id='message'
-        className='border-b bg-transparent py-2 pl-4 font-light ring-green-500 focus:rounded-md focus:outline-none focus:ring-1'
+        className='border-b bg-transparent py-2 pl-4 font-light ring-primary focus:rounded-md focus:outline-none focus:ring-1'
       />
       <ValidationError prefix='Message' field='message' errors={state.errors} />
 
-      <div className=''>
-        <button
-          type='submit'
-          disabled={state.submitting}
-          className='btn mt-8 bg-green-400 px-10 py-2 text-lg text-black hover:bg-green-500'
-        >
+      <div className='mt-8'>
+        <Button type='submit' disabled={state.submitting}>
           Send
-        </button>
+        </Button>
       </div>
     </form>
   );

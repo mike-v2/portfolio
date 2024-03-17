@@ -70,7 +70,7 @@ export default function NavLinks({ theme }: { theme: Theme }) {
           return (
             <Link
               href={link.href}
-              className='whitespace-nowrap decoration-green-400 decoration-2 hover:font-bold hover:underline'
+              className='whitespace-nowrap decoration-primary decoration-2 hover:font-bold hover:underline'
               key={i}
             >
               {link.name}

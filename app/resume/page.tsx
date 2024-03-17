@@ -48,10 +48,8 @@ export default function Resume() {
 function Divider() {
   return (
     <>
-      <div
-        className={`divider my-0 before:bg-black after:bg-black ${getCurrentTheme() === Theme.Dark ? 'before:bg-slate-400 after:bg-slate-400' : ''}`}
-      ></div>
-      <div className='divider my-0 before:bg-green-600 after:bg-green-600'></div>
+      <div className='divider my-0 before:bg-base-content after:bg-base-content'></div>
+      <div className='divider my-0 before:bg-primary after:bg-primary'></div>
     </>
   );
 }

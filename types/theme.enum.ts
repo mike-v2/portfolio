@@ -1,5 +1,5 @@
 // DaisyUI themes
 export enum Theme {
-  Light = 'light',
-  Dark = 'dark',
+  Light = 'emerald',
+  Dark = 'forest',
 }

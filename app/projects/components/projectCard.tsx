@@ -70,7 +70,7 @@ export default function ProjectCard({
   if (project.desktopOnly) linkText += ' (desktop only)';
 
   return (
-    <div className='collapse mx-auto mt-12 w-11/12 rounded-lg border-2 border-black p-2 shadow-lg '>
+    <div className='collapse mx-auto mt-12 w-11/12 rounded-lg border-2 border-base-content p-2 shadow-lg '>
       <input type='checkbox' />
       <div className='collapse-title flex flex-col rounded-lg'>
         <h2 className='text-3xl'>{project.title}</h2>
@@ -129,7 +129,7 @@ function ProjectCardTab({
   return (
     <div
       tabIndex={0}
-      className='collapse-arrow collapse border border-green-600 bg-base-200'
+      className='collapse-arrow collapse border border-primary bg-base-200'
     >
       <summary className='collapse-title text-xl'>{name}</summary>
       <div className='collapse-content'>

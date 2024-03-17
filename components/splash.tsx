@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Button } from '@/components/button';
+
 export default function Splash() {
   return (
     <section className='mt-24'>
@@ -31,9 +33,7 @@ export default function Splash() {
             build the future of interactive applications.
           </p>
           <Link href='/contact'>
-            <button className='btn w-fit rounded-full bg-green-400 px-8 text-black hover:bg-green-500'>
-              Contact
-            </button>
+            <Button>Contact</Button>
           </Link>
         </span>
       </div>
