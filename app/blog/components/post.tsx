@@ -5,9 +5,9 @@ import { Anchor } from '@/components/anchor';
 
 export default function Post({ title, date, link, content }: BlogPost) {
   return (
-    <section className='collapse'>
+    <section className='collapse border shadow'>
       <input type='checkbox' />
-      <div className='collapse-title '>
+      <div className='collapse-title'>
         <h3 className='my-4 text-xl'>{title}</h3>
         <div className='flex gap-x-4'>
           <h6>{format(date, 'MMM d, yyyy')}</h6>
