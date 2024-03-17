@@ -7,7 +7,7 @@ export default function HighlightedProject() {
         Highlighted Project
       </h2>
       <div className='mx-auto flex flex-col gap-y-4'>
-        <div className='video-container relative mx-auto w-full overflow-hidden'>
+        <div className='relative mx-auto aspect-video w-full overflow-hidden'>
           <iframe
             className='absolute inset-0 h-full w-full'
             width='853'
