@@ -6,7 +6,7 @@ import ProjectCard from '@/app/projects/components/projectCard';
 export default function Projects() {
   return (
     <main>
-      <h1 className='text- my-20 w-full text-center text-6xl'>Projects</h1>
+      <h1 className='my-20 w-full text-center text-6xl'>Projects</h1>
 
       <div className='mb-16'>
         {projectData &&

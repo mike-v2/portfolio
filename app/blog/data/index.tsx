@@ -148,7 +148,7 @@ export const posts: BlogPost[] = [
           width={0}
           height={0}
           sizes='100vw'
-          className='mx-auto h-auto w-full max-w-4xl'
+          className='mx-auto h-auto w-full'
           alt='Code to make a button with cva'
         />
 
@@ -176,7 +176,7 @@ export const posts: BlogPost[] = [
           width={0}
           height={0}
           sizes='100vw'
-          className='mx-auto h-auto w-full max-w-4xl'
+          className='mx-auto h-auto w-full'
           alt='Code to make a button without cva'
         />
 
