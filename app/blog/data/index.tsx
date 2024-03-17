@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { BlogPost } from '@/types/postData';
+import { Anchor } from '@/components/anchor';
 
 export const posts: BlogPost[] = [
   {
@@ -39,12 +40,18 @@ export const posts: BlogPost[] = [
           all ears for feedback or any questions you might have. Let&apos;s keep
           learning and building awesome stuff together.
         </p>
-        <p>
-          🎥 Watch the video here:{' '}
-          <a href='https://youtu.be/P2VxzeSsJzs' target='_blank'></a>
-          youtu.be/P2VxzeSsJzs
-        </p>
         <p>Catch you in the comments or the next video!</p>
+
+        <div className='relative mx-auto aspect-video w-full max-w-3xl overflow-hidden'>
+          <iframe
+            className='absolute inset-0 h-full w-full'
+            width='853'
+            height='480'
+            src='https://www.youtube.com/embed/P2VxzeSsJzs'
+            allowFullScreen
+            title='Embedded youtube'
+          />
+        </div>
       </div>
     ),
   },
@@ -103,9 +110,9 @@ export const posts: BlogPost[] = [
         <p>Looking forward to your insights and feedback!</p>
         <p>
           Source:{' '}
-          <a href='https://github.com/mike-v2/journal-search' target='_blank'>
+          <Anchor href='https://github.com/mike-v2/journal-search'>
             github.com/mike-v2/journal-search
-          </a>
+          </Anchor>
         </p>
       </div>
     ),
@@ -126,9 +133,9 @@ export const posts: BlogPost[] = [
             Applied Coding, Inc
           </a>{' '}
           and was introduced to a tool I hadn&apos;t used before -{' '}
-          <a href='https://github.com/joe-bell/cva#readme' target='_blank'>
+          <Anchor href='https://github.com/joe-bell/cva#readme'>
             Class Variance Authority (CVA)
-          </a>
+          </Anchor>
           . It&apos;s a straightforward and practical tool that simplifies
           managing styles. This not only makes my coding life easier but also
           leads to a cleaner, more user-friendly interface in the projects I
@@ -318,9 +325,9 @@ export const posts: BlogPost[] = [
           📊 In my project, I made variables for the square width and cutout
           diagonal so that I could adjust them from my component after the user
           hovers over the corner.{' '}
-          <a href='https://github.com/mike-v2/journal-search' target='_blank'>
+          <Anchor href='https://github.com/mike-v2/journal-search'>
             [Project Source]
-          </a>
+          </Anchor>
         </p>
 
         <Image
@@ -502,9 +509,9 @@ export const posts: BlogPost[] = [
         <h5 className='text-xl font-bold'>Accuracy</h5>
         <p>
           (measured with{' '}
-          <a href='https://app.copyleaks.com/text-compare' target='_blank'>
+          <Anchor href='https://app.copyleaks.com/text-compare'>
             Copyleaks
-          </a>
+          </Anchor>
           )
         </p>
         <Image
@@ -521,9 +528,9 @@ export const posts: BlogPost[] = [
           I noticed that sometimes Google Vision would mix words from different
           lines. But what if I could make the AI focus on one line at a time?
           With this in mind, I turned to{' '}
-          <a href='https://github.com/clovaai/CRAFT-pytorch' target='_blank'>
+          <Anchor href='https://github.com/clovaai/CRAFT-pytorch'>
             CRAFT AI
-          </a>
+          </Anchor>
           . By identifying and isolating individual lines of text, I hoped to
           present clearer data for Google Vision to interpret.
         </p>
@@ -613,16 +620,14 @@ export const posts: BlogPost[] = [
         </p>
         <p>
           View the full{' '}
-          <a href='https://github.com/mike-v2/journal-search' target='_blank'>
+          <Anchor href='https://github.com/mike-v2/journal-search'>
             source code
-          </a>
+          </Anchor>
           .
         </p>
         <p>
           Checkout{' '}
-          <a href='https://journal-search.vercel.app' target='_blank'>
-            the website
-          </a>{' '}
+          <Anchor href='https://journal-search.vercel.app'>the website</Anchor>{' '}
           in action.
         </p>
       </div>
@@ -730,8 +735,10 @@ export const posts: BlogPost[] = [
           know if you have any questions or comments!`}
         </p>
         <div className='flex gap-x-4'>
-          <a href='https://journal-search.vercel.app'>Site</a>
-          <a href='https://github.com/mike-v2/journal-search'>Source</a>
+          <Anchor href='https://journal-search.vercel.app'>Site</Anchor>
+          <Anchor href='https://github.com/mike-v2/journal-search'>
+            Source
+          </Anchor>
         </div>
 
         <div className='relative mx-auto aspect-video w-full max-w-3xl overflow-hidden'>

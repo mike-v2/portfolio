@@ -1,5 +1,6 @@
 import { getCurrentTheme } from '@/utils/theme';
 import { Theme } from '@/types/theme.enum';
+import { Anchor } from '@/components/anchor';
 
 import ContactForm from '@/app/contact/components/contactForm';
 
@@ -17,28 +18,14 @@ export default function Contact() {
           collaboration in mind, or just want to chat about web development,
           I&apos;d love to hear from you. Don&apos;t hesitate to reach out using
           the contact form below or through my{' '}
-          <a
-            href='https://www.linkedin.com/in/michael-mcguiness-react/'
-            target='_blank'
-            className='text-blue-600 visited:text-purple-600 hover:text-blue-800'
-          >
+          <Anchor href='https://www.linkedin.com/in/michael-mcguiness-react/'>
             LinkedIn
-          </a>{' '}
-          or{' '}
-          <a
-            href='https://github.com/mike-v2/'
-            target='_blank'
-            className='text-blue-600 visited:text-purple-600 hover:text-blue-800'
-          >
-            GitHub
-          </a>{' '}
+          </Anchor>{' '}
+          or <Anchor href='https://github.com/mike-v2/'>GitHub</Anchor>{' '}
           profiles, or via email at{' '}
-          <a
-            href='mailto:mikemcguiness@protonmail.com'
-            className='text-blue-600 underline visited:text-purple-600 hover:text-blue-800'
-          >
+          <Anchor href='mailto:mikemcguiness@protonmail.com'>
             mikemcguiness@protonmail.com
-          </a>
+          </Anchor>
           .
         </p>
         <p>

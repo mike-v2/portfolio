@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Theme } from '@/types/theme.enum';
+import { Anchor } from '@/components/anchor';
 
 const toolIcons: ToolIconData = {
   'Next.js': {
@@ -79,19 +80,13 @@ export default function ProjectCard({
         <div className='divider'></div>
         <div className='mx-auto mt-8 flex w-full flex-col lg:flex-row lg:gap-x-4'>
           <div className='relative lg:basis-7/12 xl:basis-1/2'>
-            <div className='absolute left-0 top-0 -translate-y-6 text-sm'>
-              {project.link && (
-                <ProjectLink name={linkText} href={project.link} />
-              )}
+            <div className='absolute left-0 top-0 flex -translate-y-6 gap-x-4 text-sm'>
+              {project.link && <Anchor href={project.link}>{linkText}</Anchor>}
               {project.article && (
-                <ProjectLink name='Article' href={project.article} />
+                <Anchor href={project.article}>Article</Anchor>
               )}
-              {project.video && (
-                <ProjectLink name='Video' href={project.video} />
-              )}
-              {project.source && (
-                <ProjectLink name='Source' href={project.source} />
-              )}
+              {project.video && <Anchor href={project.video}>Video</Anchor>}
+              {project.source && <Anchor href={project.source}>Source</Anchor>}
             </div>
             <Image
               src={project.imagePath}
@@ -121,18 +116,6 @@ export default function ProjectCard({
         </div>
       </div>
     </div>
-  );
-}
-
-function ProjectLink({ name, href }: { name: string; href: string }) {
-  return (
-    <a
-      href={href}
-      target='_blank'
-      className='pr-5 text-blue-600 underline visited:text-purple-600 hover:text-blue-800'
-    >
-      {name}
-    </a>
   );
 }
 

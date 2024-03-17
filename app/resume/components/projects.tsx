@@ -1,36 +1,27 @@
+import { Anchor } from '@/components/anchor';
+
 export default function Projects() {
   return (
-    <div className="py-6">
-      <h2 className="font-bold pb-4">PROJECTS</h2>
-      <div className="flex flex-col gap-y-4">
-        <div className="">
-          <div className="flex">
-            <h4 className="font-bold pb-2">Recreating React</h4>
-            <div className="ms-auto">
-              <div className="flex gap-x-4 text-sm">
-                <a
-                  href="https://medium.com/@mmcguiness8700/recreating-react-96e8a01d4cb5"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
+    <div className='py-6'>
+      <h2 className='pb-4 font-bold'>PROJECTS</h2>
+      <div className='flex flex-col gap-y-4'>
+        <div className=''>
+          <div className='flex'>
+            <h4 className='pb-2 font-bold'>Recreating React</h4>
+            <div className='ms-auto'>
+              <div className='flex gap-x-4 text-sm'>
+                <Anchor href='https://medium.com/@mmcguiness8700/recreating-react-96e8a01d4cb5'>
                   Article
-                </a>
-                <a
-                  href="https://youtu.be/BU37lgD28lU"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
-                  Video
-                </a>
-                <a
-                  href="https://github.com/mike-v2/react-from-scratch"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
+                </Anchor>
+                <Anchor href='https://youtu.be/BU37lgD28lU'>Video</Anchor>
+                <Anchor href='https://github.com/mike-v2/react-from-scratch'>
                   Source
-                </a>
+                </Anchor>
               </div>
             </div>
           </div>
 
-          <ul className="flex flex-col gap-y-2 list-disc ps-8">
+          <ul className='flex list-disc flex-col gap-y-2 ps-8'>
             <li>
               Demonstrated strong technical proficiency by recreating
               React&apos;s core functions, including createElement and render,
@@ -52,28 +43,20 @@ export default function Projects() {
           </ul>
         </div>
 
-        <div className="">
-          <div className="flex">
-            <h4 className="font-bold pb-2">Harry Howard&apos;s Journals</h4>
-            <div className="ms-auto">
-              <div className="flex gap-x-4 text-sm">
-                <a
-                  href="https://journal-search.vercel.app/"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
-                  Link
-                </a>
-                <a
-                  href="https://github.com/mike-v2/journal-search"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
+        <div className=''>
+          <div className='flex'>
+            <h4 className='pb-2 font-bold'>Harry Howard&apos;s Journals</h4>
+            <div className='ms-auto'>
+              <div className='flex gap-x-4 text-sm'>
+                <Anchor href='https://journal-search.vercel.app/'>Link</Anchor>
+                <Anchor href='https://github.com/mike-v2/journal-search'>
                   Source
-                </a>
+                </Anchor>
               </div>
             </div>
           </div>
 
-          <ul className="flex flex-col gap-y-2 list-disc ps-8">
+          <ul className='flex list-disc flex-col gap-y-2 ps-8'>
             <li>
               Engineered an advanced search engine capable of analyzing over a
               thousand documents for conceptual similarity, not just keyword
@@ -104,28 +87,20 @@ export default function Projects() {
           </ul>
         </div>
 
-        <div className="">
-          <div className="flex">
-            <h4 className="font-bold pb-2">Good News!</h4>
-            <div className="ms-auto">
-              <div className="flex gap-x-4 text-sm">
-                <a
-                  href="https://good-news-three.vercel.app/"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
-                  Link
-                </a>
-                <a
-                  href="https://github.com/mike-v2/good-news"
-                  className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                >
+        <div className=''>
+          <div className='flex'>
+            <h4 className='pb-2 font-bold'>Good News!</h4>
+            <div className='ms-auto'>
+              <div className='flex gap-x-4 text-sm'>
+                <Anchor href='https://good-news-three.vercel.app/'>Link</Anchor>
+                <Anchor href='https://github.com/mike-v2/good-news'>
                   Source
-                </a>
+                </Anchor>
               </div>
             </div>
           </div>
 
-          <ul className="flex flex-col gap-y-2 list-disc ps-8">
+          <ul className='flex list-disc flex-col gap-y-2 ps-8'>
             <li>
               Established an automated data collection and processing pipeline,
               minimizing manual intervention, with Google Cloud Functions, Cloud

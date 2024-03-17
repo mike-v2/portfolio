@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import { Theme } from '@/types/theme.enum';
 import { getCurrentTheme } from '@/utils/theme';
+import { Anchor } from '@/components/anchor';
 
 const icons = [
   {
@@ -32,12 +33,7 @@ export default function MediaLinks() {
       {icons &&
         icons.map((icon, i) => {
           return (
-            <a
-              href={icon.link}
-              target='_blank'
-              className='h-6 w-6 md:h-8 md:w-8'
-              key={i}
-            >
+            <Anchor href={icon.link} className='h-6 w-6 md:h-8 md:w-8' key={i}>
               <Image
                 src={icon.imagePath}
                 className={`duration-250 h-auto w-full transition hover:scale-125 ${getCurrentTheme() === Theme.Dark ? 'invert' : ''}`}
@@ -47,7 +43,7 @@ export default function MediaLinks() {
                 alt={`${icon.name} logo`}
                 key={i}
               />
-            </a>
+            </Anchor>
           );
         })}
     </div>
