@@ -1,6 +1,6 @@
 import { getCurrentTheme } from '@/utils/theme';
 
-import { projectData } from '@/app/projects/components/projectData';
+import { projectData } from '@/app/projects/data';
 import ProjectCard from '@/app/projects/components/projectCard';
 
 export default function Projects() {
