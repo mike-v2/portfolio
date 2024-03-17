@@ -353,11 +353,11 @@ export const posts: BlogPost[] = [
     content: (
       <div className='flex flex-col gap-y-4'>
         <p>
-          So, I've been using React for a while now, and recently I decided to
+          {`So, I've been using React for a while now, and recently I decided to
           really dive deep and understand the nuts and bolts of it. There were
           always these questions that kept popping up in my mind, like "How does
           React transform all that JSX jargon into delightful DOM nodes?" and
-          "How do hooks keep track of their state?" So, I decided to find out!
+          "How do hooks keep track of their state?" So, I decided to find out!`}
         </p>
         <p>
           Following the advice of{' '}
@@ -381,11 +381,11 @@ export const posts: BlogPost[] = [
           surprised to discover this!
         </p>
         <p>
-          If you're curious to see how I did it, I've written a detailed article
+          {`If you're curious to see how I did it, I've written a detailed article
           over on Medium that you can check out. I included the software tests
           so you can see exactly what its capabilities are. Plus, I made a
           YouTube video demonstrating the whole thing in action. Feel free to
-          take a look, and let me know your thoughts!
+          take a look, and let me know your thoughts!`}
         </p>
         <p>
           In-depth explanation:{' '}
@@ -427,10 +427,10 @@ export const posts: BlogPost[] = [
     content: (
       <div className='flex flex-col gap-y-4'>
         <p>
-          Adding authentication is easy and straightforward with Next-Auth and
+          {`Adding authentication is easy and straightforward with Next-Auth and
           Google Sign In. In this video I discuss how I did it, some stumbling
           blocks I ran into, as well as a quick explanation of what's happening
-          behind the scenes.
+          behind the scenes.`}
         </p>
 
         <div className='relative mx-auto aspect-video w-full max-w-3xl overflow-hidden'>
@@ -454,7 +454,7 @@ export const posts: BlogPost[] = [
     content: (
       <div className='flex flex-col gap-y-4'>
         <p>
-          Holding my great grandfather's journals, a torrent of possibilities
+          {`Holding my great grandfather's journals, a torrent of possibilities
           rushed through my mind. Visions of a digital sanctuary where these
           pages could come alive—searchable entries that users could revisit and
           bookmark, a space where every passage, every memory, every sentiment
@@ -462,19 +462,19 @@ export const posts: BlogPost[] = [
           virtual echo of my great grandfather, brought to life through his own
           words and stories. The excitement was palpable, yet all these grand
           aspirations shared one foundational need: an accurate digital
-          transcription of the decades-old text.
+          transcription of the decades-old text.`}
         </p>
 
         <h3 className='text-3xl font-bold'>
           Challenge: Accurate Transcription of Handwritten Journals
         </h3>
         <p>
-          The elegance of my great grandfather's cursive posed a surprising
+          {`The elegance of my great grandfather's cursive posed a surprising
           obstacle. While today it seems like AI can do anything, transcription
           AIs faltered before this challenge. Initial attempts with Google
           Vision API yielded disappointing results. I was confident I was on the
           right track but felt like I hit a wall. The AI had an accuracy rate of
-          just 64% - nowhere near precise enough for preserving family history.
+          just 64% - nowhere near precise enough for preserving family history.`}
         </p>
         <Image
           src='/images/ocrPost/entry-short.jpg'
@@ -598,25 +598,25 @@ export const posts: BlogPost[] = [
           alt='String comparison tool showing 85.7% similarity'
         />
         <p>
-          The proof was in the transcription. A comparison of the AI's results
+          {`The proof was in the transcription. A comparison of the AI's results
           using the entire page versus individual lines showed a remarkable
           improvement. From a mediocre 64%, accuracy soared to a commendable 86%
-          !!
+          !!`}
         </p>
 
         <h3 className='text-3xl font-bold'>Conclusion</h3>
         <p>
-          The journey from an age-old journal to a digitized archive was
+          {`The journey from an age-old journal to a digitized archive was
           challenging but incredibly rewarding. With every stumbling block, I
           found ways to innovate and move forward. The end product not only
-          preserves my family's history but makes it more accessible than ever.
+          preserves my family's history but makes it more accessible than ever.`}
         </p>
         <p>
-          As for the tools and techniques I discovered and employed, they're not
+          {`As for the tools and techniques I discovered and employed, they're not
           just about this project. They're about the resilience and
           resourcefulness of self-taught developers. Whether it's a familial
           treasure or a personal project, with determination and the right
-          resources, anything is possible.
+          resources, anything is possible.`}
         </p>
         <p>
           View the full{' '}
@@ -641,24 +641,24 @@ export const posts: BlogPost[] = [
       <div className='flex flex-col gap-y-4'>
         <p>Hey LinkedIn Learners,</p>
         <p>
-          Today, I'd like to share a snippet from one of my software tests,
+          {`Today, I'd like to share a snippet from one of my software tests,
           written in Jest for a React/Next.js app. While we often talk about the
           importance of building robust features, it's equally crucial to ensure
           those features work flawlessly under various scenarios. Let's delve
-          into one such test!
+          into one such test!`}
         </p>
 
         <h5 className='text-xl'>The Setup</h5>
         <p>
-          We've got a post with comments, and users should be able to edit their
-          own comments. We start with a mock comment and aim to modify it.
+          {`We've got a post with comments, and users should be able to edit their
+          own comments. We start with a mock comment and aim to modify it.`}
         </p>
         <p>{`const specialComments = [{ ... text: 'old comment' }];`}</p>
 
         <h5 className='text-xl'>The Sequence</h5>
         <p>1. Simulate user interaction to expand a post.</p>
         <p className='ps-4'>{`fireEvent.click(getByText(mockPost.title));`}</p>
-        <p>2. Open the menu that is attached to the user's comment.</p>
+        <p>{`2. Open the menu that is attached to the user's comment.`}</p>
         <div className='ps-4'>
           <p>{`fireEvent.click(getByLabelText('Open menu'));`}</p>
           <p>{`fireEvent.click(getByText('Edit'));`}</p>
@@ -694,9 +694,9 @@ export const posts: BlogPost[] = [
 
         <h5 className='text-xl'>The Validation</h5>
         <p>
-          Post-edit, our test checks if the comment's content has been updated
+          {`Post-edit, our test checks if the comment's content has been updated
           in the UI. The expectation? To find the revised comment - 'This is an
-          edited comment'.
+          edited comment'.`}
         </p>
         <p className='ps-4'>{`expect(await findByText('This is an edited comment')).toBeInTheDocument();`}</p>
 
