@@ -1,7 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 
 import { Theme } from '@/types/theme.enum';
-import { Anchor } from '@/components/anchor';
 
 const toolIcons: ToolIconData = {
   'Next.js': {
@@ -62,64 +63,53 @@ const toolIcons: ToolIconData = {
 export default function ProjectCard({
   project,
   theme,
+  isExpanded,
+  onExpandedChange,
 }: {
   project: ProjectData;
   theme: Theme;
+  isExpanded: boolean;
+  onExpandedChange: (isExpanded: boolean) => void;
 }) {
-  let linkText = 'Link';
-  if (project.desktopOnly) linkText += ' (desktop only)';
-
   return (
-    <div className='collapse mx-auto mt-12 w-11/12 rounded-lg border-2 border-base-content p-2 shadow-lg '>
-      <input type='checkbox' />
-      <div className='collapse-title flex flex-col rounded-lg'>
-        <h2 className='text-3xl'>{project.title}</h2>
-        <h4 className='text-lg italic'>{project.subtitle}</h4>
-      </div>
-      <div className='collapse-content'>
-        <div className='divider'></div>
-        <div className='mx-auto mt-8 flex w-full flex-col lg:flex-row lg:gap-x-4'>
-          <div className='relative lg:basis-7/12 xl:basis-1/2'>
-            <div className='absolute left-0 top-0 flex -translate-y-6 gap-x-4 text-sm'>
-              {project.link && <Anchor href={project.link}>{linkText}</Anchor>}
-              {project.article && (
-                <Anchor href={project.article}>Article</Anchor>
-              )}
-              {project.video && <Anchor href={project.video}>Video</Anchor>}
-              {project.source && <Anchor href={project.source}>Source</Anchor>}
-            </div>
-            <Image
-              src={project.imagePath}
-              className='mx-auto h-auto rounded-xl xl:mx-0 xl:ml-auto'
-              width={800}
-              height={800}
-              alt='profile pic'
-            />
-          </div>
-          <div className='mx-auto mt-8 w-11/12 max-w-xl lg:mt-0 lg:basis-5/12 lg:pr-8 xl:mx-0 xl:mr-auto xl:basis-1/2'>
-            <ProjectCardTab name='Summary' contents={project.summary} />
-            <ProjectCardTab name='Main Features' contents={project.features} />
-            <ProjectCardTab
-              name='Primary Tools Used'
-              contents={
-                <PrimaryToolsContents
-                  primaryTools={project.primaryTools}
-                  theme={theme}
-                />
-              }
-            />
-            <ProjectCardTab
-              name='Secondary Tools Used'
-              contents={project.secondaryTools}
-            />
-          </div>
+    <div
+      className={`flex max-w-3xl flex-col transition-all ${!isExpanded ? 'card w-96' : ''}`}
+      onClick={(e) => {
+        if (!isExpanded) onExpandedChange(true);
+      }}
+    >
+      <Image
+        src={project.imagePath}
+        width={0}
+        height={0}
+        sizes='100vw'
+        alt={`image representing ${project.title}`}
+        className={`${isExpanded ? 'h-96' : 'h-36'} w-full object-cover transition-all`}
+      />
+      <div className={`transition-all ${!isExpanded ? 'card-body' : ''}`}>
+        <h2 className='card-title'>{project.title}</h2>
+        <p>{project.subtitle}</p>
+
+        <div className={`${isExpanded ? 'block' : 'hidden'}`}>
+          <Tab name='Summary' contents={project.summary} />
+          <Tab name='Main Features' contents={project.features} />
+          <Tab
+            name='Primary Tools Used'
+            contents={
+              <PrimaryToolsContents
+                primaryTools={project.primaryTools}
+                theme={theme}
+              />
+            }
+          />
+          <Tab name='Secondary Tools Used' contents={project.secondaryTools} />
         </div>
       </div>
     </div>
   );
 }
 
-function ProjectCardTab({
+function Tab({
   name,
   contents,
 }: {
@@ -127,14 +117,10 @@ function ProjectCardTab({
   contents: React.ReactNode | string[];
 }) {
   return (
-    <div
-      tabIndex={0}
-      className='collapse-arrow collapse border border-primary bg-base-200'
-    >
-      <summary className='collapse-title text-xl'>{name}</summary>
-      <div className='collapse-content'>
-        <div className='px-4'>{contents}</div>
-      </div>
+    <div className='collapse'>
+      <input type='checkbox' />
+      <div className='collapse-title'>{name}</div>
+      <div className='collapse-content'>{contents}</div>
     </div>
   );
 }
@@ -147,30 +133,31 @@ function PrimaryToolsContents({
   theme: Theme;
 }) {
   return (
-    <ul className='flex flex-col gap-y-2 ps-8'>
+    <div className='flex gap-x-4'>
       {primaryTools &&
         primaryTools.map((tool) => {
           return (
-            <li key={tool.substring(0, 20)}>
-              <div className='flex gap-x-3'>
-                {toolIcons[tool].src !== '' && (
-                  <Image
-                    src={toolIcons[tool].src}
-                    className={`-ms-8 mr-2 ${
-                      toolIcons[tool].invert && theme === Theme.Dark
-                        ? 'invert'
-                        : ''
-                    }`}
-                    width={25}
-                    height={25}
-                    alt={`${tool} logo`}
-                  />
-                )}
-                <p>{tool}</p>
-              </div>
-            </li>
+            <div
+              key={tool.substring(0, 20)}
+              className='flex items-center gap-x-2'
+            >
+              {toolIcons[tool].src !== '' && (
+                <Image
+                  src={toolIcons[tool].src}
+                  className={` ${
+                    toolIcons[tool].invert && theme === Theme.Dark
+                      ? 'invert'
+                      : ''
+                  }`}
+                  width={32}
+                  height={32}
+                  alt={`${tool} logo`}
+                />
+              )}
+              <p>{tool}</p>
+            </div>
           );
         })}
-    </ul>
+    </div>
   );
 }
