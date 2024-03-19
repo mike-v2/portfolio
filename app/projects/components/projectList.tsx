@@ -43,7 +43,7 @@ export default function ProjectList({
 
   return (
     <>
-      <div className='my-20 flex justify-center'>
+      <div className='flex justify-center'>
         {selectedProject && (
           <ProjectCard
             project={selectedProject}
