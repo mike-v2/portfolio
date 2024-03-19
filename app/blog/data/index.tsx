@@ -91,7 +91,7 @@ export const posts: BlogPost[] = [
           width={0}
           height={0}
           sizes='100vw'
-          className='mx-auto h-auto w-full max-w-xl'
+          className='mx-auto h-auto w-full max-w-2xl'
           alt='Diagram showing login flow'
         />
       </div>
