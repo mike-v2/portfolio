@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 
+import { LuX } from 'react-icons/lu';
+
 import { Theme } from '@/types/theme.enum';
 
 const toolIcons: ToolIconData = {
@@ -73,27 +75,37 @@ export default function ProjectCard({
 }) {
   return (
     <div
-      className={`flex max-w-3xl flex-col transition-all ${!isExpanded ? 'card w-96' : ''}`}
+      className={`flex max-w-3xl flex-col ${!isExpanded ? 'card w-96 cursor-pointer' : ''}`}
       onClick={(e) => {
         if (!isExpanded) onExpandedChange(true);
       }}
     >
+      {isExpanded && (
+        <button
+          className='my-4 flex justify-end text-xl'
+          onClick={(e) => onExpandedChange(false)}
+        >
+          <LuX />
+        </button>
+      )}
       <Image
         src={project.imagePath}
         width={0}
         height={0}
         sizes='100vw'
         alt={`image representing ${project.title}`}
-        className={`${isExpanded ? 'h-96' : 'h-36'} w-full object-cover transition-all`}
+        className={`${isExpanded ? 'h-96' : 'h-36'} w-full object-cover`}
       />
-      <div className={`transition-all ${!isExpanded ? 'card-body' : ''}`}>
+      <div className='card-body'>
         <h2 className='card-title'>{project.title}</h2>
         <p>{project.subtitle}</p>
 
-        <div className={`${isExpanded ? 'block' : 'hidden'}`}>
-          <Tab name='Summary' contents={project.summary} />
-          <Tab name='Main Features' contents={project.features} />
-          <Tab
+        <div
+          className={`mt-6 flex flex-col gap-y-4 ${isExpanded ? 'block' : 'hidden'}`}
+        >
+          <Collapse name='Summary' contents={project.summary} />
+          <Collapse name='Main Features' contents={project.features} />
+          <Collapse
             name='Primary Tools Used'
             contents={
               <PrimaryToolsContents
@@ -102,14 +114,17 @@ export default function ProjectCard({
               />
             }
           />
-          <Tab name='Secondary Tools Used' contents={project.secondaryTools} />
+          <Collapse
+            name='Secondary Tools Used'
+            contents={project.secondaryTools}
+          />
         </div>
       </div>
     </div>
   );
 }
 
-function Tab({
+function Collapse({
   name,
   contents,
 }: {
@@ -117,9 +132,11 @@ function Tab({
   contents: React.ReactNode | string[];
 }) {
   return (
-    <div className='collapse'>
+    <div className='collapse bg-base-200'>
       <input type='checkbox' />
-      <div className='collapse-title'>{name}</div>
+      <div className='collapse-title text-lg font-medium underline decoration-primary'>
+        {name}
+      </div>
       <div className='collapse-content'>{contents}</div>
     </div>
   );
@@ -133,7 +150,7 @@ function PrimaryToolsContents({
   theme: Theme;
 }) {
   return (
-    <div className='flex gap-x-4'>
+    <div className='flex flex-wrap gap-x-6 gap-y-4'>
       {primaryTools &&
         primaryTools.map((tool) => {
           return (

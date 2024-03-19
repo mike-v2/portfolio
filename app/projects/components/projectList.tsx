@@ -30,11 +30,11 @@ export default function ProjectList({
   }, []);
 
   useEffect(() => {
-    if (selectedProject) {
-      const params = new URLSearchParams(searchParams);
-      params.set('project', encodeURIComponent(selectedProject.title));
-      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-    }
+    const params = new URLSearchParams(searchParams);
+    selectedProject
+      ? params.set('project', encodeURIComponent(selectedProject.title))
+      : params.delete('project');
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   }, [selectedProject]);
 
   function handleExpandChange(project: ProjectData, isExpanded: boolean) {
