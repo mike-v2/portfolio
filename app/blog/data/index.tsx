@@ -11,50 +11,50 @@ export const posts: BlogPost[] = [
     content: (
       <div className='flex flex-col gap-y-4'>
         <p>
-          Express, Express-Session, and Passport.js are powerful tools that
+          {`Express, Express-Session, and Passport.js are powerful tools that
           greatly simplify the process of handling authentication in a web
           application. However, even with these tools, there are still many
           moving parts to understand and implement correctly. That's why I
           wanted to create a step-by-step explanation and diagram to illustrate
           how I recently used these technologies to add authentication to a
-          business app.
+          business app.`}
         </p>
         <p>
-          In this post, we'll focus on the 'local' authentication strategy,
+          {`In this post, we'll focus on the 'local' authentication strategy,
           which typically involves using a username and password. I'll walk you
           through each step of the process, from the user submitting their
-          credentials to the server sending a response back to the client.
+          credentials to the server sending a response back to the client.`}
         </p>
 
         <ul className='flex list-decimal flex-col gap-y-3 ps-4'>
           <li>
             <h6 className='font-medium'>User submits login credentials</h6>
-            The user enters their login credentials (usually username and
-            password) on the login page and submits the form.
+            {`The user enters their login credentials (usually username and
+            password) on the login page and submits the form.`}
           </li>
           <li>
             <h6 className='font-medium'>Receive request on back end</h6>
-            The server, leveraging Express, receives the login request and
-            prepares to authenticate the user with Passport's 'local' strategy.
+            {`The server, leveraging Express, receives the login request and
+            prepares to authenticate the user with Passport's 'local' strategy.`}
           </li>
           <li>
             <h6 className='font-medium'>Check credentials against database</h6>
-            Using Passport's LocalStrategy, the server validates the submitted
-            credentials against the stored user data in the database.
+            {`Using Passport's LocalStrategy, the server validates the submitted
+            credentials against the stored user data in the database.`}
           </li>
           <li>
             <h6 className='font-medium'>Determine session data</h6>
-            Successful authentication triggers Passport's serializeUser
+            {`Successful authentication triggers Passport's serializeUser
             function, deciding which user data (here, the user's ID) is saved in
-            the session.
+            the session.`}
           </li>
           <li>
             <h6 className='font-medium'>
               Passport attaches user ID to session
             </h6>
-            This step, handled internally by Passport, involves linking the
+            {`This step, handled internally by Passport, involves linking the
             user's ID to the newly created session, marking the beginning of the
-            session management.
+            session management.`}
           </li>
           <li>
             <h6 className='font-medium'>
