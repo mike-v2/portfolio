@@ -219,12 +219,9 @@ export const posts: BlogPost[] = [
       <div className='flex flex-col gap-y-4'>
         <p>
           Recently, I started working with a new team at{' '}
-          <a
-            href='https://www.linkedin.com/company/applied-coding'
-            target='_blank'
-          >
+          <Anchor href='https://www.linkedin.com/company/applied-coding'>
             Applied Coding, Inc
-          </a>{' '}
+          </Anchor>{' '}
           and was introduced to a tool I hadn&apos;t used before -{' '}
           <Anchor href='https://github.com/joe-bell/cva#readme'>
             Class Variance Authority (CVA)
@@ -454,12 +451,9 @@ export const posts: BlogPost[] = [
         </p>
         <p>
           Following the advice of{' '}
-          <a
-            href='https://www.linkedin.com/in/raymond-gan-0ba8011'
-            target='_blank'
-          >
+          <Anchor href='https://www.linkedin.com/in/raymond-gan-0ba8011'>
             Raymond Gan
-          </a>
+          </Anchor>{' '}
           and others, I took on the challenge of creating my own React clone. I
           thought it would not only be a great learning experience but also a
           fantastic way to showcase my abilities as a junior developer.
@@ -482,21 +476,15 @@ export const posts: BlogPost[] = [
         </p>
         <p>
           In-depth explanation:{' '}
-          <a
-            href='https://medium.com/@mmcguiness8700/recreating-react-96e8a01d4cb5'
-            target='_blank'
-          >
+          <Anchor href='https://medium.com/@mmcguiness8700/recreating-react-96e8a01d4cb5'>
             Medium Article
-          </a>
+          </Anchor>
         </p>
         <p>
           Source:{' '}
-          <a
-            href='https://github.com/mike-v2/react-from-scratch'
-            target='_blank'
-          >
+          <Anchor href='https://github.com/mike-v2/react-from-scratch'>
             GitHub Project
-          </a>
+          </Anchor>
         </p>
 
         <div className='relative mx-auto aspect-video w-full max-w-3xl overflow-hidden'>
@@ -799,12 +787,9 @@ export const posts: BlogPost[] = [
         </p>
         <p>
           Check out the{' '}
-          <a
-            href='https://github.com/mike-v2/journal-search/blob/main/tests/postBox.test.tsx'
-            target='_blank'
-          >
+          <Anchor href='https://github.com/mike-v2/journal-search/blob/main/tests/postBox.test.tsx'>
             full test
-          </a>
+          </Anchor>
           .
         </p>
         <p>
