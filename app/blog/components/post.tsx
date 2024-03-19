@@ -11,11 +11,13 @@ export default function Post({ title, date, link, content }: BlogPost) {
         <h3 className='my-4 text-xl'>{title}</h3>
         <div className='flex gap-x-4'>
           <h6>{format(date, 'MMM d, yyyy')}</h6>
-          <Anchor href={link}>Link</Anchor>
         </div>
       </div>
 
-      <div className='collapse-content mx-auto max-w-4xl'>{content}</div>
+      <div className='collapse-content mx-auto flex max-w-4xl flex-col gap-y-6'>
+        <Anchor href={link}>View on LinkedIn</Anchor>
+        {content}
+      </div>
     </section>
   );
 }
