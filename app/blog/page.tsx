@@ -9,6 +9,7 @@ import {
   post8,
   post9,
   post10,
+  post11,
 } from '@/app/blog/data';
 import Post from '@/app/blog/components/post';
 
@@ -23,6 +24,7 @@ const posts = [
   post8,
   post9,
   post10,
+  post11,
 ].reverse();
 
 export default function Blog() {
