@@ -8,7 +8,7 @@ export default function Projects({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const selectedProject = searchParams['project'] as string;
+  const selectedProject = searchParams['project'];
 
   return (
     <main>

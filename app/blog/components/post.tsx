@@ -5,7 +5,7 @@ import { Anchor } from '@/components/anchor';
 
 export default function Post({ title, date, link, content }: BlogPost) {
   return (
-    <section className='collapse border border-base-content shadow'>
+    <section className='collapse border border-primary shadow'>
       <input type='checkbox' />
       <div className='collapse-title'>
         <h3 className='my-4 text-xl'>{title}</h3>
