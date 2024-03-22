@@ -56,7 +56,7 @@ export default function ProjectList({
         )}
       </div>
 
-      <div className='flex flex-wrap justify-center gap-x-8'>
+      <div className='mx-auto flex max-w-7xl flex-wrap justify-center gap-x-16'>
         {projects &&
           projects
             .filter((project) => project.title !== urlProject)
