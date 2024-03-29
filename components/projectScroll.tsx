@@ -1,7 +1,5 @@
-import Image from 'next/image';
-
-import { ContainerScroll } from '@/components/containerScrollAnimation';
 import { projectData } from '@/app/projects/data';
+import ProjectWindow from '@/components/projectWindow';
 
 const selectedProjects = projectData.filter(
   (project) =>
@@ -12,21 +10,10 @@ const selectedProjects = projectData.filter(
 
 export default function ProjectScroll() {
   return (
-    <>
+    <div className='flex flex-col gap-y-24'>
       {selectedProjects.map((project) => (
-        <ContainerScroll titleComponent=''>
-          <div className=''>
-            <Image
-              src={project.imagePath}
-              width={0}
-              height={0}
-              sizes='100vw'
-              className='h-auto w-full'
-              alt={`Image representing the project, ${project.title}`}
-            />
-          </div>
-        </ContainerScroll>
+        <ProjectWindow project={project} key={project.title} />
       ))}
-    </>
+    </div>
   );
 }
