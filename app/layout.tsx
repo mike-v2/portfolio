@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 import '@/app/globals.css';
 import { getCurrentTheme } from '@/utils/theme';
-import NavBar from '@/components/navbar';
+import NavBar from '@/app/home.components/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
