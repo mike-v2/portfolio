@@ -1,15 +1,15 @@
 import Splash from '@/app/home.components/splash';
-import Skills from '@/app/home.components/skills';
-import HighlightedProject from '@/app/home.components/highlightedProject';
+import ProjectsPreview from '@/app/home.components/projectsPreview';
+import Summary from '@/app/home.components/summary';
 
 export default function Home() {
   return (
     <main>
       <Splash />
 
-      <Skills />
+      <Summary />
 
-      <HighlightedProject />
+      <ProjectsPreview />
     </main>
   );
 }

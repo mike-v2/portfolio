@@ -7,6 +7,14 @@ module.exports = {
   ],
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["emerald", "forest"],
+    themes: [{
+      tealTheme: {
+        'primary': '#34e7d7',
+        'base-100': '#dbfcf9',
+        "secondary": "#f6d860",
+        "accent": "#37cdbe",
+        "neutral": "#3d4451",
+      }
+    }],
   },
 }

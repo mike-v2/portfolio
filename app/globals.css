@@ -5,3 +5,6 @@
 .filter-green-400 {
   filter: invert(81%) sepia(27%) saturate(947%) hue-rotate(81deg) brightness(89%) contrast(95%);
 }
+.filter-primary {
+  filter: invert(78%) sepia(49%) saturate(638%) hue-rotate(114deg) brightness(97%) contrast(87%);
+}

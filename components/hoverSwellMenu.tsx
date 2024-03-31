@@ -22,13 +22,13 @@ export default function HoverSwellMenu({
               className='object-cover'
             />
           </div>
-          <div className='absolute inset-0 z-10 w-full bg-green-100 transition-all duration-700 group-hover:translate-x-full'></div>
+          <div className='absolute inset-0 z-10 w-full bg-base-100 transition-all duration-700 group-hover:translate-x-full'></div>
           <div className='relative z-20 flex h-full flex-col items-center p-4 md:flex-row'>
             <h3 className='basis-1/3 whitespace-nowrap px-12 text-[clamp(1rem,2vw,4rem)] text-primary'>
               {item.title}
             </h3>
             <div className='relative basis-2/3 text-[clamp(1rem,2vw,4rem)]'>
-              <p className='font-medium transition-colors duration-500 group-hover:text-primary'>
+              <p className='font-medium text-primary-content transition-colors duration-500 group-hover:text-primary'>
                 {item.subtitle}
               </p>
               <div className='absolute top-full h-fit overflow-y-hidden'>
