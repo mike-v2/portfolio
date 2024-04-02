@@ -8,7 +8,7 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [{
-      tealTheme: {
+      cyanTheme: {
         'primary': '#34e7d7',
         'base-100': '#dbfcf9',
         "secondary": "#f6d860",
@@ -16,5 +16,18 @@ module.exports = {
         "neutral": "#3d4451",
       }
     }],
+  },
+  theme: {
+    extend: {
+      animation: {
+        ticker: 'ticker 35s linear infinite',
+      },
+      keyframes: {
+        ticker: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+    },
   },
 }
