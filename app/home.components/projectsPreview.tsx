@@ -1,25 +1,31 @@
 import HoverSwellMenu from '@/components/hoverSwellMenu';
-import { projectData } from '@/app/projects/data';
 
-const menuItems: HoverSwellMenuItem[] = projectData
-  .filter(
-    (project) =>
-      project.title === 'Recreating React' ||
-      project.title === "Harry Howard's Journals" ||
-      project.title === 'Good News!',
-  )
-  .map((project) => ({
-    title: project.title,
-    subtitle: project.subtitle,
-    imagePath: project.imagePath,
-    href: `/projects?project=${encodeURIComponent(project.title)}`,
-  }));
+const selectedProjects = [
+  {
+    title: 'Good News!',
+    subtitle: 'An Automated Pipeline for Finding Positive News Stories with AI',
+    imagePath: '/images/project-good-news.jpg',
+  },
+  {
+    title: "Harry Howard's Journals",
+    subtitle: 'Using AI to Make Big Data More Accessible',
+    imagePath: '/images/project-journal.jpg',
+  },
+  {
+    title: 'Recreating React',
+    subtitle: 'Building Four Core Features of React',
+    imagePath: '/images/project-react.jpg',
+  },
+].map((project) => ({
+  ...project,
+  href: `/projects?project=${encodeURIComponent(project.title)}`,
+}));
 
 export default function ProjectsPreview() {
   return (
     <section>
       <h2 className='my-24 p-8 text-center text-8xl'>Projects</h2>
-      <HoverSwellMenu items={menuItems} />
+      <HoverSwellMenu items={selectedProjects as HoverSwellMenuItem[]} />
     </section>
   );
 }
