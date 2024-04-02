@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const skills = [
@@ -34,14 +32,6 @@ const skills = [
   {
     name: 'Jest',
     imagePath: '/images/jest-logo.svg',
-  },
-  {
-    name: 'GitHub',
-    imagePath: '/images/github-logo.svg',
-  },
-  {
-    name: 'ChatGPT',
-    imagePath: '/images/openai-logo.svg',
   },
 ];
 
