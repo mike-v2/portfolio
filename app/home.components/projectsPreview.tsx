@@ -18,7 +18,7 @@ const menuItems: HoverSwellMenuItem[] = projectData
 export default function ProjectsPreview() {
   return (
     <section>
-      <h2 className='p-8 text-center text-5xl'>Projects</h2>
+      <h2 className='my-24 p-8 text-center text-8xl'>Projects</h2>
       <HoverSwellMenu items={menuItems} />
     </section>
   );
