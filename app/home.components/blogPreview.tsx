@@ -34,8 +34,9 @@ export default function BlogPreview() {
       <div className='mx-auto grid max-w-7xl grid-cols-1 items-center justify-center gap-4 p-6 md:grid-cols-2'>
         {selectedBlogs.map((blog) => (
           <Link
-            href='/'
-            className='hover:text-shadow group relative flex h-96 basis-full flex-col justify-end overflow-hidden p-8 text-white transition-colors duration-500 hover:text-primary'
+            key={blog.title}
+            href='/blog'
+            className='group relative flex h-96 basis-full flex-col justify-end overflow-hidden p-8 text-white transition-colors duration-500 hover:text-primary hover:text-shadow'
           >
             <Image
               src={blog.imagePath}

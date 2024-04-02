@@ -5,15 +5,19 @@ import MediaLinks from '@/app/home.components/mediaLinks';
 
 export default function Splash() {
   return (
-    <section className='relative flex min-h-screen items-center bg-black'>
+    <section className='relative flex items-center bg-black'>
       <Image
         src='/images/background-spotlight-teal.jpg'
         alt='Image of spotlight'
+        width={0}
+        height={0}
+        sizes='100vw'
         quality={100}
-        fill
-        className='object-contain'
+        className='h-auto w-full'
       />
-      <SplashText />
+      <div className='absolute inset-x-0 bottom-1/2 translate-y-1/2'>
+        <SplashText />
+      </div>
       <div className='absolute inset-x-0 bottom-8'>
         <MediaLinks />
       </div>

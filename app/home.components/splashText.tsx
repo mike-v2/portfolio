@@ -1,65 +1,102 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 export default function SplashText() {
   const containerRef = useRef<any>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-  });
 
-  const textMove1 = useTransform(scrollYProgress, [0.1, 0.4], [-200, 0]);
-  const textMove2 = useTransform(scrollYProgress, [0.4, 0.2], [200, 0]);
+  const [startPosition, setStartPosition] = useState(0);
+  const [position, setPosition] = useState(1);
 
-  /* useEffect(() => {
-    scrollYProgress.onChange((value) => {
-      console.log('scrollYProgress:', value);
-    });
-  }, [scrollYProgress]); */
+  useEffect(() => {
+    function handleResize() {
+      const { top, bottom, height } =
+        containerRef.current.getBoundingClientRect();
+
+      const scrollTop = document.documentElement.scrollTop;
+      const middleOfElement = top + height / 2;
+      const absPos = middleOfElement + scrollTop;
+      const startPos = absPos / window.innerHeight;
+      setStartPosition(startPos);
+    }
+
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const { top, bottom, height } =
+          containerRef.current.getBoundingClientRect();
+
+        const middleOfElement = top + height / 2;
+        const bottomOfView = window.innerHeight;
+        const topOfView = 0;
+
+        const position =
+          (middleOfElement - topOfView) / (bottomOfView - topOfView);
+        const clampedPosition = Math.min(Math.max(position, 0), 1);
+        setPosition(clampedPosition);
+      }
+    };
+
+    handleScroll();
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div
       ref={containerRef}
-      className='flex w-full flex-col items-center justify-center gap-y-4 text-9xl font-bold'
+      className='flex w-full flex-col items-center justify-center gap-y-4 text-3xl font-bold md:text-9xl'
     >
-      <div className='relative mt-8 h-36 w-full overflow-y-hidden whitespace-nowrap'>
-        <motion.h1
+      <div className='relative mt-8 h-12 w-full overflow-y-hidden whitespace-nowrap md:h-36'>
+        <h1
           style={{
-            y: textMove1,
+            transform: `translateY(${inverseLerp(0, 0.5, (startPosition - position) / startPosition) * 100}%)`,
           }}
           className='h-full w-full bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
         >
           Full Stack
-        </motion.h1>
-        <motion.h1
+        </h1>
+        <h1
           style={{
-            y: textMove2,
+            transform: `translateY(-${inverseLerp(0.5, 0.0, (startPosition - position) / startPosition) * 100}%)`,
           }}
           className='absolute inset-0 bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
         >
           Michael
-        </motion.h1>
+        </h1>
       </div>
-      <div className='relative h-36 w-full overflow-y-hidden'>
-        <motion.h1
+      <div className='relative h-12 w-full overflow-y-hidden md:h-36'>
+        <h1
           style={{
-            y: textMove1,
+            transform: `translateY(${lerp(0.0, 1.75, (startPosition - position) / startPosition) * 100}%)`,
           }}
           className='h-full w-full bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
         >
           Developer
-        </motion.h1>
-        <motion.h1
+        </h1>
+        <h1
           style={{
-            y: textMove2,
+            transform: `translateY(-${inverseLerp(0.5, 0.0, (startPosition - position) / startPosition) * 100}%)`,
           }}
           className='absolute inset-0 bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
         >
           McGuiness
-        </motion.h1>
+        </h1>
       </div>
     </div>
   );
+}
+
+function lerp(start: number, end: number, t: number) {
+  return start * (1 - t) + end * t;
+}
+
+function inverseLerp(start: number, end: number, value: number) {
+  return (value - start) / (end - start);
 }
