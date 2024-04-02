@@ -28,7 +28,7 @@ export default function HoverSwellMenu({
               {item.title}
             </h3>
             <div className='relative basis-2/3 text-[clamp(1rem,2vw,4rem)]'>
-              <p className='group-hover:text-shadow font-bold text-primary-content transition-colors duration-500 group-hover:text-primary'>
+              <p className='group-hover:text-shadow font-bold text-primary-content transition-all delay-100 duration-500 group-hover:text-primary'>
                 {item.subtitle}
               </p>
               <div className='absolute top-full h-fit overflow-y-hidden'>
