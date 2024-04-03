@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import { LuMoveUpRight } from 'react-icons/lu';
 
+import SectionTitle from '@/components/sectionTitle';
+
 const selectedBlogs = [
   {
     title: 'Deep Dive into Software Testing',
@@ -30,7 +32,7 @@ const selectedBlogs = [
 export default function BlogPreview() {
   return (
     <section>
-      <h2 className='my-24 p-8 text-center text-8xl'>Blog</h2>
+      <SectionTitle title='Blog' />
       <div className='mx-auto grid max-w-7xl grid-cols-1 items-center justify-center gap-4 p-6 md:grid-cols-2'>
         {selectedBlogs.map((blog) => (
           <Link

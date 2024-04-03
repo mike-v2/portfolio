@@ -35,23 +35,17 @@ const skills = [
   },
 ];
 
-const width = 'w-[200vw]';
-
 export default function SkillsTicker() {
   return (
-    <div className='relative flex h-64 items-center overflow-x-hidden border-2 border-primary bg-cyan-200'>
-      <div className={`${width} animate-ticker`}>
-        <ul
-          className={`${width} absolute inset-0 flex -translate-x-full justify-around`}
-        >
+    <div className='relative flex h-32 items-center overflow-x-hidden border-2 border-primary bg-cyan-200 md:h-64'>
+      <div className='animate-ticker'>
+        <ul className='absolute inset-0 flex -translate-x-full justify-around'>
           <Contents />
         </ul>
-        <ul className={`${width} flex justify-around`}>
+        <ul className='flex w-[100rem] justify-around md:w-[200rem]'>
           <Contents />
         </ul>
-        <ul
-          className={`${width} absolute inset-0 flex translate-x-full justify-around`}
-        >
+        <ul className='absolute inset-0 flex translate-x-full justify-around'>
           <Contents />
         </ul>
       </div>
@@ -65,15 +59,18 @@ function Contents() {
       {skills.map((skill, index) => (
         <li
           key={index - skills.length}
-          className='flex items-center gap-x-4 whitespace-nowrap py-2 pr-24'
+          className='flex  items-center gap-x-2 whitespace-nowrap py-2 pr-24 md:gap-x-4 '
         >
+          <div></div>
           <Image
             src={skill.imagePath}
-            height={64}
-            width={64}
+            height={0}
+            width={0}
+            sizes='100vw'
             alt={`${skill.name} logo`}
+            className='h-8 w-8 md:h-16 md:w-16'
           />
-          <span className='text-4xl'>{skill.name}</span>
+          <span className='text-xl md:text-4xl'>{skill.name}</span>
         </li>
       ))}
     </>

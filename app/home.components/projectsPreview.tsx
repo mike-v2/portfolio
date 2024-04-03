@@ -1,4 +1,5 @@
 import HoverSwellMenu from '@/components/hoverSwellMenu';
+import SectionTitle from '@/components/sectionTitle';
 
 const selectedProjects = [
   {
@@ -24,7 +25,7 @@ const selectedProjects = [
 export default function ProjectsPreview() {
   return (
     <section>
-      <h2 className='my-24 p-8 text-center text-8xl'>Projects</h2>
+      <SectionTitle title='Projects' />
       <HoverSwellMenu items={selectedProjects} />
     </section>
   );
