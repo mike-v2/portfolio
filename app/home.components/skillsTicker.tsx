@@ -61,14 +61,13 @@ function Contents() {
           key={index - skills.length}
           className='flex  items-center gap-x-2 whitespace-nowrap py-2 pr-24 md:gap-x-4 '
         >
-          <div></div>
           <Image
             src={skill.imagePath}
             height={0}
             width={0}
             sizes='100vw'
             alt={`${skill.name} logo`}
-            className='h-8 w-8 md:h-16 md:w-16'
+            className='h-auto w-8 md:w-16'
           />
           <span className='text-xl md:text-4xl'>{skill.name}</span>
         </li>

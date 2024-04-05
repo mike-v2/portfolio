@@ -9,18 +9,7 @@ export default function SplashText() {
   const [position, setPosition] = useState(1);
 
   useEffect(() => {
-    function handleResize() {
-      const { top, bottom, height } =
-        containerRef.current.getBoundingClientRect();
-
-      const scrollTop = document.documentElement.scrollTop;
-      const middleOfElement = top + height / 2;
-      const absPos = middleOfElement + scrollTop;
-      const startPos = absPos / window.innerHeight;
-      setStartPosition(startPos);
-    }
-
-    const handleScroll = () => {
+    const handleTransform = () => {
       if (containerRef.current) {
         const { top, bottom, height } =
           containerRef.current.getBoundingClientRect();
@@ -28,23 +17,26 @@ export default function SplashText() {
         const middleOfElement = top + height / 2;
         const bottomOfView = window.innerHeight;
         const topOfView = 0;
-
         const position =
           (middleOfElement - topOfView) / (bottomOfView - topOfView);
         const clampedPosition = Math.min(Math.max(position, 0), 1);
         setPosition(clampedPosition);
+
+        const scrollTop = document.documentElement.scrollTop;
+        const absPos = middleOfElement + scrollTop;
+        const startPos = absPos / window.innerHeight;
+        setStartPosition(startPos);
       }
     };
 
-    handleScroll();
-    handleResize();
+    handleTransform();
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleTransform);
+    window.addEventListener('scroll', handleTransform);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleTransform);
+      window.removeEventListener('resize', handleTransform);
     };
   }, []);
 

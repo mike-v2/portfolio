@@ -50,11 +50,12 @@ export default function BlogPreview() {
               className='-z-10 rounded-2xl object-cover transition-all duration-500 group-hover:scale-125'
             />
 
-            <div>{format(blog.date, 'MMMM d, yyyy')}</div>
-            <h2 className='text-4xl font-semibold'>{blog.title}</h2>
-            <div className='absolute right-12 top-12 flex h-16 w-16 scale-0 items-center justify-center rounded-full bg-base-100 text-3xl transition-all duration-500 group-hover:scale-100'>
+            <div className='absolute right-12 top-12 flex h-16 w-16 scale-0 items-center justify-center rounded-full bg-base-100 text-3xl text-gray-700 transition-all duration-500 group-hover:scale-100'>
               <LuMoveUpRight />
             </div>
+
+            <div>{format(blog.date, 'MMMM d, yyyy')}</div>
+            <h2 className='text-4xl font-semibold'>{blog.title}</h2>
           </Link>
         ))}
       </div>
