@@ -22,7 +22,7 @@ export default function Splash() {
       <div className='absolute right-4 top-4 md:right-16 md:top-12'>
         <MediaLinks />
       </div>
-      <Sparkles />
+      {/* <Sparkles /> */}
     </section>
   );
 }
