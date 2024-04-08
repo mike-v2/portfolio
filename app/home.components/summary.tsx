@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Catamaran } from 'next/font/google';
 
 import { inverseLerp, inverseLerpClamped, lerp } from '@/utils/math';
+import { debounce } from '@/utils/debounce';
 
 const catamaran = Catamaran({ subsets: ['latin'] });
 
