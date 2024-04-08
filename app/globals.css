@@ -8,7 +8,8 @@
 .filter-primary {
   filter: invert(78%) sepia(49%) saturate(638%) hue-rotate(114deg) brightness(97%) contrast(87%);
 }
-.double-gradient {
-  background-image: linear-gradient(to top, #a5f3fc70 10%, #11182770), linear-gradient(to top left, #a5f3fc30 50%, #11182790);
-  opacity: .8;
+.summary-gradient {
+  background-image: radial-gradient(circle farthest-corner at 0% 50%, #141719, #fff0),
+    radial-gradient(circle farthest-corner at 100% 100%, #044c46, #ffffff50),
+    radial-gradient(circle farthest-side at 50% 0%, #03332f, #ffffff45)
 }

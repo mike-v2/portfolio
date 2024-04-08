@@ -2,12 +2,18 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { Catamaran } from 'next/font/google';
+
+import { inverseLerp, inverseLerpClamped, lerp } from '@/utils/math';
+
+const catamaran = Catamaran({ subsets: ['latin'] });
 
 export default function Summary() {
   const containerRef = useRef<any>(null);
   const [position1, setPosition1] = useState(0);
   const [position2, setPosition2] = useState(0);
   const [position3, setPosition3] = useState(0);
+  const [opacity, setOpacity] = useState(100);
 
   useEffect(() => {
     const handleTransform = () => {
@@ -22,6 +28,14 @@ export default function Summary() {
         setPosition1(pos1);
         setPosition2(pos2);
         setPosition3(pos3);
+
+        const opacityFrac =
+          top > -height / 2
+            ? 1 - inverseLerpClamped(-400, -600, top)
+            : inverseLerpClamped(-height + 900, -height + 700, top);
+        const opac = Math.round(lerp(0.1, 1, opacityFrac) * 100);
+
+        setOpacity(opac);
       }
     };
 
@@ -34,27 +48,24 @@ export default function Summary() {
     };
   }, []);
 
-  function lerp(start: number, end: number, t: number) {
-    return start * (1 - t) + end * t;
-  }
-
-  function inverseLerp(start: number, end: number, value: number) {
-    return (value - start) / (end - start);
-  }
-
   return (
     <section
       ref={containerRef}
-      className='relative h-[155rem] py-40 tracking-wide'
+      className='relative h-[125rem] py-20 tracking-wide md:h-[160rem]'
     >
-      <div className='double-gradient absolute inset-0'></div>
+      <div className='summary-gradient absolute inset-0 -z-20 bg-gray-800'></div>
 
-      <div className='sticky top-12 -z-10 h-96 text-center text-9xl font-semibold tracking-widest text-primary'>
+      <div
+        style={{
+          opacity: `${opacity}%`,
+        }}
+        className='sticky top-12 -z-10 h-60 overflow-x-hidden text-center text-6xl font-bold tracking-widest text-primary md:h-[29rem] md:text-9xl'
+      >
         <div
           style={{
             transform: `translateX(${position1}vw)`,
           }}
-          className='absolute inset-0'
+          className='absolute inset-0 transition-all duration-1000 ease-out'
         >
           Agile
         </div>
@@ -62,21 +73,23 @@ export default function Summary() {
           style={{
             transform: `translateX(${position2}vw)`,
           }}
-          className='absolute inset-0 top-32'
+          className='absolute inset-0 top-20 whitespace-nowrap transition-all duration-1000 ease-out md:top-40'
         >
-          Creative
+          Team Player
         </div>
         <div
           style={{
             transform: `translateX(${position3}vw)`,
           }}
-          className='absolute inset-0 top-64'
+          className='absolute inset-0 top-40 transition-all duration-1000 ease-out md:top-80'
         >
-          Team Player
+          Creating
         </div>
       </div>
-      <div className='mx-auto mt-48 flex max-w-5xl items-center justify-between'>
-        <div className='w-96'>
+      <div
+        className={`${catamaran.className} mx-auto mt-24 flex max-w-5xl flex-col items-center justify-between gap-8 text-base-100 md:mt-48 md:flex-row`}
+      >
+        <div className='w-72 pl-12 md:w-96'>
           <Image
             src='/images/summary-bridge.jpg'
             alt='Image of bridging old and new technologies'
@@ -85,12 +98,9 @@ export default function Summary() {
             sizes='100vw'
             className='h-auto w-full rounded-xl'
           />
-          <p>
-            {`Passionate Full-Stack Developer adept at harnessing the latest in web
-        technologies and AI to craft seamless, user-centric digital experiences.`}
-          </p>
+          <p className='pt-10 text-4xl md:text-6xl'>{`OLD + NEW`}</p>
         </div>
-        <div className='w-96'>
+        <div className='w-60 pr-4 md:w-96'>
           <Image
             src='/images/summary-hands.jpg'
             alt='Image of old and new technologies represented by two hands'
@@ -99,14 +109,12 @@ export default function Summary() {
             sizes='100vw'
             className='h-auto w-full rounded-xl'
           />
-          <p>
-            {`With experience creating apps in React, Next.js, and Node.js, I'm
-        dedicated to evolving with the tech landscape to build the future of
-        interactive applications.`}
+          <p className='pt-6 text-xl'>
+            {`Combining a mastery of established tools like React with a thirst for the latest and greatest, including AI.`}
           </p>
         </div>
       </div>
-      <div className='mx-auto mt-48 w-[30rem]'>
+      <div className='mx-auto mt-48 w-full max-w-[30rem]'>
         <Image
           src='/images/summary-tree.jpg'
           alt='Image of old and new technologies represented by a tree'

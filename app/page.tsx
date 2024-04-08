@@ -9,11 +9,11 @@ export default function Home() {
     <main>
       <Splash />
 
-      <Summary />
-
       <ProjectsPreview />
 
       <SkillsTicker />
+
+      <Summary />
 
       <BlogPreview />
     </main>
