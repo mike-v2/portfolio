@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import SplashText from '@/app/home.components/splashText';
 import MediaLinks from '@/app/home.components/mediaLinks';
+import Sparkles from '@/app/home.components/sparkles';
 
 export default function Splash() {
   return (
@@ -21,6 +22,7 @@ export default function Splash() {
       <div className='absolute right-4 top-4 md:right-16 md:top-12'>
         <MediaLinks />
       </div>
+      <Sparkles />
     </section>
   );
 }

@@ -114,7 +114,7 @@ export default function Summary() {
           </p>
         </div>
       </div>
-      <div className='mx-auto mt-48 w-full max-w-[30rem]'>
+      <div className='mx-auto mt-48 w-full max-w-[35rem]'>
         <Image
           src='/images/summary-tree.jpg'
           alt='Image of old and new technologies represented by a tree'
