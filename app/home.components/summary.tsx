@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Catamaran } from 'next/font/google';
 
+const lodash = require('lodash');
+
 import { inverseLerp, inverseLerpClamped, lerp } from '@/utils/math';
 
 const catamaran = Catamaran({ subsets: ['latin'] });
@@ -16,7 +18,7 @@ export default function Summary() {
   const [opacity, setOpacity] = useState(100);
 
   useEffect(() => {
-    const handleTransform = () => {
+    const handleTransform = lodash.debounce(() => {
       if (containerRef.current) {
         const { top, height } = containerRef.current.getBoundingClientRect();
 
@@ -37,7 +39,7 @@ export default function Summary() {
 
         setOpacity(opac);
       }
-    };
+    }, 16);
 
     handleTransform();
 
