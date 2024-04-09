@@ -99,7 +99,7 @@ export default function Summary() {
             sizes='100vw'
             className='h-auto w-full rounded-xl'
           />
-          <p className='pt-10 text-4xl md:text-6xl'>{`OLD + NEW`}</p>
+          <p className='pt-10 text-center text-4xl md:text-6xl'>{`OLD + NEW`}</p>
         </div>
         <div className='w-60 pr-4 md:w-96'>
           <Image
