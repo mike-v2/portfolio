@@ -3,17 +3,9 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import { Theme } from '@/types/theme.enum';
-
 import ProjectCard from '@/app/projects/components/projectCard';
 
-export default function ProjectList({
-  projects,
-  theme,
-}: {
-  projects: ProjectData[];
-  theme: Theme;
-}) {
+export default function ProjectList({ projects }: { projects: ProjectData[] }) {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
     null,
   );
@@ -47,7 +39,6 @@ export default function ProjectList({
         {selectedProject && (
           <ProjectCard
             project={selectedProject}
-            theme={theme}
             isExpanded={true}
             onExpandedChange={(isExpanded) =>
               handleExpandChange(selectedProject, isExpanded)
@@ -64,7 +55,6 @@ export default function ProjectList({
               <ProjectCard
                 key={project.imagePath}
                 project={project}
-                theme={theme}
                 isExpanded={false}
                 onExpandedChange={(isExpanded) =>
                   handleExpandChange(project, isExpanded)

@@ -4,8 +4,6 @@ import Image from 'next/image';
 
 import { LuX } from 'react-icons/lu';
 
-import { Theme } from '@/types/theme.enum';
-
 const toolIcons: ToolIconData = {
   'Next.js': {
     src: '/images/nextjs-logo.svg',
@@ -64,12 +62,10 @@ const toolIcons: ToolIconData = {
 
 export default function ProjectCard({
   project,
-  theme,
   isExpanded,
   onExpandedChange,
 }: {
   project: ProjectData;
-  theme: Theme;
   isExpanded: boolean;
   onExpandedChange: (isExpanded: boolean) => void;
 }) {
@@ -108,10 +104,7 @@ export default function ProjectCard({
           <Collapse
             name='Primary Tools Used'
             contents={
-              <PrimaryToolsContents
-                primaryTools={project.primaryTools}
-                theme={theme}
-              />
+              <PrimaryToolsContents primaryTools={project.primaryTools} />
             }
           />
           <Collapse
@@ -142,13 +135,7 @@ function Collapse({
   );
 }
 
-function PrimaryToolsContents({
-  primaryTools,
-  theme,
-}: {
-  primaryTools: string[];
-  theme: Theme;
-}) {
+function PrimaryToolsContents({ primaryTools }: { primaryTools: string[] }) {
   return (
     <div className='flex flex-wrap gap-x-6 gap-y-4'>
       {primaryTools &&
@@ -161,11 +148,6 @@ function PrimaryToolsContents({
               {toolIcons[tool].src !== '' && (
                 <Image
                   src={toolIcons[tool].src}
-                  className={` ${
-                    toolIcons[tool].invert && theme === Theme.Dark
-                      ? 'invert'
-                      : ''
-                  }`}
                   width={32}
                   height={32}
                   alt={`${tool} logo`}
