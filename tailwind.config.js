@@ -7,27 +7,32 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  plugins: [require("daisyui"), plugin(function ({ matchUtilities, theme }) {
+  plugins: [
+    require('daisyui'),
+    plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           'text-shadow': (value) => ({
             textShadow: value,
           }),
         },
-        { values: theme('textShadow') }
+        { values: theme('textShadow') },
       );
     }),
-],
+  ],
   daisyui: {
-    themes: [{
-      cyanTheme: {
-        'primary': '#34e7d7',
-        'base-100': '#dbfcf9',
-        "secondary": "#f6d860",
-        "accent": "#37cdbe",
-        "neutral": "#3d4451",
-      }
-    }],
+    themes: [
+      {
+        cyanTheme: {
+          primary: '#34e7d7',
+          'base-100': '#dbfcf9',
+          'base-300': '#282d33',
+          secondary: '#f6d860',
+          accent: '#37cdbe',
+          neutral: '#3d4451',
+        },
+      },
+    ],
   },
   theme: {
     extend: {
@@ -45,4 +50,4 @@ module.exports = {
       },
     },
   },
-}
+};
