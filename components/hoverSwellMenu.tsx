@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { LuArrowRight } from 'react-icons/lu';
+
 export default function HoverSwellMenu({
   items,
 }: {
@@ -34,7 +36,9 @@ export default function HoverSwellMenu({
               <div className='absolute top-full h-fit overflow-y-hidden'>
                 <div className='flex gap-x-4 text-primary group-hover:text-shadow'>
                   <div className='translate-y-full transition-transform duration-700 group-hover:translate-y-0'>{`Project Details`}</div>
-                  <div className='translate-y-full transition-transform duration-1000 group-hover:translate-y-0'>{`->`}</div>
+                  <div className='flex translate-y-full items-center transition-transform duration-1000 group-hover:translate-y-0'>
+                    <LuArrowRight />
+                  </div>
                 </div>
               </div>
             </div>
