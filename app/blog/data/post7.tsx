@@ -5,6 +5,7 @@ import { Anchor } from '@/components/anchor';
 import Header4 from '@/app/blog/components/header4';
 
 export const post7: BlogPost = {
+  id: '7',
   title:
     'Vivid Variants with Class Variance Authority: Revolutionizing React Styles',
   date: '2023-11-15',

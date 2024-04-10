@@ -4,6 +4,7 @@ import { Anchor } from '@/components/anchor';
 import { BlogPost } from '@/types/postData';
 
 export const post6: BlogPost = {
+  id: '6',
   title:
     'Turn the Corner on Your Web Design Skills with This CSS Page Fold Trick',
   date: '2023-10-31',

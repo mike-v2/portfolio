@@ -4,6 +4,7 @@ import Header4 from '../components/header4';
 import CodeBlock from '../components/codeBlock';
 
 export const post2: BlogPost = {
+  id: '2',
   title: 'Deep Dive into Software Testing: Handling Comment Edits',
   date: '2023-09-27',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_softwaretesting-react-nextjs-activity-7112922913929924608-nKlT',

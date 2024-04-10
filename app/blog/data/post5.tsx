@@ -3,6 +3,7 @@ import { BlogPost } from '@/types/postData';
 import EmbeddedVideo from '@/app/blog/components/embeddedVideo';
 
 export const post5: BlogPost = {
+  id: '5',
   title: 'Recreating React',
   date: '2023-10-23',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_react-javascript-frontenddevelopment-activity-7122370503448657922-1oCI',
