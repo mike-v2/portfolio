@@ -11,6 +11,7 @@ import {
   post10,
   post11,
 } from '@/app/blog/data';
+import { BlogPost } from '@/types/postData';
 
 const posts = [
   post1,
@@ -26,6 +27,6 @@ const posts = [
   post11,
 ].reverse();
 
-export default function getBlogPostBySlug(slug: string) {
-  return posts.find((post) => post.id === slug);
+export default function getBlogPostBySlug(slug: string): BlogPost {
+  return posts.find((post) => post.id === slug) ?? post1;
 }

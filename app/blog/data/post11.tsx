@@ -5,6 +5,7 @@ import Header4 from '@/app/blog/components/header4';
 
 export const post11: BlogPost = {
   id: '11',
+  imagePath: '/images/blog-passport-auth.jpg',
   title: 'Request Rundown: Navigating the Nuances of Authenticated Access',
   date: '2024-03-19',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_logging-in-is-just-the-start-what-happens-activity-7175900680732258304-4Zlb',

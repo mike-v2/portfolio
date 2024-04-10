@@ -4,6 +4,7 @@ import Header4 from '@/app/blog/components/header4';
 
 export const post8: BlogPost = {
   id: '8',
+  imagePath: '/images/blog-journal.jpg',
   title:
     "AI Awakens Ancestry: Interactive Innovation in Harry Howard's Journals",
   date: '2023-11-25',
