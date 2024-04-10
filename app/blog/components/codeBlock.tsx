@@ -6,7 +6,7 @@ export default function CodeBlock({ children }: { children: React.ReactNode }) {
   return (
     <div className='px-4'>
       <div
-        className={`${firacode.className} rounded-lg border border-secondary bg-base-200 p-2 text-sm`}
+        className={`${firacode.className} overflow-x-auto rounded-lg border border-secondary bg-base-200 p-2 text-sm`}
       >
         {children}
       </div>
