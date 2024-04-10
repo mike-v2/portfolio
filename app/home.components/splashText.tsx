@@ -43,14 +43,17 @@ export default function SplashText() {
   return (
     <div
       ref={containerRef}
-      className='flex w-full flex-col items-center justify-center gap-y-4 text-3xl font-bold md:text-9xl'
+      style={{
+        fontSize: 'clamp(3rem,12vw,10rem)',
+      }}
+      className='flex w-full flex-col items-center justify-center font-bold'
     >
-      <div className='relative mt-8 h-12 w-full overflow-y-hidden whitespace-nowrap md:h-36'>
+      <div className='relative w-full overflow-y-hidden whitespace-nowrap'>
         <h1
           style={{
             transform: `translateY(${inverseLerp(0, 0.5, (startPosition - position) / startPosition) * 100}%)`,
           }}
-          className='h-full w-full bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
+          className='bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
         >
           Full Stack
         </h1>
@@ -63,12 +66,12 @@ export default function SplashText() {
           Michael
         </h1>
       </div>
-      <div className='relative h-12 w-full overflow-y-hidden md:h-36'>
+      <div className='relative w-full overflow-y-hidden'>
         <h1
           style={{
             transform: `translateY(${lerp(0.0, 1.75, (startPosition - position) / startPosition) * 100}%)`,
           }}
-          className='h-full w-full bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
+          className='bg-gradient-to-b from-primary to-slate-900 bg-clip-text text-center tracking-tight text-transparent'
         >
           Developer
         </h1>
