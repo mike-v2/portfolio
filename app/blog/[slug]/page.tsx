@@ -9,10 +9,11 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
   function getMoreBlogs() {
     // start with next chronological blog and find remaining by incrementing by 3
-    const first = (Number(params.slug) + 1) % blogCount;
-    const second = (first + 3) % blogCount;
-    const third = (second + 3) % blogCount;
-    const fourth = (third + 3) % blogCount;
+
+    const first = (Number(params.slug) + 1) % blogCount || blogCount;
+    const second = (first + 3) % blogCount || blogCount;
+    const third = (second + 3) % blogCount || blogCount;
+    const fourth = (third + 3) % blogCount || blogCount;
 
     return [
       first.toString(),
