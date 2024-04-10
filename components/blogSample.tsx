@@ -19,7 +19,7 @@ export default function BlogSample({ ids }: { ids: string[] }) {
             className='group relative flex h-96 basis-full flex-col justify-end overflow-hidden p-8 text-white transition-colors duration-500 text-shadow hover:text-primary'
           >
             <Image
-              src={blog.imagePath ?? '/images/blog-journal.jpg'}
+              src={blog.imagePath ?? '/images/blog-testing.jpg'}
               alt={blog.title}
               height={0}
               width={0}

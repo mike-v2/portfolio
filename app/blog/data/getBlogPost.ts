@@ -30,3 +30,5 @@ const posts = [
 export default function getBlogPostBySlug(slug: string): BlogPost {
   return posts.find((post) => post.id === slug) ?? post1;
 }
+
+export const blogCount = posts.length;

@@ -10,9 +10,9 @@ const catamaran = Catamaran({ subsets: ['latin'] });
 export default function Post({ title, date, link, content }: BlogPost) {
   return (
     <section className='bg-base-300 p-8'>
-      <div className='mx-auto max-w-xl py-16 text-center text-primary'>
-        <h3 className='my-12 text-6xl'>{title}</h3>
-        <div className='text-sm'>{format(date, 'MMM d, yyyy')}</div>
+      <div className='mx-auto max-w-2xl py-16 text-center text-primary'>
+        <h3 className='my-12 text-8xl'>{title}</h3>
+        <div className='text-lg'>{format(date, 'MMM d, yyyy')}</div>
       </div>
 
       <div
