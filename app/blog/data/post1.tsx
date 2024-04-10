@@ -3,6 +3,7 @@ import { BlogPost } from '@/types/postData';
 
 export const post1: BlogPost = {
   id: '1',
+  imagePath: '/images/blog-journal.jpg',
   title: "Harry Howard's Journals: Using AI to Make Big Data More Accessible",
   date: '2023-08-10',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_harry-howards-journals-using-ai-to-make-activity-7095504010203316224-nyHt',

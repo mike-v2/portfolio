@@ -7,6 +7,7 @@ import Header4 from '@/app/blog/components/header4';
 
 export const post3: BlogPost = {
   id: '3',
+  imagePath: '/images/blog-journal.jpg',
   title: 'Deciphering the Past: A Journey of Transcribing Handwritten Journals',
   date: '2023-09-30',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_adding-authentication-to-my-nextjs-app-with-activity-7117230565690380289-NnMw',

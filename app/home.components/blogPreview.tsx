@@ -8,21 +8,25 @@ import SectionTitle from '@/components/sectionTitle';
 
 const selectedBlogs = [
   {
+    id: '2',
     title: 'Deep Dive into Software Testing',
     date: '2023-09-27',
     imagePath: '/images/blog-testing.jpg',
   },
   {
+    id: '3',
     title: 'Deciphering the Past',
     date: '2023-09-30',
     imagePath: '/images/blog-journal.jpg',
   },
   {
+    id: '4',
     title: 'Adding Authentication to my Next.js App',
     date: '2023-10-09',
     imagePath: '/images/blog-next-auth.jpg',
   },
   {
+    id: '10',
     title: 'Login Logic',
     date: '2024-03-18',
     imagePath: '/images/blog-passport-auth.jpg',
@@ -37,7 +41,7 @@ export default function BlogPreview() {
         {selectedBlogs.map((blog) => (
           <Link
             key={blog.title}
-            href='/blog'
+            href={`/blog/${blog.id}`}
             className='group relative flex h-96 basis-full flex-col justify-end overflow-hidden p-8 text-white transition-colors duration-500 hover:text-primary hover:text-shadow'
           >
             <Image
