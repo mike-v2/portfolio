@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Anchor } from '@/components/anchor';
+import { LuFileDown } from 'react-icons/lu';
 
 const icons = [
   {
@@ -31,7 +32,12 @@ export default function MediaLinks() {
       {icons &&
         icons.map((icon, i) => {
           return (
-            <Anchor href={icon.link} className='h-6 w-6 md:h-8 md:w-8' key={i}>
+            <a
+              target='_blank'
+              href={icon.link}
+              className='h-6 w-6 md:h-8 md:w-8'
+              key={i}
+            >
               <Image
                 src={icon.imagePath}
                 className='duration-250 filter-primary h-auto w-full transition hover:scale-125'
@@ -41,9 +47,19 @@ export default function MediaLinks() {
                 alt={`${icon.name} logo`}
                 key={i}
               />
-            </Anchor>
+            </a>
           );
         })}
+
+      {/* Resume Download Button */}
+      <a
+        href='/Resume - Michael McGuiness.pdf'
+        download='Resume - Michael McGuiness.pdf'
+        target='_blank'
+        className='duration-250 filter-primary flex h-6 w-6 items-center justify-center text-4xl transition hover:scale-125 md:h-8 md:w-8'
+      >
+        <LuFileDown />
+      </a>
     </div>
   );
 }
