@@ -37,7 +37,7 @@ const skills = [
 
 export default function SkillsTicker() {
   return (
-    <div className='relative flex h-32 items-center overflow-x-hidden border-2 border-primary bg-cyan-200 md:h-64'>
+    <div className='relative flex h-32 items-center overflow-hidden border-2 border-primary bg-cyan-200 md:h-64'>
       <div className='animate-ticker'>
         <ul className='absolute inset-0 flex -translate-x-full justify-around'>
           <Contents />
@@ -59,7 +59,7 @@ function Contents() {
       {skills.map((skill, index) => (
         <li
           key={index - skills.length}
-          className='flex  items-center gap-x-2 whitespace-nowrap py-2 pr-24 md:gap-x-4 '
+          className='flex items-center gap-x-2 whitespace-nowrap py-2 pr-24 md:gap-x-4 '
         >
           <Image
             src={skill.imagePath}
