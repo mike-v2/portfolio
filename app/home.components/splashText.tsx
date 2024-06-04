@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+import { lerp, inverseLerp } from '@/utils/math';
+
 export default function SplashText() {
   const containerRef = useRef<any>(null);
 
@@ -86,12 +88,4 @@ export default function SplashText() {
       </div>
     </div>
   );
-}
-
-function lerp(start: number, end: number, t: number) {
-  return start * (1 - t) + end * t;
-}
-
-function inverseLerp(start: number, end: number, value: number) {
-  return (value - start) / (end - start);
 }

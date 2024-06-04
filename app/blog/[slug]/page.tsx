@@ -1,6 +1,5 @@
 import SectionTitle from '@/components/sectionTitle';
 import BlogSample from '@/components/blogSample';
-import HomeButton from '@/components/homeButton';
 
 import getBlogPostBySlug, { blogCount } from '@/app/blog/data/getBlogPost';
 import Post from '@/app/blog/components/post';
@@ -28,8 +27,6 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <main>
-      <HomeButton />
-
       {post && <Post key={post.title} {...post} />}
 
       <SectionTitle title='More' />
