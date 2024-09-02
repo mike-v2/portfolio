@@ -2,7 +2,7 @@ import { blogCount } from '@/app/blog/data/getBlogPost';
 import BlogSample from '@/components/blogSample';
 
 let allBlogIndexes: string[] = [];
-for (let i = 0; i < blogCount; i++) {
+for (let i = 1; i <= blogCount; i++) {
   allBlogIndexes.push(i.toString());
 }
 
