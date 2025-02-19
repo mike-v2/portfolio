@@ -14,6 +14,7 @@ export default function Splash() {
         sizes='100vw'
         quality={100}
         className='h-auto w-full'
+        priority
       />
       <div className='absolute inset-x-0 bottom-1/2 translate-y-1/2'>
         <SplashText />
