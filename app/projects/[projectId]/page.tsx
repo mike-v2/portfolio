@@ -10,8 +10,8 @@ export default function Blog({ params }: { params: { projectId: string } }) {
   if (!project) return;
 
   return (
-    <main className='summary-gradient bg-black'>
-      <div className='space-y-4 pt-32 text-center text-primary'>
+    <main className='summary-gradient bg-black px-4 text-primary'>
+      <div className='space-y-4 pt-32 text-center'>
         <h1 className='text-6xl'>{project.title}</h1>
         <p className='font-sans'>{project.subtitle}</p>
       </div>
@@ -32,8 +32,22 @@ export default function Blog({ params }: { params: { projectId: string } }) {
         />
       </div>
 
-      <p className='text-primary'>{project.summary}</p>
-      <p className='font-sans text-white'>{project.features}</p>
+      <div className='my-16 space-y-8'>
+        <h2 className='font-sans text-lg uppercase'>Summary</h2>
+        <p className='lead text-4xl leading-[1.5] tracking-wide'>
+          {project.summary}
+        </p>
+      </div>
+
+      <div className='space-y-4 font-sans text-white'>
+        <h2 className='text-2xl'>Features</h2>
+        <p className=''>{project.features}</p>
+      </div>
+
+      <div className='space-y-4 font-sans text-white'>
+        <h2 className='text-2xl'>Other Tools</h2>
+        <div className='font-sans text-white'>{project.secondaryTools}</div>
+      </div>
     </main>
   );
 }
