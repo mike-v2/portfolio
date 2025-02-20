@@ -8,7 +8,8 @@ export type ProjectData = {
   video?: string;
   desktopOnly?: boolean;
   source: string;
-  summary: React.ReactNode;
+  summary: string;
+  summaryMore?: string;
   features: React.ReactNode;
   primaryTools: string[];
   secondaryTools: React.ReactNode;
