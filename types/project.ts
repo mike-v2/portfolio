@@ -1,4 +1,5 @@
-type ProjectData = {
+export type ProjectData = {
+  id: string;
   imagePath: string;
   title: string;
   subtitle: string;
@@ -13,7 +14,7 @@ type ProjectData = {
   secondaryTools: React.ReactNode;
 };
 
-type ToolIconData = {
+export type ToolIconData = {
   [index: string]: {
     src: string;
     invert?: boolean;
