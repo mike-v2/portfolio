@@ -9,7 +9,7 @@ for (let i = 1; i <= blogCount; i++) {
 export default function Blog() {
   return (
     <main>
-      <div className='bg-gray-800'>
+      <div className='bg-zinc-800'>
         <h1 className='p-24 text-center text-[clamp(4rem,12vw,9rem)] text-primary'>
           Blog
         </h1>

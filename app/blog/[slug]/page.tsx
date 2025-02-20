@@ -30,7 +30,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
       {post && <Post key={post.title} {...post} />}
 
       <SectionTitle title='More' />
-      <div className='bg-gray-800'>
+      <div className='bg-zinc-800'>
         <BlogSample ids={getMoreBlogs()} />
       </div>
     </main>
