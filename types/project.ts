@@ -10,7 +10,7 @@ export type ProjectData = {
   source: string;
   summary: string;
   summaryMore?: string;
-  features: React.ReactNode;
+  features: string[];
   primaryTools: string[];
   secondaryTools: React.ReactNode;
 };
