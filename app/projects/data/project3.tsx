@@ -30,9 +30,5 @@ export const goodNews: ProjectData = {
     'Google Cloud Functions',
     'Mediastack API',
   ],
-  secondaryTools: (
-    <ul className='list-disc ps-4'>
-      <li>React Simple Maps</li>
-    </ul>
-  ),
+  secondaryTools: ['React Simple Maps'],
 };

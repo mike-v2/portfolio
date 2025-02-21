@@ -18,11 +18,5 @@ export const mechanicWebsite: ProjectData = {
     'Bootstrap',
     'GitHub',
   ],
-  secondaryTools: (
-    <ul className='list-disc ps-4'>
-      <li>Google Places API</li>
-      <li>Google Maps API</li>
-      <li>Yelp API</li>
-    </ul>
-  ),
+  secondaryTools: ['Google Places API', 'Google Maps API', 'Yelp API'],
 };

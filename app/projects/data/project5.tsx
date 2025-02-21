@@ -19,10 +19,5 @@ export const recreatingReact: ProjectData = {
     'useEffect synchronizes the component with an external system',
   ],
   primaryTools: ['TypeScript', 'Parcel', 'Jest'],
-  secondaryTools: (
-    <ul className='list-disc ps-4'>
-      <li>Prettier</li>
-      <li>GitHub</li>
-    </ul>
-  ),
+  secondaryTools: ['Prettier', 'GitHub'],
 };

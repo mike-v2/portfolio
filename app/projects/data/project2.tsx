@@ -20,10 +20,5 @@ export const journalTranscribe: ProjectData = {
     'Special annotation tools to enrich the text data',
   ],
   primaryTools: ['React', 'JavaScript', 'Firebase', 'GitHub'],
-  secondaryTools: (
-    <ul className='list-disc ps-4'>
-      <li>React Speech Recognition</li>
-      <li>React Inner Image Zoom</li>
-    </ul>
-  ),
+  secondaryTools: ['React Speech Recognition', 'React Inner Image Zoom'],
 };

@@ -1,4 +1,3 @@
-import { Anchor } from '@/components/anchor';
 import { ProjectData } from '@/types/project';
 
 export const harrysJournals: ProjectData = {
@@ -30,22 +29,16 @@ export const harrysJournals: ProjectData = {
     'Prisma',
     'Supabase',
   ],
-  secondaryTools: (
-    <ul className='list-disc ps-4'>
-      <li>
-        Use Python library <Anchor href='https://opencv.org/'>OpenCV</Anchor> to
-        preprocess images
-      </li>
-      <li>
-        Run{' '}
-        <Anchor href='https://github.com/clovaai/CRAFT-pytorch'>CRAFT</Anchor>{' '}
-        AI locally to split images into lines
-      </li>
-      <li>Apply Google Vision API on lines</li>
-      <li>Use GPT-4 to reconstruct journal entry from Google Vision output</li>
-      <li>Generate metadata on journal entries with GPT-3.5 (ChatGPT) API</li>
-      <li>Store data with Google Cloud Storage</li>
-      <li>Run python scripts with Google Cloud Run</li>
-    </ul>
-  ),
+  secondaryTools: [
+    'Use Python library OpenCV to preprocess images',
+    'Run CRAFT AI locally to split images into lines',
+    'Apply Google Vision API on lines',
+    'Use GPT-4 to reconstruct journal entry from Google Vision output',
+    'Generate metadata on journal entries with GPT-3.5 (ChatGPT) API',
+    'Store data with Google Cloud Storage',
+    'Run python scripts with Google Cloud Run',
+  ],
 };
+
+//<Anchor href='https://opencv.org/'>
+//<Anchor href='https://github.com/clovaai/CRAFT-pytorch'>

@@ -12,7 +12,7 @@ export type ProjectData = {
   summaryMore?: string;
   features: string[];
   primaryTools: string[];
-  secondaryTools: React.ReactNode;
+  secondaryTools: string[];
 };
 
 export type ToolIconData = {
