@@ -54,4 +54,7 @@ export const toolIcons: ToolIconData = {
   Parcel: {
     src: '/images/parcel-logo.png',
   },
+  Jest: {
+    src: '/images/jest-logo.svg',
+  },
 };

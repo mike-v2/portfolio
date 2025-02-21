@@ -11,7 +11,7 @@ export const recreatingReact: ProjectData = {
   summary:
     'In this self-driven project, I undertook the challenge of recreating a simplified version of React from scratch to deepen my understanding of its inner workings.',
   summaryMore:
-    "By building out core functions like createElement, render, useState, and useEffect, I gained valuable insights into JSX transformation, DOM manipulation, and state management. This hands-on experience has not only solidified my grasp of React fundamentals but also honed my problem-solving skills. I've documented my journey and the technical intricacies of the project in a Medium article and a YouTube video for those interested in diving deeper.",
+    "By building out core functions like createElement, render, useState, and useEffect, I gained valuable insights into JSX transformation, DOM manipulation, and state management. This hands-on experience has not only solidified my grasp of React fundamentals but also honed my problem-solving skills. I've documented my journey and the technical intricacies of the project in a Medium article and a YouTube video for those interested in diving deeper (links below).",
   features: (
     <ul className='list-disc ps-4'>
       <li key='createElement'>
@@ -31,10 +31,9 @@ export const recreatingReact: ProjectData = {
       </li>
     </ul>
   ),
-  primaryTools: ['TypeScript', 'Parcel'],
+  primaryTools: ['TypeScript', 'Parcel', 'Jest'],
   secondaryTools: (
     <ul className='list-disc ps-4'>
-      <li>Jest</li>
       <li>Prettier</li>
       <li>GitHub</li>
     </ul>
