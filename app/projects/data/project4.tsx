@@ -9,7 +9,9 @@ export const harrysJournals: ProjectData = {
   link: 'https://journal-search.vercel.app/',
   source: 'https://github.com/mike-v2/journal-search',
   summary:
-    "I'm proud to introduce Harry Howard's Journals, an advanced web application that redefines the way we explore historical journal entries. Using Next.js, Python, and AI tools, the app processes and analyzes entries from the 1930s and 40s. These entries are enhanced by AI and made easily accessible, putting a treasure trove of historical data at your fingertips.",
+    "I'm proud to introduce Harry Howard's Journals, an advanced web application that redefines the way we explore historical journal entries.",
+  summaryMore:
+    'Using Next.js, Python, and AI tools, the app processes and analyzes entries from the 1930s and 40s. These entries are enhanced by AI and made easily accessible, putting a treasure trove of historical data at your fingertips.',
   features: (
     <ul className='list-disc ps-4'>
       <li>

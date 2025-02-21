@@ -9,7 +9,9 @@ export const journalTranscribe: ProjectData = {
   desktopOnly: true,
   source: 'https://github.com/mike-v2/journal-transcribe',
   summary:
-    'A kind of Content Management Application that serves images of journal pages to users and provides the tools to quickly and conveniently transcribe them. The transcription is indexed and stored in a database so that another website can analyze and display them.',
+    'A kind of Content Management Application that serves images of journal pages to users and provides the tools to quickly and conveniently transcribe them.',
+  summaryMore:
+    'The transcription is indexed and stored in a database so that another website can analyze and display them.',
   features: (
     <ul className='list-disc ps-4'>
       <li>Process, index, and store images of journal pages</li>
