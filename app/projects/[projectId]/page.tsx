@@ -10,43 +10,58 @@ export default function Blog({ params }: { params: { projectId: string } }) {
   if (!project) return;
 
   return (
-    <main className='summary-gradient bg-black px-4 text-primary'>
-      <div className='space-y-4 pt-32 text-center'>
-        <h1 className='text-6xl'>{project.title}</h1>
-        <p className='font-sans'>{project.subtitle}</p>
-      </div>
+    <main className='summary-gradient bg-black px-4 leading-loose text-primary'>
+      <div className='mx-auto max-w-5xl'>
+        <header className='space-y-4 pt-32 text-center'>
+          <h1 className='text-6xl'>{project.title}</h1>
+          <p className='font-sans text-white'>{project.subtitle}</p>
+        </header>
 
-      <div className='my-12 flex flex-wrap justify-center gap-x-6 gap-y-4'>
-        {project.primaryTools &&
-          project.primaryTools.map((tool) => {
-            return <ToolWithIcon tool={tool} />;
-          })}
-      </div>
+        <section aria-labelledby='primary-tools-heading' className='my-12'>
+          <h2 id='primary-tools-heading' className='sr-only'>
+            Primary Tools
+          </h2>
+          <div className='flex flex-wrap justify-center gap-x-6 gap-y-4'>
+            {project.primaryTools.map((tool) => (
+              <ToolWithIcon key={tool} tool={tool} />
+            ))}
+          </div>
+        </section>
 
-      <div className='relative h-[30rem] w-auto '>
-        <Image
-          src={project.imagePath}
-          alt={project.title}
-          fill
-          className='object-contain p-8'
-        />
-      </div>
+        <section
+          aria-labelledby='project-image-heading'
+          className='relative h-[30rem] w-auto '
+        >
+          <h2 id='project-image-heading' className='sr-only'>
+            Project Image
+          </h2>
+          <Image
+            src={project.imagePath}
+            alt={project.title}
+            fill
+            className='object-contain p-8'
+          />
+        </section>
 
-      <div className='my-16 space-y-8'>
-        <h2 className='font-sans text-lg uppercase'>Summary</h2>
-        <p className='lead text-4xl leading-[1.5] tracking-wide'>
-          {project.summary}
-        </p>
-      </div>
+        <section className='my-16 space-y-8' aria-labelledby='summary-heading'>
+          <SectionHeader text='Summary' id='summary-heading' />
+          <p className='lead text-4xl leading-[1.5] tracking-wide'>
+            {project.summary}
+          </p>
+          {project.summaryMore && (
+            <p className='font-sans text-white'>{project.summaryMore}</p>
+          )}
+        </section>
 
-      <div className='space-y-4 font-sans text-white'>
-        <h2 className='text-2xl'>Features</h2>
-        <p className=''>{project.features}</p>
-      </div>
+        <section className='space-y-4 font-sans'>
+          <SectionHeader text='Features' />
+          <p className=''>{project.features}</p>
+        </section>
 
-      <div className='space-y-4 font-sans text-white'>
-        <h2 className='text-2xl'>Other Tools</h2>
-        <div className='font-sans text-white'>{project.secondaryTools}</div>
+        <section className='mt-10 space-y-4 font-sans'>
+          <SectionHeader text='Other Tools' />
+          <div className='font-sans'>{project.secondaryTools}</div>
+        </section>
       </div>
     </main>
   );
@@ -66,5 +81,19 @@ function ToolWithIcon({ tool }: { tool: string }) {
       )}
       <p className='font-mono text-white'>{tool}</p>
     </div>
+  );
+}
+
+type SectionHeaderProps = React.ComponentProps<'h2'> & {
+  text: string;
+};
+function SectionHeader({ text, ...props }: SectionHeaderProps) {
+  return (
+    <h2
+      className='font-sans text-2xl uppercase tracking-widest text-white'
+      {...props}
+    >
+      {text}
+    </h2>
   );
 }
