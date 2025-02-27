@@ -36,8 +36,18 @@ export const toolIcons: ToolIconData = {
   'Daisy UI': {
     src: '/images/daisyui-logo.svg',
   },
+  'Google Cloud Platform': {
+    src: '/images/google-cloud.svg',
+  },
   'Google Cloud Functions': {
-    src: '/images/cloud_functions.png',
+    src: '/images/google-cloud-functions.png',
+  },
+  YouTube: {
+    src: '/images/youtube-logo.svg',
+  },
+  Medium: {
+    src: '/images/medium-logo.svg',
+    invert: true,
   },
   'Mediastack API': {
     src: '/images/mediastack.png',
@@ -56,5 +66,9 @@ export const toolIcons: ToolIconData = {
   },
   Jest: {
     src: '/images/jest-logo.svg',
+  },
+  Link: {
+    src: '/images/link.svg',
+    invert: true,
   },
 };
