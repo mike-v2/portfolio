@@ -13,10 +13,10 @@ export const recreatingReact: ProjectData = {
   summaryMore:
     "By building out core functions like createElement, render, useState, and useEffect, I gained valuable insights into JSX transformation, DOM manipulation, and state management. This hands-on experience has not only solidified my grasp of React fundamentals but also honed my problem-solving skills. I've documented my journey and the technical intricacies of the project in a Medium article and a YouTube video for those interested in diving deeper (links below).",
   features: [
-    'createElement transforms JSX into ReactElement objects',
-    'render brings ReactElements to life on the DOM',
-    'useState manages state',
-    'useEffect synchronizes the component with an external system',
+    'Transforms JSX into ReactElement objects with the createElement function',
+    'Brings ReactElements to life on the DOM with the render function',
+    'Manages state with useState',
+    'Synchronizes the component with an external system with useEffect',
   ],
   primaryTools: ['TypeScript', 'Parcel', 'Jest'],
   secondaryTools: ['Prettier', 'GitHub'],

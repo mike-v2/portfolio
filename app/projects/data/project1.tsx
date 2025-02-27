@@ -9,7 +9,10 @@ export const mechanicWebsite: ProjectData = {
   source: 'https://github.com/mike-v2/service-now-auto-repair',
   summary:
     'An update of an old website to make it clean, responsive, and consistent with modern design principles',
-  features: ['Realtime review data', 'Embedded Google Map'],
+  features: [
+    'Updates review data in realtime',
+    'Embeds Google Map to display business location',
+  ],
   primaryTools: [
     'React',
     'Next.js',

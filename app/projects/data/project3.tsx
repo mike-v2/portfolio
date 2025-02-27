@@ -13,9 +13,9 @@ export const goodNews: ProjectData = {
     "To identify the most uplifting and positive stories, I employ advanced AI analysis, powered by OpenAI's GPT. This sophisticated natural language processing helps to filter and present news that sparks optimism and inspiration, shedding light on the progress and goodwill that is constantly unfolding around the world.",
   features: [
     'Aggregates positive news stories from around the world related to construction projects, healthcare advancements, educational progress, and peace initiatives',
-    'Interactable world map representing source countries',
-    'Updated daily with new articles',
-    'Automated data collection and processing pipeline that requires minimal manual intervention',
+    'Filters stories by country with interactable world map',
+    'Updates daily with new articles',
+    'Implements automated data collection and processing pipeline that requires minimal manual intervention',
     "Utilizes OpenAI's GPT API to evaluate and filter news stories based on positivity and relevance to the chosen categories",
   ],
   primaryTools: [
@@ -24,11 +24,14 @@ export const goodNews: ProjectData = {
     'Node.js',
     'TypeScript',
     'Tailwind CSS',
+    'Firebase',
+    'Google Cloud Platform',
+  ],
+  secondaryTools: [
+    'React Simple Maps',
     'Daisy UI',
     'ChatGPT API',
-    'Firebase',
     'Google Cloud Functions',
     'Mediastack API',
   ],
-  secondaryTools: ['React Simple Maps'],
 };

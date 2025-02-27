@@ -24,21 +24,17 @@ export const harrysJournals: ProjectData = {
     'Node.js',
     'TypeScript',
     'Tailwind CSS',
-    'Daisy UI',
     'ChatGPT API',
     'Prisma',
     'Supabase',
   ],
   secondaryTools: [
-    'Use Python library OpenCV to preprocess images',
-    'Run CRAFT AI locally to split images into lines',
-    'Apply Google Vision API on lines',
-    'Use GPT-4 to reconstruct journal entry from Google Vision output',
-    'Generate metadata on journal entries with GPT-3.5 (ChatGPT) API',
-    'Store data with Google Cloud Storage',
-    'Run python scripts with Google Cloud Run',
+    'Uses Python library OpenCV to preprocess images',
+    'Runs CRAFT AI locally to split images into lines',
+    'Applies Google Vision API on individual lines of text',
+    'Uses GPT-4 to reconstruct journal entry from Google Vision output',
+    'Generates metadata on journal entries with GPT-3.5 API',
+    'Stores data with Google Cloud Storage',
+    'Runs python scripts with Google Cloud Run',
   ],
 };
-
-//<Anchor href='https://opencv.org/'>
-//<Anchor href='https://github.com/clovaai/CRAFT-pytorch'>
