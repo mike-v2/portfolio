@@ -6,23 +6,15 @@ import Image from 'next/image';
 
 import { cn } from '@/utils/cn';
 
-const items = [
-  {
-    title: 'Recreating React',
-    subtitle: 'subtitle subtitle subtitle subtitle subtitle subtitle',
-    imagePath: '/images/recreating-react-logo.png',
-    href: '',
-  },
-  {
-    title: 'Recreating React',
-    subtitle:
-      'subtitle subtitle subtitle subtitle subtitle subtitlesubtitle subtitle subtitle subtitle subtitle subtitlesubtitle subtitle subtitle subtitle subtitle subtitle',
-    imagePath: '/images/recreating-react-logo.png',
-    href: '',
-  },
-];
+import { ProjectData } from '@/types/project';
 
-export default function HoverUnderlineMenu({ bgColor }: { bgColor: string }) {
+export default function HoverUnderlineMenu({
+  items,
+  bgColor,
+}: {
+  items: ProjectData[];
+  bgColor: string;
+}) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -30,7 +22,7 @@ export default function HoverUnderlineMenu({ bgColor }: { bgColor: string }) {
       {items.map((item, index) => (
         <Link
           key={item.title}
-          href={item.href}
+          href={`/projects/${item.id}`}
           className={cn(
             'group relative h-96 text-primary transition-colors duration-500',
             hoveredIndex !== index &&

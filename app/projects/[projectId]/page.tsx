@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import getProjectById from '@/app/projects/data/getProject';
+import { getProjectById } from '@/app/projects/data/getProject';
 import { toolIcons } from '@/app/projects/data/toolIconData';
 import { ProjectData } from '@/types/project';
 

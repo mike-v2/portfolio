@@ -7,7 +7,7 @@ import {
 } from '@/app/projects/data';
 import { ProjectData } from '@/types/project';
 
-const projects = [
+export const projects = [
   mechanicWebsite,
   journalTranscribe,
   goodNews,
@@ -15,6 +15,6 @@ const projects = [
   recreatingReact,
 ].reverse();
 
-export default function getProjectById(id: string): ProjectData {
+export function getProjectById(id: string): ProjectData {
   return projects.find((project) => project.id === id) ?? recreatingReact;
 }
