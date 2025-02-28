@@ -45,6 +45,9 @@ export const toolIcons: ToolIconData = {
   YouTube: {
     src: '/images/youtube-logo.svg',
   },
+  'YouTube Dark': {
+    src: '/images/youtube-dark-logo.svg',
+  },
   Medium: {
     src: '/images/medium-logo.svg',
     invert: true,
