@@ -13,7 +13,7 @@ import {
 } from '@/app/blog/data';
 import { BlogPost } from '@/types/postData';
 
-const posts = [
+export const blogPosts = [
   post1,
   post2,
   post3,
@@ -27,8 +27,8 @@ const posts = [
   post11,
 ].reverse();
 
-export default function getBlogPostBySlug(slug: string): BlogPost {
-  return posts.find((post) => post.id === slug) ?? post1;
-}
+export const blogCount = blogPosts.length;
 
-export const blogCount = posts.length;
+export function getBlogPostBySlug(slug: string): BlogPost {
+  return blogPosts.find((post) => post.id === slug) ?? post1;
+}

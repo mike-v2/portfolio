@@ -1,7 +1,7 @@
 import SectionTitle from '@/components/sectionTitle';
 import BlogSample from '@/components/blogSample';
 
-import getBlogPostBySlug, { blogCount } from '@/app/blog/data/getBlogPost';
+import { getBlogPostBySlug, blogCount } from '@/app/blog/data/getBlogPost';
 import Post from '@/app/blog/components/post';
 
 export default function Blog({ params }: { params: { slug: string } }) {
@@ -17,22 +17,24 @@ export default function Blog({ params }: { params: { slug: string } }) {
     const third = mod(second + 3);
     const fourth = mod(third + 3);
 
-    return [
+    const ids = [
       first.toString(),
       second.toString(),
       third.toString(),
       fourth.toString(),
     ];
+
+    return ids.map((id) => getBlogPostBySlug(id));
   }
 
   return (
     <main>
       {post && <Post key={post.title} {...post} />}
 
-      <SectionTitle title='More' />
-      <div className='bg-zinc-800'>
-        <BlogSample ids={getMoreBlogs()} />
-      </div>
+      <section>
+        <SectionTitle title='More' />
+        <BlogSample selectedBlogs={getMoreBlogs()} />
+      </section>
     </main>
   );
 }

@@ -1,20 +1,13 @@
-import { blogCount } from '@/app/blog/data/getBlogPost';
+import { blogPosts } from '@/app/blog/data/getBlogPost';
 import BlogSample from '@/components/blogSample';
-
-let allBlogIndexes: string[] = [];
-for (let i = 1; i <= blogCount; i++) {
-  allBlogIndexes.push(i.toString());
-}
 
 export default function Blog() {
   return (
     <main>
-      <div className='bg-zinc-800'>
-        <h1 className='p-24 text-center text-[clamp(4rem,12vw,9rem)] text-primary'>
-          Blog
-        </h1>
-      </div>
-      <BlogSample ids={allBlogIndexes} />
+      <h1 className='bg-zinc-800 p-24 text-center text-[clamp(4rem,12vw,9rem)] text-primary'>
+        Blog
+      </h1>
+      <BlogSample selectedBlogs={blogPosts} />
     </main>
   );
 }

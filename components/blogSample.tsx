@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import { LuMoveUpRight } from 'react-icons/lu';
 
-import getBlogPostBySlug from '@/app/blog/data/getBlogPost';
+import { BlogPost } from '@/types/postData';
 
-export default function BlogSample({ ids }: { ids: string[] }) {
-  const selectedBlogs = ids.map((id) => getBlogPostBySlug(id));
-
+export default function BlogSample({
+  selectedBlogs,
+}: {
+  selectedBlogs: BlogPost[];
+}) {
   return (
     <div className='mx-auto grid max-w-7xl grid-cols-1 items-center justify-center gap-4 p-6 md:grid-cols-2'>
       {selectedBlogs &&
