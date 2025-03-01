@@ -1,6 +1,6 @@
 export type BlogPost = {
   id: string;
-  imagePath?: string;
+  imagePath: string;
   title: string;
   date: string;
   link: string;

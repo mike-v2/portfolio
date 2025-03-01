@@ -3,6 +3,7 @@ import Header4 from '@/app/blog/components/header4';
 
 export const post9: BlogPost = {
   id: '9',
+  imagePath: 'blog-dark-mode',
   title: 'Theme Switching with Next.js and DaisyUI - Light and Dark Modes',
   date: '2024-03-12',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_theme-switching-with-nextjs-and-daisyui-activity-7173385927979913218-stg1',

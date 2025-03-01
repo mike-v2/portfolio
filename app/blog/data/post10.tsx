@@ -5,7 +5,7 @@ import Header4 from '../components/header4';
 
 export const post10: BlogPost = {
   id: '10',
-  imagePath: '/images/blog-passport-auth.jpg',
+  imagePath: 'blog-auth',
   title: 'Login Logic: Unlocking the Secrets of Secure Sign-Ins',
   date: '2024-03-18',
   link: 'https://www.linkedin.com/posts/michael-mcguiness-react_express-express-session-and-passportjs-activity-7175550724531990529-qC_b',
