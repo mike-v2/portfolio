@@ -3,7 +3,7 @@ import EmbeddedVideo from '@/app/blog/components/embeddedVideo';
 
 export const post4: BlogPost = {
   id: '4',
-  imagePath: '/images/blog-next-auth.jpg',
+  imagePath: 'blog-auth',
   title:
     'Adding Authentication to my Next.js App with Next-Auth and Google Sign In',
   date: '2023-10-09',

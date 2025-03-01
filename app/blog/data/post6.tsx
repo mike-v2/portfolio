@@ -5,7 +5,7 @@ import { BlogPost } from '@/types/postData';
 
 export const post6: BlogPost = {
   id: '6',
-  imagePath: '/images/cutoutPost/cutout-4.jpeg',
+  imagePath: 'blog-cutout',
   title:
     'Turn the Corner on Your Web Design Skills with This CSS Page Fold Trick',
   date: '2023-10-31',
