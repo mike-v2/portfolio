@@ -1,20 +1,12 @@
-import { projectData } from '@/app/projects/data';
-import ProjectList from '@/app/projects/components/projectList';
+import ProjectPageMenu from '@/components/projectPageMenu';
+import { projects } from '@/app/projects/data/getProject';
 
-export default function Projects({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const selectedProject = searchParams['project'];
-
+export default function Projects() {
   return (
-    <main>
-      {!selectedProject && (
-        <h1 className='my-20 w-full text-center text-6xl'>Projects</h1>
-      )}
+    <main className='bg-zinc-800'>
+      <h1 className='py-20 text-center text-6xl text-primary'>Projects</h1>
 
-      <ProjectList projects={projectData} />
+      <ProjectPageMenu items={projects} bgColor='bg-zinc-800' />
     </main>
   );
 }

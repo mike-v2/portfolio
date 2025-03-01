@@ -22,7 +22,7 @@ const icons = [
   {
     name: 'YouTube',
     link: 'https://www.youtube.com/channel/UCSacwkTC8liUfirZuPEOuew',
-    imagePath: '/images/youtube-logo.svg',
+    imagePath: '/images/youtube-dark-logo.svg',
   },
 ];
 

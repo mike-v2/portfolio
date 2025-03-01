@@ -54,7 +54,7 @@ export default function Summary() {
       ref={containerRef}
       className='relative h-[125rem] py-20 tracking-wide md:h-[160rem]'
     >
-      <div className='summary-gradient absolute inset-0 -z-20 bg-gray-800'></div>
+      <div className='summary-gradient absolute inset-0 -z-20'></div>
 
       <div
         style={{
